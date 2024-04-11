@@ -1,0 +1,3 @@
+import os
+
+TVM_PORT = int(os.environ.get('TVM_PORT', 18018))

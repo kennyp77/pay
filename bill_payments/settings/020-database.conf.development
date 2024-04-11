@@ -1,0 +1,8 @@
+DATABASE = {
+    'NAME': 'bill_payments_db',
+    'USER': 'bill_payments',
+    'PASSWORD': 'P@ssw0rd',
+    'HOST': '0.0.0.0',
+    'PORT': 5252,
+    'USE_SSL': None,
+}

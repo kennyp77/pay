@@ -1,0 +1,49 @@
+import logging
+import os
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'standard': {
+            'format': '[%(asctime)s] %(levelname)s (%(name)s): %(message)s'
+        },
+        'request': {
+            'format': '%(message)s'
+        },
+        'uni': {
+            '()': 'sendr_qlog.UniFormatter',
+        },
+        'lines': {
+            '()': 'sendr_qlog.LinesFormatter',
+        },
+        'deploy': {
+            '()': 'sendr_qlog.DeployMetaFormatter',
+        },
+    },
+    'handlers': {
+        'default': {
+            'level': 'DEBUG',
+            'formatter': 'uni',
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'aiohttp.access': {
+            'handlers': ['default'],
+            'level': 'ERROR',
+            'propagate': False
+        },
+        'kikimr.public.sdk.python.persqueue': {
+            'level': 'DEBUG'
+        },
+        # DEBUG уровень мешает при работе с manage.py shell командой
+        'parso': {
+            'level': 'INFO',
+        }
+    },
+    'root': {
+        'handlers': ['default'],
+        'level': 'DEBUG'
+    }
+}

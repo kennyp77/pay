@@ -1,0 +1,4 @@
+BLACKBOX_API_URL = 'https://blackbox.yandex.net/blackbox'
+
+KAZNA_API_URL = 'https://yakazna.tprs.ru/api/kazna/2.0'
+SUP_API_URL = 'https://sup.yandex.net'

@@ -1,0 +1,80 @@
+{
+    "meta": {
+        "name": "bill_payments",
+        "version": "{branch}-r{revision}",
+        "maintainer": "g:yandex-pay"
+    },
+    "build": {
+        "build_type": "release",
+        "targets": [
+            "pay/bill_payments/bin"
+        ],
+        "target-platforms": [
+            "DEFAULT-LINUX-X86_64"
+        ]
+    },
+    "data": [
+        {
+            "source": {
+                "type": "BUILD_OUTPUT",
+                "path": "pay/bill_payments/bin"
+            },
+            "destination": {
+                "path": "/"
+            }
+        },
+        {
+            "source": {
+                "type": "RELATIVE",
+                "path": "Dockerfile"
+            },
+            "destination": {
+                "path": "/Dockerfile"
+            }
+        },
+        {
+            "source": {
+                "type": "RELATIVE",
+                "path": "entrypoint.sh"
+            },
+            "destination": {
+                "path": "/entrypoint.sh"
+            }
+        },
+        {
+            "source": {
+                "type": "RELATIVE",
+                "path": "etc/logrotate.d/nginx"
+            },
+            "destination": {
+                "path": "/etc/logrotate.d/nginx",
+                "attributes": {
+                    "mode": {
+                        "value": "644"
+                     }
+                }
+            }
+        },
+        {
+            "source": {
+                "type": "RELATIVE",
+                "path": "etc",
+                "files": [
+                    "*"
+                ]
+            },
+            "destination": {
+                "path": "/etc/"
+            }
+        },
+        {
+            "source": {
+                "type": "INLINE",
+                "content": "{branch}-r{revision}"
+            },
+            "destination": {
+                "path": "/version.txt"
+            }
+        }
+    ]
+}
