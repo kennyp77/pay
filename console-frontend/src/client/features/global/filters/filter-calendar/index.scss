@@ -1,0 +1,23 @@
+.FilterCalendar {
+  display: flex;
+  align-items: center;
+
+  &-Picker {
+    position: relative;
+  }
+
+  .Button2-Text {
+    position: static;
+  }
+
+  &-Separator {
+    margin: 0 var(--offset-10);
+  }
+
+  &-Input {
+    position: absolute;
+    left: 0;
+    bottom: calc(-1 * var(--offset-12));
+    opacity: 0;
+  }
+}

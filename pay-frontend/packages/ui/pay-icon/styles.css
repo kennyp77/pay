@@ -1,0 +1,75 @@
+@import '../styles/constants.css';
+
+.pay-icon {
+    display: block;
+}
+
+/**
+ * CARD ICONS
+ */
+
+.pay-icon_apple-pay,
+.pay-icon_google-pay,
+.pay-icon_new-card,
+.pay-icon_AmericanExpress,
+.pay-icon_Discover,
+.pay-icon_JCB,
+.pay-icon_Maestro,
+.pay-icon_Mastercard,
+.pay-icon_MastercardElite,
+.pay-icon_MIR,
+.pay-icon_UnionPay,
+.pay-icon_Unknown,
+.pay-icon_Uzcard,
+.pay-icon_Visa,
+.pay-icon_VisaElectron {
+    width: 36px;
+    height: 24px;
+}
+
+/**
+ * TODO: Do not repaints the path elements.
+ */
+.pay-icon_card-google-pay,
+.pay-icon_card-apple-pay,
+:--theme-dark .pay-icon_google-pay,
+:--theme-dark .pay-icon_apple-pay {
+    fill: #000;
+}
+
+:--theme-dark .pay-icon_MIR,
+:--theme-dark .pay-icon_MasterCard,
+:--theme-dark .pay-icon_Maestro,
+:--theme-dark .pay-icon_JCB,
+:--theme-dark .pay-icon_Discover,
+:--theme-dark .pay-icon_AmericanExpress {
+    fill: #333;
+}
+
+.pay-icon_new-card {
+    fill: #f2f2f2;
+}
+
+:--theme-dark .payment-methods__icon_new-card {
+    fill: #707070;
+}
+
+:--theme-dark .pay-icon_new-card {
+    fill: rgba(255, 255, 255, 0.3);
+}
+
+:--theme-dark .pay-icon_new-card .new_svg__plus-sign {
+    fill: rgba(0, 0, 0, 0.25);
+}
+
+.pay-icon_Visa,
+.pay-icon_VisaElectron,
+.pay-icon_Uzcard {
+    fill: #223084;
+}
+
+:--theme-dark .pay-icon_Visa,
+:--theme-dark .pay-icon_VisaElectron,
+:--theme-dark .pay-icon_Uzcard {
+    fill: #067aff;
+}

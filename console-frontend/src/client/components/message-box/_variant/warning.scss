@@ -1,0 +1,5 @@
+.MessageBox.MessageBox_variant_warning {
+  .MessageBox-Backdrop:before {
+    background-color: var(--message-box-bg-warning);
+  }
+}

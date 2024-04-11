@@ -1,0 +1,19 @@
+@import '../constants.css';
+
+.order {
+    display: none;
+}
+
+.order_active {
+    display: block;
+}
+
+.order__content {
+    margin-bottom: var(--space-28);
+}
+
+:--mobile {
+    .order__footer {
+        height: 158px;
+    }
+}

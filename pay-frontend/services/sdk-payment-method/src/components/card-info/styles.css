@@ -1,0 +1,32 @@
+.card-info {
+    display: inline-block;
+
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0 10px 0 8px;
+
+    white-space: nowrap;
+
+    color: var(--color-primary);
+    border-radius: 50px;
+    background-color: var(--color-gray);
+}
+
+.card-info__network,
+.card-info__pan {
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+.card-info__network {
+    width: 36px;
+    height: 100%;
+    margin-right: 6px;
+}
+
+.card-info__pan {
+    font-size: 18px;
+    font-weight: 500;
+    white-space: pre;
+}

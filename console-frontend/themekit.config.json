@@ -1,0 +1,33 @@
+{
+  "entry": {
+    "mg-light": "./src/client/styles/themes/mg-light/theme.json",
+    "mg-dark": "./src/client/styles/themes/mg-dark/theme.json"
+  },
+  "output": {
+    "css": {
+      "transforms": ["name/cti/kebab", "name/mapper"],
+      "actions": ["process-color"],
+      "buildPath": "./src/client/styles/themes/",
+      "files": [
+        {
+          "destination": "[entry]/color.css",
+          "format": "css/variables",
+          "filter": "whitepaper/color",
+          "options": {
+            "selector": ".Theme_color_[entry]",
+            "useAliasVariables": true
+          }
+        },
+        {
+          "destination": "[entry]/root.css",
+          "format": "css/variables",
+          "filter": "whitepaper/root",
+          "options": {
+            "selector": ".Theme_root_[entry]",
+            "useAliasVariables": true
+          }
+        }
+      ]
+    }
+  }
+}

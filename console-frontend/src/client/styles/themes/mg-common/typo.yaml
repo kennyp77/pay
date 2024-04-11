@@ -1,0 +1,194 @@
+typography:
+  controls:
+    fontFamily:
+      value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+    size:
+      s:
+        fontSize:
+          value: 14px
+      m:
+        fontSize:
+          value: 14px
+      l:
+        fontSize:
+          value: 16px
+      xl:
+        fontSize:
+          value: 16px
+      xxl:
+        fontSize:
+          value: 16px
+text:
+  bodyShort:
+    size:
+      s:
+        fontSize:
+          value: 0,8125rem
+        lineHeight:
+          value: 1rem
+        letterSpacing:
+          value: 0em
+      m:
+        fontSize:
+          value: 0.875rem
+        lineHeight:
+          value: 1.125rem
+        letterSpacing:
+          value: 0em
+      l:
+        fontSize:
+          value: 1rem
+        lineHeight:
+          value: 1.25rem
+        letterSpacing:
+          value: 0em
+      xl:
+        fontSize:
+          value: 1.125rem
+        lineHeight:
+          value: 1.375rem
+        letterSpacing:
+          value: 0em
+  bodyLong:
+    size:
+      s:
+        fontSize:
+          value: 0,8125rem
+        lineHeight:
+          value: 1.125rem
+        letterSpacing:
+          value: 0em
+      m:
+        fontSize:
+          value: 0.875rem
+        lineHeight:
+          value: 1.25rem
+        letterSpacing:
+          value: 0em
+      l:
+        fontSize:
+          value: 1rem
+        lineHeight:
+          value: 1.375rem
+        letterSpacing:
+          value: 0em
+      xl:
+        fontSize:
+          value: 1.125rem
+        lineHeight:
+          value: 1.5rem
+        letterSpacing:
+          value: 0em
+  control:
+    size:
+      s:
+        fontSize:
+          value: 0.875rem
+  subheader:
+    size:
+      xl:
+        fontSize:
+          value: 1.75rem
+        letterSpacing:
+          value: 0em
+        lineHeight:
+          value: 2rem
+        fontFamily:
+          value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+      l:
+        fontSize:
+          value: 1.5rem
+        letterSpacing:
+          value: 0em
+        lineHeight:
+          value: 1.75rem
+        fontFamily:
+          value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+      m:
+        fontSize:
+          value: 1.25rem
+        lineHeight:
+          value: 1.5rem
+        letterSpacing:
+          value: 0em
+        fontFamily:
+          value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+      s:
+        fontSize:
+          value: 1.125rem
+        lineHeight:
+          value: 1.375rem
+        letterSpacing:
+          value: 0em
+        fontFamily:
+          value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  headline:
+    size:
+      xs:
+        fontFamily:
+          value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        fontSize:
+          value: 1.75rem
+        lineHeight:
+          value: 2rem
+        letterSpacing:
+          value: 0em
+      xl:
+        fontSize:
+          value: 3.5rem
+        lineHeight:
+          value: 3.75rem
+        letterSpacing:
+          value: 0em
+        fontFamily:
+          value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+      l:
+        fontFamily:
+          value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        fontSize:
+          value: 3rem
+        lineHeight:
+          value: 3.25rem
+        letterSpacing:
+          value: 0em
+      m:
+        fontFamily:
+          value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        fontSize:
+          value: 2.5rem
+        lineHeight:
+          value: 2.75rem
+        letterSpacing:
+          value: 0em
+      s:
+        fontFamily:
+          value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        fontSize:
+          value: 2.125rem
+        lineHeight:
+          value: 2.5rem
+        letterSpacing:
+          value: 0em
+  caption:
+    size:
+      xl:
+        fontSize:
+          value: 0.8125rem
+        lineHeight:
+          value: 1rem
+        letterSpacing:
+          value: 0.0065em
+      l:
+        fontSize:
+          value: 0.75rem
+        lineHeight:
+          value: 0.875rem
+        letterSpacing:
+          value: 0.0065em
+      m:
+        fontSize:
+          value: 0.6875rem
+        lineHeight:
+          value: 0.875rem
+        letterSpacing:
+          value: 0.0065em

@@ -1,0 +1,44 @@
+.RegistrationError {
+
+    &-Error {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &-Icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    &-ErrorMessage {
+        width: 100%;
+        max-width: 560px;
+
+        margin-bottom: 32px;
+    }
+
+    &-ErrorMessageHeader {
+        margin: 32px auto;
+
+        font-size: 28px;
+        font-weight: normal;
+        line-height: 32px;
+        text-align: center;
+    }
+
+    &-ErrorButton {
+        cursor: pointer;
+    }
+
+    &-ErrorMessageInfo {
+        font-family: monospace;
+        word-break: break-all;
+
+        overflow-wrap: break-word;
+    }
+}

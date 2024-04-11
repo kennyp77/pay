@@ -1,0 +1,25 @@
+@use 'sass:color';
+
+@import '../../../styles/variables.scss';
+
+.Button2_outline_primary {
+    &.Button2_view_action {
+        --button-view-action-typo-color-base: #{$color-fill-red};
+        --button-view-action-typo-color-progress-base: #{$color-fill-red};
+        --button-view-action-typo-color-hovered: #{$color-fill-red};
+        --button-view-action-fill-color-hovered: #{rgba($color-fill-red-light, 0.05)};
+        --button-view-action-fill-color-base: #{$color-fill-white};
+        --button-view-action-fill-color-progress-base: #{rgba($color-fill-red-light, 0.05)};
+        --button-view-action-fill-color-progress-process: #{rgba($color-fill-red-light, 0.1)};
+
+        &::before {
+            border: 1px solid #{rgba($color-fill-red-light, 0.4)};
+        }
+
+        &.Button2_pressed {
+            &::before {
+                background-color: #{rgba($color-fill-red-light, 0.1)};
+            }
+        }
+    }
+}

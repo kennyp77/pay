@@ -1,0 +1,148 @@
+$offsets: 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 32, 36;
+$radius: 6, 8, 12, 16, 20, 24, 32, 100;
+$sizes: 2, 8, 12, 14, 16, 18, 20, 24, 36, 40, 48, 52, 56;
+
+:root {
+  /* borders */
+  --form-element-border-width: 2px;
+  --form-element-border-radius: 16px;
+
+  /* colors */
+  --text-input-bg: rgba(180, 184, 204, 0.12);
+  --text-input-bg-action: #f1f2f6;
+  --text-input-color-disabled: #c9cddb;
+  --border-primary: rgba(180, 184, 204, 0.36);
+  --link-default: #0077ff;
+  --color-border-outlined: rgba(180, 184, 204, 0.36);
+  --color-border-default: #d8dce6;
+  --color-link-default: #0077ff;
+  --color-text-secondary: #85889e;
+  --color-text-tertiary: #b3b8cc;
+  --checkbox-text-color: var(--color-text-secondary);
+  --color-white: #ffffff;
+  --color-text-main: #000000;
+  --color-text-label: #939cb0;
+  --color-text-default-soft: #262633;
+  --color-icon: #4b4c5a;
+  --color-error: #ff3333;
+  --color-succes: #00a85a;
+  --color-box-shadow-start: rgba(147, 151, 173, 0.1);
+  --color-box-shadow-end: rgba(147, 151, 173, 0.3);
+  --color-locked-elem: #b5efba;
+
+  /* background */
+  --bg-brand: #ffdb4d;
+  --bg-lightblack: #2f2f32;
+  --bg-grey: #f5f6f8;
+  --bg-white: #ffffff;
+  --bg-lightgray: #eceef2;
+  --bg-disabled: #f1f2f6;
+  --button-bg-primary: #f04527;
+  --button-bg-primary-active: #d23d23;
+  --button-bg-primary-hover: #ff6145;
+  --button-bg-primary-disabled: rgba(240, 69, 39, 0.3);
+  --button-bg-secondary: rgba(180, 184, 204, 0.26);
+  --message-box-bg-success: #f7f8fa;
+  --message-box-bg-warning: #fffae5;
+  --message-box-bg-error: #fff5f2;
+  --message-box-bg-freeze: #edfaff;
+  --message-box-bg-check: #fff6b2;
+  --message-box-bg-finish: #000000;
+
+  /* other */
+  --tooltip-filter:
+    drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.1))
+    drop-shadow(0px 8px 28px rgba(0, 0, 0, 0.3));
+  --button-box-shadow: 0px 8px 20px rgba(255, 56, 21, 0.28);
+  --bg-box-shadow:
+    0px 0px 2px var(--color-box-shadow-start),
+    0px 2px 4px var(--color-box-shadow-end);
+  --bg-button-shadow:
+    0px 0px 2px var(--color-box-shadow-start),
+    0px 8px 28px var(--color-box-shadow-end);
+  --dropdown-popup-box-shadow:
+    0px 0px 2px rgba(147, 151, 173, 0.1),
+    0px 8px 28px rgba(147, 151, 173, 0.3);
+  --divider-linear-gradient:
+    linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(241, 242, 245, 0) 100%
+    );
+  --message-box-box-shadow:
+    0px 0px 2px rgba(0, 0, 0, 0.1),
+    0px 8px 28px rgba(0, 0, 0, 0.3);
+
+  /* sizes */
+  --about-block-width: 650px;
+  --add-module-width: 44px;
+  --add-module-height: 44px;
+  --add-module-icon-width: 18px;
+  --back-button-width: 96px;
+  --developers-api-keys-block-width: var(--about-block-width);
+  --developers-api-keys-warning-text-width: 230px;
+  --developers-merchant-id-block-width: var(--about-block-width);
+  --developers-integration-logo-width: 80px;
+  --filter-search-input-width: 200px;
+  --locked-elem-width: 24px;
+  --locked-elem-height: 24px;
+  --locked-elem-radius: var(--radius-6);
+  --order-info-bg: #fafbfc;
+  --order-info-event-height: 32px;
+  --order-info-event-shadow: 0px 2px 2px rgba(147, 156, 176, 0.1);
+  --order-info-event-date-width: 200px;
+  --payment-empty-wrapper-width: 430px;
+  --pagination-button-width: 36px;
+  --progress-height: 6px;
+  --progress-wrapper-width: 480px;
+  --progress-width: 155px;
+  --provider-card-height: 90px;
+  --provider-card-small-height: 48px;
+  --provider-logo-width: 98px;
+  --secure-label-width: 131px;
+  --text-input-clipboard-height: 48px;
+  --text-input-clipboard-offset-right: 55px;
+  --to-account-button-width: 18px;
+  --user-pic-height: 36px;
+  --user-pic-width: 36px;
+  --future-provider-fact-width: 106px;
+  --modal-alert-width: 470px;
+  --modal-alert-height: 490px;
+  --modal-default-width: 600px;
+  --modal-small-width: 420px;
+  --modal-cross-outside-close-right-pos: -44px;
+  --size-side-menu: 204px;
+  --size-tablet-side-menu: 76px;
+  --registration-form-width: 560px;
+  --registration-form-full-width: 630px;
+
+  /* font-size */
+  @each $fz in 12, 14, 16, 20, 28, 40 {
+    --fz-#{$fz}: #{$fz}px;
+  }
+
+  /* line-height */
+  @each $lh in 12, 14, 16, 18, 20, 22, 24, 32, 44 {
+    --lh-#{$lh}: #{$lh}px;
+  }
+
+  /* z-indexes */
+  @each $zi in 0, 1, 10, 50, 100 {
+    --z-#{$zi}: #{$zi};
+  }
+
+  /* offsets */
+  @each $space in $offsets {
+    --offset-#{$space}: #{$space}px;
+  }
+
+  /* radius */
+  @each $r in $radius {
+    --radius-#{$r}: #{$r}px;
+  }
+
+  /* size */
+  @each $s in $sizes {
+    --size-#{$s}: #{$s}px;
+  }
+}

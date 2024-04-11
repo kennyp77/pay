@@ -1,0 +1,12 @@
+@import './constants.css';
+
+/* Market */
+html.service-610 {
+    body {
+        display: block;
+    }
+
+    :--desktop .page {
+        padding: 0;
+    }
+}

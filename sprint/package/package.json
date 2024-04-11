@@ -1,0 +1,108 @@
+{
+    "meta": {
+        "name": "yandex-pay-sprint",
+        "version": "{branch}-r{revision}",
+        "maintainer": "g:yandex-pay"
+    },
+    "build": {
+        "build_type": "release",
+        "targets": [
+            "pay/sprint/bin"
+        ],
+        "target-platforms": [
+            "DEFAULT-LINUX-X86_64"
+        ]
+    },
+    "data": [
+        {
+            "source": {
+                "type": "BUILD_OUTPUT",
+                "path": "pay/sprint/bin"
+            },
+            "destination": {
+                "path": "/"
+            }
+        },
+        {
+            "source": {
+                "type": "SANDBOX_RESOURCE",
+                "id": 2007673887
+            },
+            "destination": {
+                "path": "/",
+                "attributes": {
+                    "mode": {
+                        "value": "+x"
+                    }
+                }
+            }
+        },
+        {
+            "source": {
+                "type": "SANDBOX_RESOURCE",
+                "id": 2383206246
+            },
+            "destination": {
+                "path": "/",
+                "attributes": {
+                    "mode": {
+                        "value": "+x"
+                    }
+                }
+            }
+        },
+        {
+            "source": {
+                "type": "RELATIVE",
+                "path": "Dockerfile"
+            },
+            "destination": {
+                "path": "/Dockerfile"
+            }
+        },
+        {
+            "source": {
+                "type": "RELATIVE",
+                "path": "entrypoint.sh"
+            },
+            "destination": {
+                "path": "/entrypoint.sh"
+            }
+        },
+        {
+            "source": {
+                "type": "RELATIVE",
+                "path": "etc/logrotate.d/nginx"
+            },
+            "destination": {
+                "path": "/etc/logrotate.d/nginx",
+                "attributes": {
+                    "mode": {
+                        "value": "644"
+                     }
+                }
+            }
+        },
+        {
+            "source": {
+                "type": "RELATIVE",
+                "path": "etc",
+                "files": [
+                    "*"
+                ]
+            },
+            "destination": {
+                "path": "/etc/"
+            }
+        },
+        {
+            "source": {
+                "type": "INLINE",
+                "content": "{branch}-r{revision}"
+            },
+            "destination": {
+                "path": "/version.txt"
+            }
+        }
+    ]
+}

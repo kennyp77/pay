@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "code": 200,
+  "data": {
+    "partner_data": {
+      "address": "119021, г. Москва, ул. Льва Толстого, д. 16",
+      "email": "yndx-andreykarelin@yandex.ru",
+      "full_name": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ  ЯНДЕКС",
+      "inn": "773620754300",
+      "kpp": "770401001",
+      "leader_name": "Бунина Елена Игоревна",
+      "name": "ЯНДЕКС, ООО",
+      "ogrn": "1027700229193",
+      "phone": "+71312424242",
+      "region_name": "Москва",
+      "site": "test.com",
+      "terms": true
+    }
+  }
+}

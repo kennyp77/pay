@@ -1,0 +1,39 @@
+@import 'styles/breakpoints.scss';
+@import 'styles/mixins.scss';
+
+.Registration {
+  height: 100vh;
+  overflow-y: scroll;
+
+  &-LeftSide {
+    width: 50%;
+    padding-top: var(--offset-32);
+  }
+
+  &-RightSide {
+    position: fixed;
+    right: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+@include media($desktop, below) {
+  .Registration {
+    &-LeftSide {
+      width: 100%;
+    }
+
+    &-RightSide {
+      display: none;
+    }
+  }
+}
+
+@include media($tablet, below) {
+  .Registration {
+    &-LeftSide {
+      padding-top: 0;
+    }
+  }
+}

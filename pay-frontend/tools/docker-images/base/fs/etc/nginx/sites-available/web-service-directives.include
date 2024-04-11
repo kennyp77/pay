@@ -1,0 +1,11 @@
+request_id_from_header on;
+
+client_max_body_size 128m;
+large_client_header_buffers 8 16k;
+
+proxy_buffer_size 128k;
+proxy_buffers 8 128k;
+
+access_log off;
+tskv_log   syslog:server=127.0.0.1,facility=local7,tag=nginx,severity=info tskv-access-log;
+error_log  syslog:server=127.0.0.1,facility=local7,tag=nginx info;

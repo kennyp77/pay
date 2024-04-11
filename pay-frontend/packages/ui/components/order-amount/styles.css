@@ -1,0 +1,53 @@
+@import '../constants.css';
+
+.order-amount {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.order-amount__current,
+.order-amount__original {
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+.order-amount__current {
+    padding-right: var(--space-14);
+
+    font-weight: 500;
+
+    color: var(--color-text-primary);
+
+    @apply --text-size-28;
+}
+
+.order-amount__original {
+    position: relative;
+
+    margin-left: var(--space-20);
+
+    color: var(--color-text-primary);
+
+    @apply --text-size-16;
+}
+
+.order-amount__original::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: calc(100% - 14px);
+    height: 3px;
+    margin: -2px 0 0 calc(-50%);
+
+    content: '';
+
+    background: var(--yandex-pay-gradient), #f00;
+
+    transform: rotate(-12deg);
+}
+
+.order-amount__plus {
+    align-self: center;
+}

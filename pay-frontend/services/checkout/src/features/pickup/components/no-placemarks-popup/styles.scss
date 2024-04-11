@@ -1,0 +1,38 @@
+@import '../../../../styles/variables.scss';
+
+.NoPlacemarksPopup {
+    --tooltip-view-default-fill-color-base: #{$color-fill-white};
+    --popup-view-default-fill-color: #{$color-fill-dark-grey};
+    --popup-view-default-typo-color: #{$color-fill-white};
+    --tooltip-borderRadius: 12px;
+
+    .Popup2-Tail {
+        position: absolute;
+    }
+
+    &_platform_desktop {
+        top: 34px;
+        left: 395px;
+
+        &.NoPlacemarksPopup_ob {
+            top: 106px;
+        }
+
+        .Popup2-Tail {
+            top: 50% !important;
+        }
+    }
+
+    &_platform_touch {
+        top: 132px;
+        left: calc(100% - 230px);
+
+        &.NoPlacemarksPopup_ob {
+            top: 70px;
+        }
+
+        .Popup2-Tail {
+            left: 50% !important;
+        }
+    }
+}

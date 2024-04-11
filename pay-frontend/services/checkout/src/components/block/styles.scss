@@ -1,0 +1,68 @@
+@use 'sass:math';
+
+@import '../../styles/variables.scss';
+
+$radius: (
+    '3xl': 40px,
+    '2xl': 32px,
+    'xl': 24px,
+    'l': 20px,
+    'm': 16px,
+    's': 12px,
+    'xs': 8px,
+    '2xs': 4px,
+    '3xs': 2px,
+);
+
+.Block {
+    display: flex;
+    // flex: 1 1 100%;
+    flex-direction: column;
+
+    &:empty {
+        display: none;
+    }
+
+    /* bg */
+    &_bg_white {
+        background: $color-fill-white;
+    }
+
+    &_bg_grey {
+        background: $color-fill-grey;
+    }
+
+    &_bg_red {
+        background: $color-fill-red;
+    }
+
+    &_bg_red-light {
+        background: $color-fill-red-light;
+    }
+
+    &_bg_green-light {
+        background: $color-fill-green-light;
+    }
+
+    &_overflow_visible {
+        overflow: visible;
+    }
+
+    &_overflow_hidden {
+        overflow: hidden;
+    }
+}
+
+@each $r, $size in $radius {
+    /* round */
+    .Block_radius_#{$r} {
+        border-radius: $size;
+    }
+
+    /* shadow */
+    .Block_shadow.Block_radius_#{$r} {
+        /* box-shadow: 0 0 2px rgba(147, 156, 176, 0.1), 0 8px 28px rgba(147, 156, 176, 0.3); */
+        box-shadow: 0 0 #{math.div($size, 10)} rgba(147, 156, 176, 0.1),
+            0 ($size * 0.4) ($size * 1.4) rgba(147, 156, 176, 0.3);
+    }
+}

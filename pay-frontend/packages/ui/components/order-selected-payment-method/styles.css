@@ -1,0 +1,17 @@
+@import '../constants.css';
+
+.order-selected-payment-method_single {
+    padding-top: 24px;
+}
+
+.order-selected-payment-method__link {
+    height: 24px;
+    margin-bottom: var(--space-12);
+
+    line-height: 24px;
+    text-align: right;
+}
+
+.order-selected-payment-method__method {
+    pointer-events: none;
+}

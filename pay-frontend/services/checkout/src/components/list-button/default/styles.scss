@@ -1,0 +1,40 @@
+@import '../../../styles/variables.scss';
+
+.ListButton_view_default {
+    --list-button-icon-size-right: 24px;
+
+    &.ListButton_size_m {
+        --list-button-space-left: var(--space-xs);
+        --list-button-space-right: var(--space-xs);
+        --list-button-space-top: var(--space-xs);
+        --list-button-space-bottom: var(--space-xs);
+    }
+
+    &.ListButton_size_l {
+        --list-button-space-left: var(--space-l);
+        --list-button-space-right: var(--space-l);
+        --list-button-space-top: var(--space-xs);
+        --list-button-space-bottom: var(--space-xs);
+    }
+
+    &.ListButton_size_xl {
+        --list-button-space-left: var(--space-xl);
+        --list-button-space-right: var(--space-xl);
+        --list-button-space-top: var(--space-m);
+        --list-button-space-bottom: var(--space-m);
+    }
+
+    .ListButton-EditIcon {
+        color: $color-fill-grey2;
+
+        transition: color 0.3s ease;
+    }
+
+    &.hovered {
+        background-color: $color-fill-grey-hover;
+
+        .ListButton-EditIcon {
+            color: $color-typo-black;
+        }
+    }
+}

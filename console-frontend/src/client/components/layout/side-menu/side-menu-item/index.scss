@@ -1,0 +1,41 @@
+@import 'styles/mixins.scss';
+@import 'styles/breakpoints.scss';
+
+.SideMenuItem {
+  @include transition;
+
+  display: flex;
+  align-items: center;
+  padding-right: var(--offset-12);
+  padding-left: var(--offset-12);
+  color: var(--color-text-secondary);
+
+  .Menu-Item_checked &,
+  &:hover,
+  &:focus {
+    color: var(--color-mg-typo-primary);
+  }
+
+  &-Icon {
+    margin-right: var(--offset-8);
+    line-height: 0;
+  }
+
+  .Menu-Item_disabled & {
+    color: var(--text-input-color-disabled);
+  }
+}
+
+@include media($tablet-horizontal, below) {
+  .SideMenuItem {
+    padding: var(--offset-10);
+
+    &-Icon {
+      margin-right: 0;
+    }
+
+    &-Title {
+      display: none;
+    }
+  }
+}

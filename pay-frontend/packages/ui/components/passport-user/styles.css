@@ -1,0 +1,68 @@
+@import '../constants.css';
+
+/**
+ * TODO: Create a custom user component for the lego components package.
+ */
+
+.passport-user .legouser__current-account.user-account {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    pointer-events: none;
+}
+
+.passport-user .legouser__current-account .user-account__name {
+    overflow: hidden;
+
+    max-width: 150px;
+    margin-right: 10px;
+    margin-left: 0;
+
+    font-size: 16px;
+    line-height: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.passport-user .legouser__current-account .user-account__name,
+.passport-user .legouser__current-account .user-account__name::first-letter {
+    color: var(--ya-passport-user-typo);
+}
+
+.passport-user .legouser__current-account .user-account__pic {
+    width: 40px;
+    height: 40px;
+}
+
+.passport-user .legouser__current-account .user-account__ticker {
+    top: 0;
+    right: auto;
+    left: 100%;
+
+    margin-right: auto;
+    margin-left: -45px;
+}
+
+.passport-user .user-pic__camera {
+    display: none;
+
+    pointer-events: none;
+}
+
+/**
+ * TODO: Make the component independent of the context.
+ */
+:--mobile {
+    .passport-user .legouser__current-account .user-account__name,
+    .passport-user .legouser__current-account .user-account__name::first-letter {
+        color: var(--ya-passport-user-typo-2);
+    }
+}
+
+/* 960 - 1000 — размер при котором логин может "залезть" на форму */
+@media (min-width: 960px) and (max-width: 1000px) {
+    .passport-user .legouser__current-account .user-account__name {
+        max-width: 100px;
+    }
+}

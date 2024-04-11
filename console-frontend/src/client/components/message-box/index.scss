@@ -1,0 +1,36 @@
+.MessageBox {
+  width: 100%;
+  color: var(--color-text-main);
+
+  .MessageBox-Backdrop:before {
+    border-radius: var(--radius-16);
+    box-shadow: none;
+  }
+
+  .MessageBox-Content {
+    padding: var(--offset-14);
+  }
+
+  .MessageBox-TextWrap {
+    align-items: center;
+  }
+
+  .MessageBox-Text > b {
+    font-weight: 500;
+  }
+
+  .MessageBox-TextLeft {
+    margin-right: var(--offset-14);
+  }
+
+  .MessageBox-TextRight {
+    .Link {
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .Icon {
+      margin-left: var(--offset-6);
+    }
+  }
+}

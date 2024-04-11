@@ -1,0 +1,78 @@
+@import '../../constants.css';
+
+.Button2.big-button {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 64px;
+
+    font-weight: 500;
+
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+
+    transition: transform var(--transition-visibility);
+
+    @apply --text-size-20;
+}
+
+.Button2.big-button_type_red {
+    background-color: var(--yandex-pay-color);
+    box-shadow: 0 8px 20px rgba(255, 56, 21, 0.28);
+}
+
+.Button2.big-button_type_red:hover {
+    background: var(--yandex-pay-gradient);
+
+    transition: background var(--transition-color);
+    transform: translateY(-1px);
+}
+
+.Button2.big-button_type_white {
+    font-weight: normal;
+
+    color: var(--color-common-black);
+    border: 1px solid var(--color-grey-light);
+    background-color: var(--color-common-white);
+}
+
+.Button2.big-button_type_white:hover {
+    background: #f0f0f0;
+
+    transition: background var(--transition-color);
+}
+
+.Button2.Button2_pressed {
+    transform: scale(0.98);
+}
+
+.Button2.big-button_disabled {
+    color: var(--color-text-tetriary);
+    background: var(--color-bg-primary);
+    box-shadow: none;
+}
+
+.Button2 .icon-left {
+    position: absolute;
+    left: var(--space-16);
+}
+
+.Button2 .icon-right {
+    position: absolute;
+    right: var(--space-16);
+}
+
+:--mobile {
+    .Button2 .icon-left {
+        @apply --mounted-hidden;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Button2.big-button_disabled .icon {
+        display: none;
+    }
+}

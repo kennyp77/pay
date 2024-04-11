@@ -1,0 +1,97 @@
+@import '../../styles/variables.scss';
+
+.Text {
+    display: block;
+
+    font-family: $font-family;
+}
+
+.Text_inline {
+    display: inline-block;
+}
+
+/* color */
+.Text_color_black {
+    color: $color-typo-black;
+}
+
+.Text_color_grey {
+    color: $color-typo-grey;
+}
+
+.Text_color_white {
+    color: $color-fill-white;
+}
+
+.Text_color_red {
+    color: $color-fill-red;
+}
+
+.Text_color_green {
+    color: $color-fill-green;
+}
+
+.Text_color_plus {
+    font-weight: 500;
+
+    background-image: linear-gradient(101.66deg, #505add 34.4%, #be40c0 66.11%, #fba82b 96.37%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+/* align */
+.Text_align_left {
+    text-align: left;
+}
+
+.Text_align_center {
+    text-align: center;
+}
+
+.Text_align_right {
+    text-align: right;
+}
+
+/* variant */
+.Text_variant_header-l {
+    @include typo-header-l;
+}
+
+.Text_variant_header-m {
+    @include typo-header-m;
+}
+
+.Text_variant_header-s {
+    @include typo-header-s;
+}
+
+.Text_variant_m {
+    @include typo-m;
+}
+
+.Text_variant_s {
+    @include typo-s;
+}
+
+.Text_variant_xs {
+    @include typo-xs;
+}
+
+/* weight */
+.Text_weight_bold {
+    font-weight: 500;
+}
+
+/* overflow */
+.Text_overflow_ellipsis {
+    display: block;
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.Text-TabularNums {
+    font-variant-numeric: tabular-nums;
+}

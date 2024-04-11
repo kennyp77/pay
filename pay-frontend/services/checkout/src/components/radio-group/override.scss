@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+#{$legoVariablesRoot} {
+    --radiobox-view-default-fill-color-checked-base: #{$color-fill-yellow};
+    --radiobox-view-default-fill-color-checked-hovered: #{$color-fill-yellow-dark};
+}
+
+.Radiobox_view_default {
+    label {
+        display: block;
+    }
+}

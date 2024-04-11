@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "code": 200,
+  "data": {
+    "integration_id": "[#faker:datatype:uuid]",
+    "for_testing": true,
+    "revision": 0,
+    "psp_external_id": "[#faker:datatype:uuid]",
+    "created": "[#faker:date:recent]",
+    "updated": "[#faker:date:recent]",
+    "merchant_id": "[#faker:datatype:uuid]",
+    "status": "string"
+  }
+}

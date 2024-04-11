@@ -1,0 +1,72 @@
+.MessageBox.MessageBox_variant_popup-default {
+  position: fixed;
+  left: 50%;
+  bottom: var(--offset-24);
+  width: auto;
+  border-radius: var(--radius-20);
+  box-shadow: var(--message-box-box-shadow);
+  transform: translateX(-50%);
+
+  .MessageBox-Content {
+    display: flex;
+    align-items: center;
+    padding: var(--offset-10) var(--offset-20);
+
+    .MessageBox-TextWrap {
+      margin-right: var(--offset-16);
+    }
+  }
+
+  .MessageBox-Backdrop {
+    border-radius: var(--radius-20);
+
+    &:before {
+      background-color: var(--bg-lightblack);
+    }
+  }
+
+  .MessageBox-TextRight {
+    margin-left: var(--offset-16);
+  }
+
+  .MessageBox-Text {
+    color: var(--color-white);
+    white-space: nowrap;
+  }
+
+  .MessageBox-Close {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: var(--size-16);
+    height: var(--size-16);
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: var(--offset-8);
+      content: '';
+      display: block;
+      width: var(--size-20);
+      height: 2px;
+      background: var(--bg-white);
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      left: auto;
+      bottom: auto;
+      display: block;
+      margin-bottom: 0;
+      padding: 0;
+      transform: rotate(-45deg);
+    }
+
+    svg {
+      display: none;
+    }
+  }
+}

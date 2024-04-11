@@ -1,0 +1,20 @@
+.Menu_variant_dropdown {
+  .Menu-Item.Menu-Item_type_option {
+    display: flex;
+    justify-content: space-between;
+
+    .Icon.Icon_glyph_type-check[class] {
+      order: 2;
+      margin-right: 0;
+      margin-left: var(--menu-size-m-titleSibling-indentLeft);
+    }
+
+    .Icon.Icon_glyph_type-check[class] + .Menu-Text {
+      order: 1;
+
+      > a {
+        color: inherit;
+      }
+    }
+  }
+}

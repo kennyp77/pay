@@ -1,0 +1,418 @@
+.Theme_color_mg-light {
+    --color-base: var(--color-mg-typo-primary); /* базовый цвет содержимого, от которого выстраиваются цвета текста, иконок, ... */
+    --color-essential: var(--color-mg-surface-primary); /* базовый цвет поверхностей */
+    --color-project: var(--color-mg-accent-brand); /* проектный цвет, от которого выстраивают акцентные состояния */
+    --color-phantom: var(--color-mg-typo-primary); /* тонирующий цвет, от которого выстраиваются бордеры, паранджа, ... */
+    --color-path: var(--color-mg-link-default-base); /* ссылочный цвет, от которого выстраиваются все их вариации */
+    --color-success: var(--color-mg-accent-success); /* цвет успеха, от которого выстраивается как статусный фон так и типографика */
+    --color-alert: var(--color-mg-accent-alert); /* цвет ошибки, от которого выстраивается как статусный фон так и типографика */
+    --color-warning: var(--color-mg-typo-primary); /* цвет предупреждения, от которого выстраивается как статусный фон так и типографика */
+    --color-normal: var(--color-mg-tint-light); /* нейтральный цвет, от которого выстраивается как статусный фон так и типографика */
+    --color-system: var(--color-mg-typo-secondary); /* системный цвет, от которого выстраивается как статусный фон так и типографика */
+    --color-promo: var(--color-mg-promo-fill);
+    --color-hover: var(--color-mg-link-default-hover);
+    --color-transparent: transparent;
+    --color-bg-brand: var(--color-mg-accent-brand);
+    --color-bg-inverse: var(--color-mg-inverse-fill);
+    --color-bg-action: var(--color-mg-accent-brand);
+    --color-bg-selection: #FFEDAF;
+    --color-bg-hover: var(--color-mg-tint-superlight);
+    --color-bg-border: var(--color-mg-stroke-default-base);
+    --color-bg-stripe: var(--color-mg-stroke-default-base);
+    --color-bg-ghost: var(--color-mg-tint-superlight);
+    --color-bg-default: var(--color-mg-surface-primary);
+    --color-bg-tone: var(--color-mg-typo-primary);
+    --color-bg-soft: var(--color-mg-surface-primary);
+    --color-bg-success: var(--color-mg-accent-success);
+    --color-bg-alert: var(--color-mg-accent-alert);
+    --color-bg-warning: var(--color-mg-typo-primary);
+    --color-bg-normal: var(--color-mg-tint-light);
+    --color-bg-system: var(--color-mg-typo-secondary);
+    --color-bg-link: var(--color-mg-link-default-base);
+    --color-bg-promo: var(--color-mg-promo-fill);
+    --color-typo-brand: var(--color-mg-accent-brand);
+    --color-typo-primary: var(--color-mg-typo-primary); /* цвет основного текста дефолтных контролов */
+    --color-typo-inverse: var(--color-mg-inverse-typo);
+    --color-typo-promo: var(--color-mg-promo-fill);
+    --color-typo-secondary: var(--color-mg-typo-secondary); /* цвет второстепенного текста контрола */
+    --color-typo-ghost: var(--color-mg-typo-secondary); /* цвет дополнительного текста контрола */
+    --color-typo-disable: var(--color-mg-control-disabled-typo-secondary); /* цвет основного текста неактивного контрола */
+    --color-typo-success: var(--color-mg-accent-success);
+    --color-typo-warning: var(--color-mg-typo-primary);
+    --color-typo-alert: var(--color-mg-accent-alert);
+    --color-link: var(--color-mg-link-default-base); /* цвет фона ссылки */
+    --color-link-external: var(--color-mg-link-default-base);
+    --color-link-minor: var(--color-mg-link-default-base);
+    --color-link-hover: var(--color-mg-link-default-hover); /* цвет фона ссылки по ховеру */
+    --color-control-bg-border-focus: var(--color-mg-control-focus-base); /* цвет фона бордеров контрола при фокусе */
+    --color-control-bg-border-prism: var(--color-mg-control-focus-base); /* цвет фона бордера офсетных выделений контрола */
+    --color-control-typo-primary: var(--color-mg-typo-primary);
+    --color-control-typo-secondary: var(--color-mg-typo-secondary);
+    --color-control-typo-ghost: var(--color-mg-typo-secondary);
+    --color-control-typo-passive: var(--color-mg-typo-primary);
+    --color-control-typo-faint: var(--color-mg-inverse-typo);
+    --color-control-typo-disable: var(--color-mg-control-disabled-typo-secondary);
+    --color-control-typo-link: var(--color-mg-link-default-base);
+    --color-control-typo-error: var(--color-mg-accent-alert);
+    --color-control-bg-default: var(--color-mg-button-secondary-fill-base); /* цвет фона контрола */
+    --color-control-bg-default-hover: var(--color-mg-button-secondary-fill-hover); /* цвет фона контрола по ховеру */
+    --color-control-bg-default-press: var(--color-mg-button-secondary-fill-hover); /* цвет фона контрола по нажатию */
+    --color-control-bg-default-disable: var(--color-mg-control-disabled-fill); /* цвет фона неактивного контрола */
+    --color-control-bg-border-default: var(--color-mg-stroke-default-base); /* цвет фона бордеров контрола */
+    --color-control-bg-border-default-hover: var(--color-mg-stroke-default-hover); /* цвет фона бордеров контрола по ховеру */
+    --color-control-bg-border-default-press: var(--color-mg-stroke-default-hover); /* цвет фона бордеров контрола по нажатию */
+    --color-control-bg-border-default-disable: var(--color-mg-control-disabled-stroke); /* цвет фона бордеров неактивного контрола */
+    --color-control-bg-border-default-error: var(--color-mg-accent-alert);
+    --color-control-bg-border-default-error-hover: var(--color-mg-accent-alert);
+    --color-control-bg-pseudo: var(--color-mg-control-outlined-fill); /* цвет фона псевдо контрола */
+    --color-control-bg-pseudo-hover: var(--color-mg-tint-superlight); /* цвет фона псевдо контрола по ховеру */
+    --color-control-bg-border-pseudo: var(--color-mg-stroke-default-base); /* цвет бордеров псевдо контрола */
+    --color-control-bg-action: var(--color-mg-button-primary-fill-base); /* цвет фона активного контрола */
+    --color-control-bg-action-hover: var(--color-mg-button-primary-fill-hover); /* цвет фона активного контрола по ховеру */
+    --color-control-bg-action-press: var(--color-mg-button-primary-fill-hover); /* цвет фон активного контролы по нажатию */
+    --color-control-bg-passive: var(--color-mg-control-outlined-fill); /* цвет фона пассивной части контрола */
+    --color-control-bg-progress: var(--color-mg-button-primary-fill-base); /* цвет фон активного контрола в прогрессе */
+    --color-control-bg-progress-process: var(--color-mg-button-primary-fill-hover); /* цвет фон активного контрола в прогрессе выполнения */
+    --color-control-bg-blank: var(--color-mg-control-outlined-fill); /* цвет фона пустого контрола */
+    --color-control-bg-blank-hover: var(--color-mg-control-outlined-fill); /* цвет фона пустого контрола по ховеру */
+    --color-control-bg-blank-disable: var(--color-mg-control-disabled-fill); /* цвет фона пустого неактивного контрола */
+    --color-control-bg-border-blank: var(--color-mg-stroke-default-base); /* цвет фона бордеров пустого контрола */
+    --color-control-bg-border-blank-hover: var(--color-mg-stroke-default-hover); /* цвет фона бордеров пустого контрола по ховеру */
+    --color-control-bg-border-blank-disable: var(--color-mg-control-disabled-stroke); /* цвет фона бордеров пустого неактивного контрола */
+    --color-control-bg-faint: var(--color-mg-control-outlined-fill); /* цвет фона ослабленной части контрола */
+    --color-control-bg-faint-disable: var(--color-mg-control-disabled-fill); /* цвет фона ослабленной части неактивного контрола */
+    --color-control-bg-check: var(--color-mg-button-primary-fill-base); /* цвет фона чекнутого контрола */
+    --color-control-bg-check-hover: var(--color-mg-button-primary-fill-hover); /* цвет фона чекнутого контрола по ховеру */
+    --color-control-bg-check-press: var(--color-mg-button-primary-fill-hover); /* цвет фона чекнутого контрола по нажатию */
+    --color-control-bg-check-disable: var(--color-mg-control-disabled-fill); /* цвет фона чекнутого неактивного контрола */
+    --color-control-bg-border-check: transparent; /* цвет фона бордеров чекнутого контрола */
+    --color-control-bg-border-check-hover: transparent; /* цвет фона бордеров чекнутого контрола по ховеру */
+    --color-control-bg-border-check-press: transparent; /* цвет фона бордеров чекнутого контрола при фокусе по нажатию */
+    --color-control-bg-link-default: var(--color-mg-control-outlined-fill);
+    --color-control-bg-link-default-hover: var(--color-mg-control-outlined-fill);
+    --color-control-bg-border-link-default: var(--color-mg-link-default-base);
+    --color-control-bg-border-link-default-hover: var(--color-mg-link-default-base);
+    --color-control-typo-raised: var(--color-mg-typo-primary);
+    --color-control-typo-raised-disable: var(--color-mg-control-disabled-typo-primary);
+    --color-control-bg-raised: var(--color-mg-control-outlined-fill);
+    --color-control-bg-raised-hover: var(--color-mg-tint-superlight);
+    --color-control-bg-raised-disable: var(--color-mg-control-disabled-fill);
+    --color-control-bg-raised-check: var(--color-mg-control-outlined-fill);
+    --color-mg-typo-primary: #262633;
+    --color-mg-typo-secondary: #85889e;
+    --color-mg-accent-brand: #FFDB4D;
+    --color-mg-accent-alert: #FF4D4D;
+    --color-mg-accent-success: #3BC46D;
+    --color-mg-tint-superlight: #F7F8FA;
+    --color-mg-tint-light: #F1F2F5;
+    --color-mg-tint-overlay: rgba(38, 38, 51, 0.5);
+    --color-mg-link-default-base: #4D8EFF;
+    --color-mg-link-default-hover: #FF4D4D;
+    --color-mg-stroke-default-base: rgba(180, 184, 204, 0.52);
+    --color-mg-stroke-default-hover: rgba(180, 184, 204, 0.65);
+    --color-mg-button-primary-fill-base: #FFDB4D;
+    --color-mg-button-primary-fill-hover: #FFD633;
+    --color-mg-button-primary-typo: #361600;
+    --color-mg-button-secondary-fill-base: rgba(180, 184, 204, 0.26);
+    --color-mg-button-secondary-fill-hover: rgba(180, 184, 204, 0.32);
+    --color-mg-button-secondary-typo: #262633;
+    --color-mg-surface-primary: #FFFFFF;
+    --color-mg-surface-submerged: #E5EAF1;
+    --color-mg-surface-elevated-lvl-1: #FFFFFF;
+    --color-mg-surface-elevated-lvl-2: #FFFFFF;
+    --color-mg-surface-elevated-lvl-3: #FFFFFF;
+    --color-mg-spectre-red: #FF4D4D;
+    --color-mg-spectre-yellow: #FFDB4D;
+    --color-mg-spectre-green: #3BC46D;
+    --color-mg-spectre-blue: #4D8EFF;
+    --color-mg-spectre-purple: #A466FF;
+    --color-mg-control-checked-fill-base: rgba(180, 184, 204, 0.52);
+    --color-mg-control-checked-fill-hover: rgba(180, 184, 204, 0.64);
+    --color-mg-control-placeholder: #b3b8cc;
+    --color-mg-control-disabled-typo-primary: #c9cddb;
+    --color-mg-control-disabled-typo-secondary: #c9cddb;
+    --color-mg-control-disabled-stroke: #E6E9F0;
+    --color-mg-control-disabled-fill: rgba(180, 184, 204, 0.18);
+    --color-mg-control-focus-base: var(--color-mg-button-primary-fill-base);
+    --color-mg-control-outlined-fill: var(--color-mg-surface-primary);
+    --color-mg-promo-fill: #4D8EFF;
+    --color-mg-inverse-fill: #272733;
+    --color-mg-inverse-typo: #FFFFFF;
+    --attach-typo-color: var(--color-mg-typo-primary);
+    --badge-border-color: var(--color-bg-default);
+    --badge-fill-color: var(--color-bg-alert);
+    --badge-typo-color: var(--color-typo-inverse);
+    --button-view-action-border-color-focused: var(--color-mg-control-focus-base);
+    --button-view-action-fill-color-base: var(--color-mg-button-primary-fill-base);
+    --button-view-action-fill-color-disabled: var(--color-mg-control-disabled-fill);
+    --button-view-action-fill-color-hovered: var(--color-mg-button-primary-fill-hover);
+    --button-view-action-fill-color-progress-base: var(--color-mg-button-primary-fill-base);
+    --button-view-action-fill-color-progress-process: var(--color-mg-button-primary-fill-hover);
+    --button-view-action-fill-color-checked-base: var(--color-mg-control-checked-fill-base);
+    --button-view-action-fill-color-checked-hovered: var(--color-mg-control-checked-fill-hover);
+    --button-view-action-typo-color-base: var(--color-mg-button-primary-typo);
+    --button-view-action-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --button-view-action-typo-color-hovered: var(--color-mg-button-primary-typo);
+    --button-view-action-typo-color-progress-base: var(--color-mg-button-primary-typo);
+    --button-view-action-typo-color-checked-base: var(--color-mg-button-secondary-typo);
+    --button-view-action-typo-color-checked-hovered: var(--color-mg-button-secondary-typo);
+    --button-view-clear-border-color-focused: var(--color-mg-control-focus-base);
+    --button-view-clear-fill-color-disabled: transparent;
+    --button-view-clear-fill-color-checked-base: var(--color-mg-control-checked-fill-base);
+    --button-view-clear-fill-color-checked-hovered: var(--color-mg-control-checked-fill-hover);
+    --button-view-clear-typo-color-base: var(--color-mg-typo-primary);
+    --button-view-clear-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --button-view-clear-typo-color-checked-base: var(--color-mg-button-secondary-typo);
+    --button-view-default-border-color-focused: var(--color-mg-control-focus-base);
+    --button-view-default-fill-color-base: var(--color-mg-button-secondary-fill-base);
+    --button-view-default-fill-color-disabled: var(--color-mg-control-disabled-fill);
+    --button-view-default-fill-color-hovered: var(--color-mg-button-secondary-fill-hover);
+    --button-view-default-fill-color-checked-base: var(--color-mg-control-checked-fill-base);
+    --button-view-default-fill-color-checked-hovered: var(--color-mg-control-checked-fill-hover);
+    --button-view-default-typo-color-base: var(--color-mg-button-secondary-typo);
+    --button-view-default-typo-color-hovered: var(--color-mg-button-secondary-typo);
+    --button-view-default-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --button-view-default-typo-color-checked-base: var(--color-mg-button-secondary-typo);
+    --button-view-default-typo-color-checked-hovered: var(--color-mg-button-secondary-typo);
+    --button-view-link-border-color-base: transparent;
+    --button-view-link-border-color-focused: var(--color-mg-control-focus-base);
+    --button-view-link-fill-color-base: rgba(255, 255, 255, 0.15);
+    --button-view-link-fill-color-disabled: rgba(255, 255, 255, 0.07);
+    --button-view-link-fill-color-hovered: rgba(255, 255, 255, 0.12);
+    --button-view-link-fill-color-checked-base: var(--color-mg-inverse-typo);
+    --button-view-link-fill-color-checked-hovered: rgba(255, 255, 255, 0.9);
+    --button-view-link-typo-color-base: rgba(255, 255, 255, 0.9);
+    --button-view-link-typo-color-disabled: rgba(255, 255, 255, 0.3);
+    --button-view-link-typo-color-checked-base: var(--color-mg-inverse-fill);
+    --button-view-pseudo-border-color-base: var(--color-mg-stroke-default-base);
+    --button-view-pseudo-border-color-focused: var(--color-mg-control-focus-base);
+    --button-view-pseudo-fill-color-disabled: var(--color-mg-control-disabled-fill);
+    --button-view-pseudo-fill-color-hovered: var(--color-mg-tint-superlight);
+    --button-view-pseudo-fill-color-checked-base: var(--color-mg-control-checked-fill-base);
+    --button-view-pseudo-fill-color-checked-hovered: var(--color-mg-control-checked-fill-hover);
+    --button-view-pseudo-typo-color-base: var(--color-mg-typo-primary);
+    --button-view-pseudo-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --button-view-pseudo-typo-color-checked-base: var(--color-mg-button-secondary-typo);
+    --button-view-raised-border-color-focused: var(--color-mg-control-focus-base);
+    --button-view-raised-fill-color-base: var(--color-mg-surface-elevated-lvl-1);
+    --button-view-raised-fill-color-disabled: var(--color-mg-control-disabled-fill);
+    --button-view-raised-fill-color-hovered: var(--color-mg-tint-superlight);
+    --button-view-raised-fill-color-checked-base: var(--color-mg-control-checked-fill-base);
+    --button-view-raised-fill-color-checked-hovered: var(--color-mg-control-checked-fill-hover);
+    --button-view-raised-typo-color-base: var(--color-mg-typo-primary);
+    --button-view-raised-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --button-view-raised-typo-color-checked-base: var(--color-mg-button-secondary-typo);
+    --checkbox-view-outline-border-color: var(--color-mg-stroke-default-base);
+    --checkbox-view-outline-fill-color-base: var(--color-mg-surface-primary);
+    --checkbox-view-outline-fill-color-hovered: var(--color-mg-surface-primary);
+    --checkbox-view-default-outline-color: var(--color-mg-button-primary-fill-base);
+    --checkbox-view-default-fill-color-base: var(--color-mg-button-secondary-fill-base);
+    --checkbox-view-default-fill-color-hovered: var(--color-mg-button-secondary-fill-hover);
+    --checkbox-view-default-fill-color-checked-base: var(--color-mg-button-primary-fill-base);
+    --checkbox-view-default-fill-color-checked-hovered: var(--color-mg-button-primary-fill-hover);
+    --checkbox-view-default-typo-color-base: var(--color-mg-typo-primary);
+    --checkbox-view-default-typo-color-checked-base: var(--color-mg-button-primary-typo);
+    --divider-fill-color: var(--color-mg-stroke-default-base);
+    --header-fill-color: #fff; /* Фон шапки */
+    --header-nav-link-color-base: #939cb0; /* Основной цвет текста навигационного таба */
+    --header-nav-link-color-hover: #222426; /* Цвет текста навигационного таба при наведении мыши */
+    --header-nav-link-color-active: #d00; /* Цвет текста навигационного таба при нажатии */
+    --header-search-fill-color-base: #ffdb4d; /* Основной цвет заливки и границ Textinput_view_search-arrow и Button_view_search-arrow */
+    --header-search-fill-color-hover: #ffd633; /* Цвет заливки и границ Textinput_view_search-arrow и Button_view_search-arrow при наведении мыши */
+    --header-search-fill-color-active: #fc0; /* Цвет заливки и границ Textinput_view_search-arrow и Button_view_search-arrow при нажатии */
+    --header-search-button-typo-color: #000; /* Цвет текста Button_view_search-arrow */
+    --header-search-textinput-typo-color: #000; /* Цвет текста Button_view_search-arrow */
+    --header-search-textinput-fill-color: #fff; /* Цвет заливки Textinput_view_search-arrow Texinput-Box */
+    --link-view-default-outline-color: var(--color-mg-control-focus-base);
+    --link-view-default-typo-color-base: var(--color-mg-link-default-base);
+    --link-view-default-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --link-view-default-typo-color-hovered: var(--color-mg-link-default-hover);
+    --menu-view-default-border-color-base: var(--color-mg-stroke-default-base);
+    --menu-view-default-fill-color-base: var(--color-mg-surface-elevated-lvl-3);
+    --menu-view-default-fill-color-hovered: var(--color-mg-tint-superlight);
+    --menu-view-default-typo-color-base: var(--color-mg-typo-primary);
+    --menu-view-default-typo-color-secondary: var(--color-mg-typo-secondary);
+    --menu-view-default-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --menu-view-default-typo-color-hovered: var(--color-mg-typo-primary);
+    --message-box-view-default-typo-color: var(--color-mg-inverse-typo);
+    --message-box-view-default-fill-color: var(--color-mg-inverse-fill);
+    --message-box-view-promo-typo-color: var(--color-mg-inverse-typo);
+    --message-box-view-promo-fill-color: var(--color-mg-promo-fill);
+    --message-box-view-inverse-typo-color: var(--color-mg-typo-primary);
+    --message-box-view-inverse-fill-color: var(--color-mg-surface-elevated-lvl-3);
+    --popup-view-default-typo-color: var(--color-mg-typo-primary);
+    --popup-view-default-fill-color: var(--color-mg-surface-elevated-lvl-3);
+    --progress-outer-fill-color: transparent;
+    --progress-inner-fill-color: var(--color-mg-button-primary-fill-base);
+    --radio-button-view-default-outline-color: var(--color-mg-control-focus-base);
+    --radio-button-view-default-fill-color-base: var(--color-mg-button-secondary-fill-base);
+    --radio-button-view-default-fill-color-checked-base: var(--color-mg-surface-primary);
+    --radio-button-view-default-typo-color-base: var(--color-mg-typo-secondary);
+    --radio-button-view-default-typo-color-hovered: var(--color-mg-button-secondary-typo);
+    --radio-button-view-default-typo-color-checked-base: var(--color-mg-button-secondary-typo);
+    --radiobox-view-default-dot-fill-color: var(--color-mg-inverse-typo);
+    --radiobox-view-default-outline-color: var(--color-mg-control-focus-base);
+    --radiobox-view-default-fill-color-base: var(--color-mg-button-secondary-fill-base);
+    --radiobox-view-default-fill-color-hovered: var(--color-mg-button-secondary-fill-hover);
+    --radiobox-view-default-fill-color-checked-base: var(--color-mg-button-primary-fill-base);
+    --radiobox-view-default-fill-color-checked-hovered: var(--color-mg-button-primary-fill-hover);
+    --radiobox-view-default-typo-color-base: var(--color-mg-typo-primary);
+    --radiobox-view-outline-border-color: var(--color-mg-stroke-default-base);
+    --radiobox-view-outline-fill-color-base: transparent;
+    --radiobox-view-outline-fill-color-hovered: var(--color-mg-stroke-default-hover);
+    --slider-view-default-typo-color-base: var(--color-mg-typo-primary); /* Цвет типографики внутри слайдера */
+    --slider-view-default-track-fill-color-base: var(--color-mg-button-secondary-fill-base); /* Цвет заливки трека в обычном состоянии */
+    --slider-view-default-track-fill-color-hovered: var(--color-mg-button-secondary-fill-hover); /* Цвет заливки трека в состоянии наведения */
+    --slider-view-default-range-fill-color-base: var(--color-mg-button-primary-fill-base); /* Цвет заливки диапазона в обычном состоянии */
+    --slider-view-default-range-fill-color-hovered: var(--color-mg-button-primary-fill-hover); /* Цвет заливки диапазона в состоянии наведения */
+    --slider-view-default-range-fill-color-disabled: var(--color-mg-control-disabled-fill); /* Цвет заливки диапазона в неактивном состоянии */
+    --slider-view-default-thumb-fill-color-base: var(--color-mg-surface-elevated-lvl-1); /* Цвет заливки бегунка в обычном состоянии */
+    --slider-view-default-thumb-fill-color-disabled: var(--color-mg-control-disabled-fill); /* Цвет заливки бегунка в неактивном состоянии */
+    --slider-view-default-tick-fill-color-base: var(--color-mg-surface-primary); /* Цвет заливки метки в обычном состоянии */
+    --spin-view-default-border-color: var(--color-mg-button-primary-fill-base);
+    --tabs-menu-view-default-outline-color: var(--color-mg-button-primary-fill-base);
+    --tabs-menu-view-default-active-line-fill-color-active: var(--color-mg-button-primary-fill-base);
+    --tabs-menu-view-default-typo-color-base: var(--color-mg-typo-primary);
+    --textarea-view-default-fill-color-base: var(--color-mg-control-outlined-fill);
+    --textarea-view-default-fill-color-disabled: var(--color-mg-control-disabled-fill);
+    --textarea-view-default-fill-color-hovered: var(--color-mg-control-outlined-fill);
+    --textarea-view-default-typo-color-base: var(--color-mg-typo-primary);
+    --textarea-view-default-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --textarea-view-default-placeholder-typo-color-base: var(--color-mg-typo-secondary);
+    --textarea-view-default-placeholder-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --textarea-view-default-icon-fill-color-base: var(--color-mg-typo-secondary);
+    --textarea-view-default-clear-fill-color-base: var(--color-mg-typo-secondary);
+    --textarea-view-default-clear-fill-color-hovered: var(--color-mg-typo-primary);
+    --textarea-view-default-hint-typo-color-state-error-base: var(--color-mg-accent-alert);
+    --textarea-view-default-border-color-base: var(--color-mg-stroke-default-base);
+    --textarea-view-default-border-color-disabled: transparent;
+    --textarea-view-default-border-color-focused: var(--color-mg-control-focus-base);
+    --textarea-view-default-border-color-hovered: var(--color-mg-stroke-default-hover);
+    --textarea-view-default-border-color-state-error-base: var(--color-mg-accent-alert);
+    --textarea-view-default-border-color-state-error-hovered: var(--color-mg-accent-alert);
+    --textinput-view-material-typo-color-base: var(--color-mg-typo-primary);
+    --textinput-view-material-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --textinput-view-material-border-color-base: var(--color-mg-stroke-default-base);
+    --textinput-view-material-border-color-state-error: #FF3737;
+    --textinput-view-material-icon-fill-color-base: var(--color-mg-typo-secondary);
+    --textinput-view-material-icon-fill-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --textinput-view-material-hint-typo-color-base: var(--color-mg-typo-secondary);
+    --textinput-view-material-hint-typo-color-state-error: #FF3737;
+    --textinput-view-material-caret-color-base: var(--color-mg-typo-primary);
+    --textinput-view-material-caret-color-state-error: var(--color-mg-typo-primary);
+    --textinput-view-material-placeholder-typo-color-base: var(--color-mg-control-placeholder);
+    --textinput-view-material-label-color-base: var(--color-mg-typo-secondary);
+    --textinput-view-material-label-color-state-error: #FF3737;
+    --textinput-view-material-label-color-floated-base: var(--color-mg-typo-secondary);
+    --textinput-view-material-variant-filled-border-color-focused: var(--color-mg-control-focus-base);
+    --textinput-view-material-variant-filled-fill-color: var(--color-mg-button-secondary-fill-base);
+    --textinput-view-material-variant-filled-label-color-floated: var(--color-mg-typo-secondary);
+    --textinput-view-material-variant-outlined-border-color-base: var(--color-mg-stroke-default-base);
+    --textinput-view-material-variant-outlined-border-color-focused: var(--color-mg-control-focus-base);
+    --textinput-view-material-variant-outlined-label-color-floated: var(--color-mg-typo-secondary);
+    --textinput-view-default-fill-color-base: var(--color-mg-control-outlined-fill);
+    --textinput-view-default-fill-color-disabled: var(--color-mg-control-disabled-fill);
+    --textinput-view-default-fill-color-hovered: var(--color-mg-control-outlined-fill);
+    --textinput-view-default-typo-color-base: var(--color-mg-typo-primary);
+    --textinput-view-default-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --textinput-view-default-placeholder-typo-color-base: var(--color-mg-typo-secondary);
+    --textinput-view-default-placeholder-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --textinput-view-default-icon-fill-color-base: var(--color-mg-typo-secondary);
+    --textinput-view-default-clear-fill-color-base: var(--color-mg-typo-secondary);
+    --textinput-view-default-clear-fill-color-hovered: var(--color-mg-typo-primary);
+    --textinput-view-default-hint-typo-color-state-error-base: var(--color-mg-accent-alert);
+    --textinput-view-default-border-color-base: var(--color-mg-stroke-default-base);
+    --textinput-view-default-border-color-disabled: transparent;
+    --textinput-view-default-border-color-focused: var(--color-mg-control-focus-base);
+    --textinput-view-default-border-color-hovered: var(--color-mg-stroke-default-hover);
+    --textinput-view-default-border-color-state-error-base: var(--color-mg-accent-alert);
+    --textinput-view-default-border-color-state-error-hovered: var(--color-mg-accent-alert);
+    --tooltip-view-default-fill-color-base: var(--color-mg-surface-elevated-lvl-3);
+    --tooltip-view-default-fill-color-state-success: var(--color-mg-accent-success);
+    --tooltip-view-default-fill-color-state-warning: var(--color-mg-inverse-fill);
+    --tooltip-view-default-fill-color-state-alert: var(--color-mg-accent-alert);
+    --tooltip-view-default-typo-color-state-success: var(--color-mg-inverse-typo);
+    --tooltip-view-default-typo-color-state-warning: var(--color-mg-inverse-typo);
+    --tooltip-view-default-typo-color-state-alert: var(--color-mg-inverse-typo);
+    --tumbler-view-default-outline-color: var(--color-mg-control-focus-base);
+    --tumbler-view-default-fill-color-base: var(--color-mg-button-secondary-fill-base);
+    --tumbler-view-default-fill-color-disabled: var(--color-mg-control-disabled-fill);
+    --tumbler-view-default-fill-color-hovered: var(--color-mg-button-secondary-fill-hover);
+    --tumbler-view-default-fill-color-checked-base: var(--color-mg-button-primary-fill-base);
+    --tumbler-view-default-fill-color-checked-disabled: var(--color-mg-control-disabled-fill);
+    --tumbler-view-default-fill-color-checked-hovered: var(--color-mg-button-primary-fill-hover);
+    --tumbler-view-default-button-fill-color-base: var(--color-mg-surface-primary);
+    --tumbler-view-default-typo-color-base: var(--color-mg-typo-primary);
+    --tumbler-view-default-typo-color-disabled: var(--color-mg-control-disabled-typo-secondary);
+    --calendar-view-default-fill-color: #fff;
+    --calendar-view-default-header-fill-color: transparent;
+    --calendar-view-default-aside-typo-color-base: rgba(0, 0, 0, 0.6);
+    --calendar-view-default-aside-fill-color-base: rgba(0, 0, 0, 0.05);
+    --calendar-view-default-weekday-typo-color-base: #000000;
+    --calendar-view-default-weekend-typo-color-base: #ff3029;
+    --calendar-view-default-cell-border-color-hovered: rgba(0, 0, 0, 0.1);
+    --calendar-view-default-cell-border-color-focused: #e69900;
+    --calendar-view-default-cell-border-color-today: rgba(0, 0, 0, 0.05);
+    --calendar-view-default-cell-underline-color-today: #ff3737;
+    --calendar-view-default-cell-typo-color-base: rgba(0, 0, 0, 0.8);
+    --calendar-view-default-cell-typo-color-disabled: rgba(0, 0, 0, 0.45);
+    --calendar-view-default-cell-typo-color-selected-base: #fff;
+    --calendar-view-default-cell-typo-color-weekend: #ff3737;
+    --calendar-view-default-cell-fill-color-hovered: #f2f2f2;
+    --calendar-view-default-cell-fill-color-pressed: #e5e5e5;
+    --calendar-view-default-cell-fill-color-range-selected-base: #f2f2f2;
+    --calendar-view-default-cell-fill-color-range-selected-hovered: #e6e6e6;
+    --calendar-view-default-cell-fill-color-range-selected-pressed: #d9d9d9;
+    --calendar-view-default-cell-fill-color-selected-base: #ff3333;
+    --calendar-view-default-cell-fill-color-selected-hovered: #ff0000;
+    --calendar-view-default-cell-fill-color-selected-pressed: #f20008;
+    --calendar-view-default-cell-fill-color-selected-disabled: #f7f8fA;
+    --calendar-view-default-nav-action-typo-color-base: rgba(0, 0, 0, 0.65);
+    --calendar-view-default-nav-action-typo-color-hovered: rgba(0, 0, 0, 1);
+    --calendar-view-default-nav-action-typo-color-disabled: #808080;
+    --calendar-view-default-nav-title-button-typo-color-base: #000;
+    --calendar-view-default-nav-title-button-typo-color-hovered: rgba(0, 0, 0, 0.65);
+    --calendar-view-brand-fill-color: #fff;
+    --calendar-view-brand-header-fill-color: #1a1a1a;
+    --calendar-view-brand-aside-typo-color-base: rgba(0, 0, 0, 0.6);
+    --calendar-view-brand-aside-fill-color-base: rgba(0, 0, 0, 0.05);
+    --calendar-view-brand-weekday-typo-color-base: #fff;
+    --calendar-view-brand-weekend-typo-color-base: rgba(255, 255, 255, 0.75);
+    --calendar-view-brand-cell-border-color-hovered: rgba(0, 0, 0, 0.1);
+    --calendar-view-brand-cell-border-color-focused: #fdb100;
+    --calendar-view-brand-cell-border-color-today: rgba(0, 0, 0, 0.05);
+    --calendar-view-brand-cell-underline-color-today: #ff3737;
+    --calendar-view-brand-cell-typo-color-base: rgba(0, 0, 0, 0.8);
+    --calendar-view-brand-cell-typo-color-disabled: rgba(0, 0, 0, 0.45);
+    --calendar-view-brand-cell-typo-color-selected-base: #fff;
+    --calendar-view-brand-cell-typo-color-weekend: #ff3737;
+    --calendar-view-brand-cell-fill-color-hovered: #f2f2f2;
+    --calendar-view-brand-cell-fill-color-pressed: #e5e5e5;
+    --calendar-view-brand-cell-fill-color-range-selected-base: #f2f2f2;
+    --calendar-view-brand-cell-fill-color-range-selected-hovered: #e6e6e6;
+    --calendar-view-brand-cell-fill-color-range-selected-pressed: #d9d9d9;
+    --calendar-view-brand-cell-fill-color-selected-base: #ff3333;
+    --calendar-view-brand-cell-fill-color-selected-hovered: #ff0000;
+    --calendar-view-brand-cell-fill-color-selected-pressed: #f20008;
+    --calendar-view-brand-cell-fill-color-selected-disabled: #f7f8fA;
+    --calendar-view-brand-nav-action-typo-color-base: rgba(255, 255, 255, 0.65);
+    --calendar-view-brand-nav-action-typo-color-hovered: rgba(255, 255, 255, 1);
+    --calendar-view-brand-nav-action-typo-color-disabled: rgba(255, 255, 255, 0.4);
+    --calendar-view-brand-nav-title-button-typo-color-base: #fff;
+    --calendar-view-brand-nav-title-button-typo-color-hovered: rgba(255, 255, 255, 0.65);
+    --datetimefield-view-default-fill-color-base: var(--color-control-bg-blank);
+    --datetimefield-view-default-fill-color-disabled: var(--color-control-bg-blank-disable);
+    --datetimefield-view-default-fill-color-hovered: var(--color-control-bg-blank-hover);
+    --datetimefield-view-default-border-color-base: var(--color-control-bg-border-blank);
+    --datetimefield-view-default-border-color-disabled: var(--color-control-bg-border-blank-disable);
+    --datetimefield-view-default-border-color-focused: var(--color-control-bg-border-focus);
+    --datetimefield-view-default-border-color-hovered: var(--color-control-bg-border-blank-hover);
+    --datetimefield-view-default-segment-fill-color-focused: #b4d5fe;
+    --datetimefield-view-default-segment-typo-color-base: var(--color-control-typo-primary);
+    --datetimefield-view-default-segment-typo-color-disabled: var(--color-control-typo-disable);
+    --datetimefield-view-default-segment-typo-color-invalid: var(--color-control-typo-error);
+    --datetimefield-view-default-placeholder-typo-color-base: var(--color-control-typo-ghost);
+    --datetimefield-view-default-placeholder-typo-color-disabled: var(--color-control-typo-disable);
+    --fbadge-border-color: var(--color-mg-surface-primary);
+    --fbadge-fill-color: var(--color-mg-accent-alert);
+}

@@ -1,0 +1,13 @@
+.Flex {
+  display: flex;
+  flex: 1 1 100%;
+  box-sizing: border-box;
+
+  &_direction_column {
+    flex-direction: column;
+  }
+
+  &_direction_row {
+    flex-direction: row;
+  }
+}

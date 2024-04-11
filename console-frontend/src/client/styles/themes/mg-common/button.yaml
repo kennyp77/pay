@@ -1,0 +1,240 @@
+button:
+  border:
+    radius:
+      value: "{radius.mg.s.base.value}"
+  size:
+    s:
+      fontSize:
+        value: "{typography.controls.size.s.fontSize.value}"
+      icon:
+        indentLeft:
+          value: 30px
+        indentRight:
+          value: 30px
+      text:
+        indentAll:
+          value: 0 12px
+    m:
+      fontSize:
+        value: "{typography.controls.size.m.fontSize.value}"
+      icon:
+        width:
+          value: 36px
+        indentLeft:
+          value: 32px
+        indentRight:
+          value: 32px
+      text:
+        indentAll:
+          value: 0 16px
+    l:
+      fontSize:
+        value: "{typography.controls.size.l.fontSize.value}"
+      lineHeight:
+        value: 44px
+      height:
+        value: 44px
+      icon:
+        width:
+          value: 44px
+        indentLeft:
+          value: 40px
+        indentRight:
+          value: 40px
+      text:
+        indentAll:
+          value: 0 20px
+    xl:
+      fontSize:
+        value: "{typography.controls.size.xl.fontSize.value}"
+      lineHeight:
+        value: 48px
+      height:
+        value: 48px
+      icon:
+        width:
+          value: 48px
+        indentLeft:
+          value: 44px
+        indentRight:
+          value: 44px
+      text:
+        indentAll:
+          value: 0 20px
+    xxl:
+      fontSize:
+        value: "{typography.controls.size.xxl.fontSize.value}"
+      lineHeight:
+        value: 56px
+      height:
+        value: 56px
+      icon:
+        width:
+          value: 56px
+        indentLeft:
+          value: 48px
+        indentRight:
+          value: 48px
+      text:
+        indentAll:
+          value: 0 24px
+  fontFamily:
+    value: "'YS Text Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  viewAction:
+    borderColor:
+      focused:
+        value: "{color.mg.control.focus.base.value}"
+    fillColor:
+      base:
+        value: "{color.mg.button.primary.fill.base.value}"
+      disabled:
+        value: "{color.mg.control.disabled.fill.value}"
+      hovered:
+        value: "{color.mg.button.primary.fill.hover.value}"
+      progress:
+        base:
+          value: "{color.mg.button.primary.fill.base.value}"
+        process:
+          value: "{color.mg.button.primary.fill.hover.value}"
+      checked:
+        base:
+          value: "{color.mg.control.checked.fill.base.value}"
+        hovered:
+          value: "{color.mg.control.checked.fill.hover.value}"
+    typoColor:
+      base:
+        value: "{color.mg.button.primary.typo.value}"
+      hovered:
+        value: "{color.mg.button.primary.typo.value}"
+      progress:
+        base:
+          value: "{color.mg.button.primary.typo.value}"
+      checked:
+        base:
+          value: "{color.mg.button.secondary.typo.value}"
+        hovered:
+          value: "{color.mg.button.secondary.typo.value}"
+      disabled:
+        value: "{color.mg.control.disabled.typo.secondary.value}"
+  viewClear:
+    borderColor:
+      focused:
+        value: "{color.mg.control.focus.base.value}"
+    fillColor:
+      disabled:
+        value: transparent
+      checked:
+        base:
+          value: "{color.mg.control.checked.fill.base.value}"
+        hovered:
+          value: "{color.mg.control.checked.fill.hover.value}"
+    typoColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+      checked:
+        base:
+          value: "{color.mg.button.secondary.typo.value}"
+      disabled:
+        value: "{color.mg.control.disabled.typo.secondary.value}"
+  viewDefault:
+    borderColor:
+      focused:
+        value: "{color.mg.control.focus.base.value}"
+    fillColor:
+      base:
+        value: "{color.mg.button.secondary.fill.base.value}"
+      disabled:
+        value: "{color.mg.control.disabled.fill.value}"
+      checked:
+        base:
+          value: "{color.mg.control.checked.fill.base.value}"
+        hovered:
+          value: "{color.mg.control.checked.fill.hover.value}"
+      hovered:
+        value: "{color.mg.button.secondary.fill.hover.value}"
+    typoColor:
+      base:
+        value: "{color.mg.button.secondary.typo.value}"
+      hovered:
+        value: "{color.mg.button.secondary.typo.value}"
+      disabled:
+        value: "{color.mg.control.disabled.typo.secondary.value}"
+      checked:
+        base:
+          value: "{color.mg.button.secondary.typo.value}"
+        hovered:
+          value: "{color.mg.button.secondary.typo.value}"
+  viewLink:
+    borderColor:
+      base:
+        value: transparent
+      focused:
+        value: "{color.mg.control.focus.base.value}"
+    fillColor:
+      base:
+        value: rgba(255, 255, 255, 0.15)
+      disabled:
+        value: rgba(255, 255, 255, 0.07)
+      hovered:
+        value: rgba(255, 255, 255, 0.12)
+      checked:
+        base:
+          value: "{color.mg.inverse.typo.value}"
+        hovered:
+          value: "color({color.mg.inverse.typo.value} a(90%))"
+    typoColor:
+      base:
+        value: rgba(255, 255, 255, 0.9)
+      disabled:
+        value: rgba(255, 255, 255, 0.3)
+      checked:
+        base:
+          value: "{color.mg.inverse.fill.value}"
+  viewPseudo:
+    borderColor:
+      base:
+        value: "{color.mg.stroke.default.base.value}"
+      focused:
+        value: "{color.mg.control.focus.base.value}"
+    fillColor:
+      disabled:
+        value: "{color.mg.control.disabled.fill.value}"
+      hovered:
+        value: "{color.mg.tint.superlight.value}"
+      checked:
+        base:
+          value: "{color.mg.control.checked.fill.base.value}"
+        hovered:
+          value: "{color.mg.control.checked.fill.hover.value}"
+    typoColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+      disabled:
+        value: "{color.mg.control.disabled.typo.secondary.value}"
+      checked:
+        base:
+          value: "{color.mg.button.secondary.typo.value}"
+  viewRaised:
+    borderColor:
+      focused:
+        value: "{color.mg.control.focus.base.value}"
+    fillColor:
+      base:
+        value: "{color.mg.surface.elevated.lvl1.value}"
+      disabled:
+        value: "{color.mg.control.disabled.fill.value}"
+      hovered:
+        value: "{color.mg.tint.superlight.value}"
+      checked:
+        base:
+          value: "{color.mg.control.checked.fill.base.value}"
+        hovered:
+          value: "{color.mg.control.checked.fill.hover.value}"
+    typoColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+      disabled:
+        value: "{color.mg.control.disabled.typo.secondary.value}"
+      checked:
+        base:
+          value: "{color.mg.button.secondary.typo.value}"

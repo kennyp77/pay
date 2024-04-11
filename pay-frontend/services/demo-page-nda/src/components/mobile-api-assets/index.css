@@ -1,0 +1,43 @@
+.mobile-api-assets {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mobile-api-assets__list {
+    display: block;
+
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-api-assets__item {
+    display: block;
+
+    margin: 0 0 20px;
+    padding: 0;
+
+    text-align: center;
+}
+
+.mobile-api-assets__item-title {
+    display: block;
+
+    margin: 0 0 5px 10px;
+}
+
+.mobile-api-assets__item-icon {
+    max-width: 300px;
+
+    border: 1px solid;
+}
+
+.mobile-api-assets__json {
+    display: block;
+    overflow: auto;
+
+    margin: 0 0 20px;
+
+    font-size: 13px;
+    white-space: pre;
+}

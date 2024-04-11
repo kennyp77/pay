@@ -1,0 +1,12 @@
+.AlertModal {
+  &-Inner {
+    width: min(90vw, var(--modal-alert-width));
+    height: min(90vh, var(--modal-alert-height));
+    overflow: hidden;
+  }
+
+  &-Footer {
+    width: 100%;
+    margin-top: auto;
+  }
+}

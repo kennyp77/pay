@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+PACKAGEVERSION := $(shell dpkg-parsechangelog | sed -nE 's/^Version: (.*)/\1/p')
+BUILD_CMD := /usr/local/go/bin/go build -v -trimpath -ldflags=-buildid=v$(PACKAGEVERSION)
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+override_dh_auto_test:
+	/usr/local/go/bin/go test ./...
+
+override_dh_auto_build:
+override_dh_auto_install:
+	$(BUILD_CMD) ./cmd/duckgo
+	$(BUILD_CMD) ./cmd/sign-recipient-key
+
+override_dh_gencontrol:
+	dh_gencontrol -- -v$(PACKAGEVERSION)
+
+override_dh_strip:
+	# disable strip

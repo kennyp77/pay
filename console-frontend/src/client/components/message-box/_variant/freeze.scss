@@ -1,0 +1,13 @@
+.MessageBox.MessageBox_variant_freeze {
+  .MessageBox-Backdrop:before {
+    background-color: var(--message-box-bg-freeze);
+  }
+
+  .MessageBox-TextLeft {
+    margin-right: var(--offset-12);
+
+    .Icon {
+      width: var(--size-20);
+    }
+  }
+}

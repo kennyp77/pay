@@ -1,0 +1,8 @@
+dev-proxy: node _config/dev-server/proxy
+console: cd services/console && npm start
+console-registration: cd services/console-registration && npm start
+demo-page: cd services/demo-page && npm start
+demo-page-nda: cd services/demo-page-nda && npm start
+mobile-api-assets: cd services/mobile-api-assets && npm start
+server-tvmtool: cd server && npm run start-tvmtool
+server: cd server && npm start

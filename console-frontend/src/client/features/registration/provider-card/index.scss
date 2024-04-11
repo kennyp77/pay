@@ -1,0 +1,55 @@
+@import 'styles/mixins.scss';
+
+.ProviderCard {
+  @include transition;
+
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: var(--provider-card-height);
+  border: 1px solid var(--color-border-outlined);
+  background-color: var(--color-white);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-mg-tint-superlight);
+  }
+
+  &:focus-visible,
+  &:focus {
+    outline: 2px solid var(--color-link-default);
+    outline-style: auto;
+  }
+
+  &-Logo {
+    max-width: var(--provider-logo-width);
+    margin-bottom: var(--offset-12);
+  }
+
+  &-Spin {
+    position: absolute;
+    top: var(--offset-8);
+    right: var(--offset-8);
+  }
+}
+
+.ProviderCard_checked {
+  outline: 2px solid var(--color-link-default);
+  outline-style: auto;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.ProviderCard_small {
+  height: var(--provider-card-small-height);
+
+  .ProviderCard-Logo {
+    display: none;
+  }
+}

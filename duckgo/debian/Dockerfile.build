@@ -1,0 +1,11 @@
+FROM registry.yandex.net/rtc-base/bionic:stable
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN wget https://golang.org/dl/go1.17.5.linux-amd64.tar.gz && tar -C /usr/local -xzf go*.linux-amd64.tar.gz
+ENV PATH $PATH:/usr/local/go/bin
+
+RUN apt-get update && apt-get install -y debhelper dh-make devscripts dupload
+
+COPY debian/build.bash .
+COPY debian/compare.bash .
+COPY debian/yandex-boinic-testing.list /etc/apt/sources.list.d/

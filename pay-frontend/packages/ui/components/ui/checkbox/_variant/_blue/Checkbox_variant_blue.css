@@ -1,0 +1,18 @@
+@import '../../../../constants.css';
+
+.Checkbox_variant_blue {
+    --checkbox-size-m-width: 20px;
+    --checkbox-size-m-height: 20px;
+    --color-control-typo-primary: var(--color-text-primary);
+    --color-control-bg-faint: var(--color-common-white);
+    --checkbox-borderRadius: 6px;
+    --checkbox-size-m-tick-width: 13px;
+    --checkbox-size-m-tick-height: 10px;
+    --checkbox-view-default-fill-color-hovered: #9397ad;
+    --checkbox-view-default-fill-color-checked-hovered: var(--color-control-bg-check);
+    --checkbox-view-outline-fill-color-base: transparent;
+    --checkbox-view-outline-fill-color-hovered: rgba(180, 184, 204, 0.08);
+    --checkbox-view-outline-border-color: #9397ad;
+    --color-control-bg-check: var(--color-blue);
+    --checkbox-size-m-indentLeft: 8px;
+}

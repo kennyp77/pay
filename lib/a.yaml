@@ -1,0 +1,79 @@
+service: yandexpay
+title: Yandex.Pay Common Library
+arcanum:
+  review:
+    groups:
+    - name: "backend_developers"
+      roles:
+        - "yandexpay:@id=38, !backend_developer_intern"
+    override_policy: "override"
+    rules:
+    - reviewers:
+      - name: "backend_developers"
+        ship: 1
+        assign: 1
+  auto_merge:
+    enabled: false
+    requirements:
+      - system: arcanum
+        type: comment_issues_closed
+      - system: arcanum
+        type: st_issue_linked
+ci:
+  release-title-source: flow
+  secret: sec-01eq6tdg8ydmnnrfqkt63kbphp
+  runtime:
+    sandbox-owner: YANDEX-PAY
+  autocheck:
+    fast-targets:
+      - pay/lib/ya.make
+      - billing/yandex_pay/ya.make
+      - billing/yandex_pay_plus/ya.make
+  triggers:
+    - on: pr
+      flow: precommit-checks
+  flows:
+    precommit-checks:
+      title: Precommit Checks Pay Lib
+      jobs:
+        mypy:
+          title: mypy
+          task: projects/finsrv/mypy
+          input:
+            python3_executable_path: /pyenv/versions/3.10.4/bin/python
+            project_path: /pay/lib
+            project_import_path: pay.lib
+            requirements:
+              - mypy==0.961 --hash=sha256:3e09f1f983a71d0672bbc97ae33ee3709d10c779beb613febc36805a6e28bb4e
+              - mypy-extensions==0.4.3 --hash=sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d
+              - tomli==2.0.1 --hash=sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc
+              - typing-extensions==4.2.0 --hash=sha256:6657594ee297170d19f67d55c05852a874e7eb634f4f753dbd667855e07c1708
+          requirements:
+            cores: 1
+            sandbox:
+              container_resource: 3199711288
+        yastyle:
+          title: yastyle
+          task: projects/finsrv/yastyle
+          input:
+            python3_executable_path: /usr/bin/pyenv/versions/3.9.6/bin/python3
+            project_path: /pay/lib
+            project_import_path: pay.lib
+          requirements:
+            cores: 1
+            sandbox:
+              container_resource: 2459734777
+        isort:
+          title: isort
+          task: projects/finsrv/isort
+          input:
+            python3_executable_path: /usr/bin/pyenv/versions/3.9.6/bin/python3
+            project_path: /pay/lib
+            project_import_path: pay.lib
+            isort_check_path: /pay/lib
+            requirements:
+              - isort==5.9.3 --hash=sha256:e17d6e2b81095c9db0a03a8025a957f334d6ea30b26f9ec70805411e5c7c81f2
+          requirements:
+            cores: 1
+            sandbox:
+              container_resource: 2459734777

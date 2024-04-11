@@ -1,0 +1,15 @@
+{
+  "name": "@trust/ui",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "../../node_modules/.bin/jest --verbose --passWithNoTests"
+  },
+  "main": "src/index.ts",
+  "author": "stepler@yandex-team.ru",
+  "license": "ISC",
+  "dependencies": {
+    "@yandex-lego/components": "3.21.1",
+    "@yandex-lego/serp-header": "4.33.1"
+  }
+}

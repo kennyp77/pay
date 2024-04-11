@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.ErrorBase {
+    &-ErrorIcon {
+        width: 48px;
+        height: 48px;
+    }
+
+    &-SupportCode {
+        font-family: monospace, monospace;
+    }
+}

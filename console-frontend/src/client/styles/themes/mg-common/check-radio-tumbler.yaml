@@ -1,0 +1,233 @@
+checkbox:
+  viewOutline:
+    borderColor:
+      value: "{color.mg.stroke.default.base.value}"
+    fillColor:
+      hovered:
+        value: "{color.mg.surface.primary.value}"
+      base:
+        value: "{color.mg.surface.primary.value}"
+    disabled:
+      opacity:
+        value: "0.4"
+  fontFamily:
+    value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  size:
+    s:
+      fontSize:
+        value: 14px
+      indentLeft:
+        value: 6px
+      width:
+        value: 16px
+      height:
+        value: 16px
+      tick:
+        height:
+          value: 12px
+    m:
+      fontSize:
+        value: 16px
+      indentLeft:
+        value: 8px
+      width:
+        value: 20px
+      height:
+        value: 20px
+      tick:
+        width:
+          value: 16px
+        height:
+          value: 16px
+  viewDefault:
+    outlineColor:
+      value: "{color.mg.button.primary.fill.base.value}"
+    fillColor:
+      base:
+        value: "{color.mg.button.secondary.fill.base.value}"
+      hovered:
+        value: "{color.mg.button.secondary.fill.hover.value}"
+      checked:
+        base:
+          value: "{color.mg.button.primary.fill.base.value}"
+        hovered:
+          value: "{color.mg.button.primary.fill.hover.value}"
+    typoColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+      checked:
+        base:
+          value: "{color.mg.button.primary.typo.value}"
+  disabled:
+    opacity:
+      value: "0.6"
+
+radioButton:
+  fontFamily:
+    value: "'YS Text Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  border:
+    radius:
+      value: "{radius.mg.s.base.value}"
+  after:
+    border:
+      radius:
+        value: "{radius.mg.s.inner.value}"
+  indent:
+    value: 4px
+  size:
+    s:
+      fontSize:
+        value: "{typography.controls.size.s.fontSize.value}"
+      lineHeight:
+        value: "{button.size.s.lineHeight.value}"
+      space:
+        value: "{button.size.s.text.indentAll.value}"
+    m:
+      fontSize:
+        value: "{typography.controls.size.m.fontSize.value}"
+      lineHeight:
+        value: "{button.size.m.lineHeight.value}"
+      space:
+        value: "{button.size.m.text.indentAll.value}"
+    l:
+      fontSize:
+        value: "{typography.controls.size.s.fontSize.value}"
+      lineHeight:
+        value: "{button.size.l.lineHeight.value}"
+      space:
+        value: "{button.size.l.text.indentAll.value}"
+  viewDefault:
+    outlineColor:
+      value: "{color.mg.control.focus.base.value}"
+    fillColor:
+      base:
+        value: "{color.mg.button.secondary.fill.base.value}"
+      checked:
+        base:
+          value: "{color.mg.surface.primary.value}"
+    typoColor:
+      base:
+        value: "{color.mg.typo.secondary.value}"
+      hovered:
+        value: "{color.mg.button.secondary.typo.value}"
+      checked:
+        base:
+          value: "{color.mg.button.secondary.typo.value}"
+
+radiobox:
+  viewDefault:
+    fillColor:
+      base:
+        value: "{color.mg.button.secondary.fill.base.value}"
+      hovered:
+        value: "{color.mg.button.secondary.fill.hover.value}"
+      checked:
+        base:
+          value: "{color.mg.button.primary.fill.base.value}"
+        hovered:
+          value: "{color.mg.button.primary.fill.hover.value}"
+    dot:
+      fillColor:
+        value: "{color.mg.inverse.typo.value}"
+    outlineColor:
+      value: "{color.mg.control.focus.base.value}"
+    typoColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+  viewOutline:
+    borderColor:
+      value: "{color.mg.stroke.default.base.value}"
+    fillColor:
+      base:
+        value: transparent
+      hovered:
+        value: "{color.mg.stroke.default.hover.value}"
+  size:
+    s:
+      fontSize:
+        value: 14px
+      size:
+        value: 16px
+      indentRight:
+        value: 6px
+      after:
+        size:
+          value: 6px
+    m:
+      fontSize:
+        value: 16px
+      size:
+        value: 20px
+      indentRight:
+        value: 8px
+      after:
+        size:
+          value: 8px
+  disabled:
+    opacity:
+      value: "0.4"
+  fontFamily:
+    value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+
+tumbler:
+  fontFamily:
+    value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  size:
+    s:
+      fontSize:
+        value: 14px
+      lineHeight:
+        value: 18px
+      height:
+        value: 18px
+      button:
+        width:
+          value: 14px
+        height:
+          value: 14px
+        borderRadius:
+          value: 8px
+      borderRadius:
+        value: 10px
+    m:
+      fontSize:
+        value: 16px
+      width:
+        value: 42px
+      height:
+        value: 24px
+      button:
+        borderRadius:
+          value: 12px
+        width:
+          value: 20px
+        height:
+          value: 20px
+      borderRadius:
+        value: 12px
+  viewDefault:
+    outlineColor:
+      value: "{color.mg.control.focus.base.value}"
+    fillColor:
+      base:
+        value: "{color.mg.button.secondary.fill.base.value}"
+      disabled:
+        value: "{color.mg.control.disabled.fill.value}"
+      hovered:
+        value: "{color.mg.button.secondary.fill.hover.value}"
+      checked:
+        base:
+          value: "{color.mg.button.primary.fill.base.value}"
+        disabled:
+          value: "{color.mg.control.disabled.fill.value}"
+        hovered:
+          value: "{color.mg.button.primary.fill.hover.value}"
+    button:
+      fillColor:
+        base:
+          value: "{color.mg.surface.primary.value}"
+    typoColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+      disabled:
+        value: "{color.mg.control.disabled.typo.secondary.value}"

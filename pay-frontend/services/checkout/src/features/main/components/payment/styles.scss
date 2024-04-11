@@ -1,0 +1,11 @@
+@import '../../../../styles/variables.scss';
+
+.MainPaymentBlock {
+    &-ListButtonLoader {
+        padding-left: var(--list-button-space-left);
+    }
+
+    &-Question {
+        vertical-align: bottom;
+    }
+}

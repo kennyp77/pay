@@ -1,0 +1,27 @@
+@import '../../../styles/mixins.scss';
+
+.Button2_variant_filled-grey {
+  padding: var(--offset-18);
+  box-sizing: border-box;
+  color: var(--color-text-default-soft);
+  font-weight: 500;
+  font-size: var(--fz-16);
+  font-family: var(--typography-font-family);
+  border-radius: var(--form-element-border-radius);
+  background-color: var(--button-bg-secondary);
+
+  .Button2-Text {
+    display: flex;
+    align-items: center;
+  }
+
+  &.Button2_size_m {
+    height: auto;
+    padding: var(--offset-12);
+    line-height: var(--lh-20);
+
+    .Button2-Text {
+      margin: 0 var(--offset-8);
+    }
+  }
+}

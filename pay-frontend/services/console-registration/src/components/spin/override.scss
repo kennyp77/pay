@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+:root {
+    --spin-size-m: 32px;
+    --spin-size-l: 48px;
+    --spin-view-default-border-color: #ff3815;
+}
+
+.Spin2 {
+    flex-shrink: 0;
+
+    &.Spin2_size_l {
+        border-width: 4px;
+    }
+
+    &.Spin2_view_default.Spin2_progress {
+        border-bottom-color: var(--spin-view-default-border-color);
+    }
+}

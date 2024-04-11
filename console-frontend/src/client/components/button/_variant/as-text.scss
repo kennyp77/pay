@@ -1,0 +1,19 @@
+@import '../../../styles/mixins.scss';
+
+.Button2_variant_as-text {
+  @extend %clear-button;
+
+  display: contents;
+  -webkit-appearance: none;
+
+  &:empty {
+    display: none;
+  }
+
+  .Button2-Text {
+    display: inline;
+    margin: 0;
+    white-space: normal;
+    pointer-events: initial;
+  }
+}

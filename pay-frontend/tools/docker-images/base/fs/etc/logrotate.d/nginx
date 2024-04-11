@@ -1,0 +1,14 @@
+/var/log/nginx/access.tskv
+/var/log/nginx/error.log
+{
+	size 200M
+	rotate 3
+	missingok
+	notifempty
+	compress
+	delaycompress
+	sharedscripts
+	postrotate
+		nginx -s reload
+	endscript
+}

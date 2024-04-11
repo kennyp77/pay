@@ -1,0 +1,14 @@
+.MessageBox.MessageBox_variant_check {
+  .MessageBox-Backdrop:before {
+    background-color: var(--message-box-bg-check);
+  }
+
+  .MessageBox-TextLeft {
+    margin-right: var(--offset-12);
+
+    .Icon {
+      width: var(--size-20);
+      height: var(--size-20);
+    }
+  }
+}

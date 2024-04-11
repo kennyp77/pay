@@ -1,0 +1,3 @@
+location ~ (.+\.(?:css|js|png|gif|jpe?g|html|xml|svg|eot|woff2|woff|ttf))$ {
+    alias /usr/src/public/$1;
+}

@@ -1,0 +1,7 @@
+@import '../../../../styles/variables.scss';
+
+.SplitFrame,
+.SplitFrame > iframe {
+    width: 100%;
+    min-height: 400px;
+}

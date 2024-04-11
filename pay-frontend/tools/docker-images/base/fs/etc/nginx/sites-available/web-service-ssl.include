@@ -1,0 +1,10 @@
+# https://wiki.yandex-team.ru/security/ssl/bestpractices/#protokoly
+ssl_protocols TLSv1.3 TLSv1.2 TLSv1;
+ssl_prefer_server_ciphers on;
+ssl_ciphers kEECDH+AESGCM+AES128:TLS-CHACHA20-POLY1305-SHA256:kEECDH+AES128:kRSA+AESGCM+AES128:kRSA+AES128:DES-CBC3-SHA:!RC4:!aNULL:!eNULL:!MD5:!EXPORT:!LOW:!SEED:!CAMELLIA:!IDEA:!PSK:!SRP:!SSLv2;
+
+ssl_session_cache off;
+ssl_session_timeout 48h;
+
+ssl_certificate     /etc/nginx/ssl/cert.pem;
+ssl_certificate_key /etc/nginx/ssl/key.pem;

@@ -1,0 +1,25 @@
+.OrderInfoModal {
+  font-variant: proportional-nums lining-nums;
+  background-color: var(--order-info-bg);
+  overflow: hidden;
+}
+
+.OrderInfoModal-Event {
+  height: var(--order-info-event-height);
+  padding: var(--offset-8) var(--offset-32);
+  border-radius: 0 0 var(--radius-24) var(--radius-24);
+  box-shadow: var(--order-info-event-shadow);
+
+  &:not(&:first-child) {
+    margin-top: var(--offset-4);
+  }
+}
+
+.OrderInfoModal-EventDate {
+  flex-grow: 0;
+  width: var(--order-info-event-date-width);
+}
+
+.OrderInfoModal-EventStatus {
+  flex-grow: 1;
+}

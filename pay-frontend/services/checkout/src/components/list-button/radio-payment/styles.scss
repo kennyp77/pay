@@ -1,0 +1,7 @@
+@import '../../../styles/variables.scss';
+
+.ListButton-RadioPayment {
+    &.ListButton_view_radio {
+        --list-button-icon-size-left: 32px;
+    }
+}

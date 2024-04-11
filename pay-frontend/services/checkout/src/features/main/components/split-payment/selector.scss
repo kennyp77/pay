@@ -1,0 +1,19 @@
+@import '../../../../styles/variables.scss';
+
+.SplitPaymentSelector-Question {
+    display: block;
+
+    margin-left: 6px;
+
+    vertical-align: bottom;
+
+    &_size_s {
+        width: 16px;
+        height: 16px;
+    }
+
+    &_size_m {
+        width: 20px;
+        height: 20px;
+    }
+}

@@ -1,0 +1,42 @@
+@import '../constants.css';
+
+.order-cart {
+    --popup-view-default-fill-color-base: var(--color-common-white);
+    --popup-view-default-fill-color: #272733;
+    --popup-view-default-typo-color: var(--color-common-white);
+    --popup-borderRadius: 12px;
+}
+
+.order-cart__items {
+    overflow-y: auto;
+
+    width: 263px;
+    max-height: 200px;
+    padding: var(--space-8) var(--space-16);
+}
+
+.order-cart__items-inner {
+    width: 100%;
+}
+
+.order-cart__button {
+    width: 24px;
+    height: 24px;
+}
+
+.order-cart__button .Link {
+    width: 100%;
+}
+
+.order-cart__button .link__text {
+    line-height: 0;
+}
+
+.order-cart__chevron {
+    transition: transform 0.3s ease;
+    transform: rotate(270deg);
+}
+
+.order-cart__chevron_visible {
+    transform: rotate(90deg);
+}

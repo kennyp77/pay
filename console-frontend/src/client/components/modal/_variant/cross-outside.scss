@@ -1,0 +1,21 @@
+@import '../../../styles/mixins.scss';
+
+.Modal_variant_cross-outside {
+  .Modal-Content {
+    width: 100%;
+    max-width: var(--modal-default-width);
+    background: transparent;
+  }
+
+  .Modal-close-button {
+    @extend %clear-button;
+
+    position: absolute;
+    top: 0;
+    right: var(--modal-cross-outside-close-right-pos);
+    display: flex;
+    padding: var(--offset-10);
+    border-radius: var(--radius-100);
+    background-color: var(--color-white);
+  }
+}

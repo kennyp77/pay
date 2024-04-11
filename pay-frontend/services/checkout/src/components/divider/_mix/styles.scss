@@ -1,0 +1,17 @@
+@import '../../../styles/variables.scss';
+
+.Divider {
+    &_color {
+        &_black {
+            --divider-fill-color: #{$color-typo-black};
+        }
+
+        &_grey {
+            --divider-fill-color: #{$color-fill-grey};
+        }
+
+        &_white {
+            --divider-fill-color: #{$color-fill-white};
+        }
+    }
+}

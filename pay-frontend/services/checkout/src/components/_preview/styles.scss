@@ -1,0 +1,48 @@
+@import '../../styles/variables.scss';
+
+.Preview {
+    display: block;
+}
+
+.Preview-Title {
+    display: block;
+
+    width: 100%;
+    margin: 0;
+}
+
+.Preview-Row {
+    display: flex;
+}
+
+.Preview-Props {
+    flex: 0 0 300px;
+
+    width: 300px;
+    margin: 0;
+    padding: 0;
+}
+
+.Preview-PropsItem {
+    display: block;
+
+    margin: 10px 0;
+}
+
+.Preview-PropsItemLabel {
+    display: flex;
+    align-items: center;
+}
+
+.Preview-PropName {
+    width: 100px;
+}
+
+.Preview-Example {
+    overflow: auto;
+    flex: 1 1 auto;
+}
+
+.Preview-PropVariant_type_comment {
+    opacity: 0.5;
+}

@@ -1,0 +1,69 @@
+status:
+  port: 16301
+
+storages:
+  - name: nginx
+    plugin: fs
+    config:
+      directory: /var/data/unified-agent/nginx
+      max_partition_size: 100mb
+  - name: duffman-access
+    plugin: fs
+    config:
+      directory: /var/data/unified-agent/duffman-access
+      max_partition_size: 200mb
+  - name: duffman-http
+    plugin: fs
+    config:
+      directory: /var/data/unified-agent/duffman-http
+      max_partition_size: 200mb
+
+routes:
+  - input:
+      plugin: syslog
+      config:
+        path: /var/log/nginx/web-service/access.sock
+    channel:
+      pipe:
+        - storage_ref:
+            name: nginx
+      output:
+        plugin: logbroker
+        config:
+          endpoint: logbroker.yandex.net
+          topic: %topic-prefix%access-log
+          oauth:
+            secret:
+              env: LOGBROKER_OAUTH_TOKEN
+  - input:
+      plugin: syslog
+      config:
+        path: /var/log/duffman/duffman-access.sock
+    channel:
+      pipe:
+        - storage_ref:
+            name: duffman-access
+      output:
+        plugin: logbroker
+        config:
+          endpoint: logbroker.yandex.net
+          topic: %topic-prefix%duffman-access-log
+          oauth:
+            secret:
+              env: LOGBROKER_OAUTH_TOKEN
+  - input:
+      plugin: syslog
+      config:
+        path: /var/log/duffman/duffman-http.sock
+    channel:
+      pipe:
+        - storage_ref:
+            name: duffman-http
+      output:
+        plugin: logbroker
+        config:
+          endpoint: logbroker.yandex.net
+          topic: %topic-prefix%duffman-http-log
+          oauth:
+            secret:
+              env: LOGBROKER_OAUTH_TOKEN

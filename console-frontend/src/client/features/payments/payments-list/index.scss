@@ -1,0 +1,8 @@
+.PaymentEmpty,
+.PaymentEmptyFilters {
+  max-width: var(--payment-empty-wrapper-width);
+}
+
+.PaymentEmptyFilters-ButtonReset {
+  color: var(--link-default);
+}

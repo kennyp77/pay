@@ -1,0 +1,244 @@
+textarea:
+  fontFamily:
+    value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  border:
+    radius:
+      value: "{radius.mg.s.base.value}"
+  size:
+    s:
+      fontSize:
+        value: "{typography.controls.size.s.fontSize.value}"
+      spaceAll:
+        value: "{textinput.size.s.spaceAll.value}"
+      hint:
+        fontSize:
+          value: "{typography.controls.size.s.fontSize.value}"
+      minHeight:
+        value: "{textinput.size.s.height.value}"
+    m:
+      fontSize:
+        value: "{typography.controls.size.m.fontSize.value}"
+      spaceAll:
+        value: "{textinput.size.m.spaceAll.value}"
+      hint:
+        fontSize:
+          value: "{typography.controls.size.m.fontSize.value}"
+      minHeight:
+        value: "{textinput.size.m.height.value}"
+  viewDefault:
+    fillColor:
+      base:
+        value: "{color.mg.control.outlined.fill.value}"
+      disabled:
+        value: "{color.mg.control.disabled.fill.value}"
+      hovered:
+        value: "{color.mg.control.outlined.fill.value}"
+    typoColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+      disabled:
+        value: "{color.mg.control.disabled.typo.secondary.value}"
+    placeholder:
+      typoColor:
+        base:
+          value: "{color.mg.typo.secondary.value}"
+        disabled:
+          value: "{color.mg.control.disabled.typo.secondary.value}"
+    icon:
+      fillColor:
+        base:
+          value: "{color.mg.typo.secondary.value}"
+    clear:
+      fillColor:
+        base:
+          value: "{color.mg.typo.secondary.value}"
+        hovered:
+          value: "{color.mg.typo.primary.value}"
+    hint:
+      typoColor:
+        stateError:
+          base:
+            value: "{color.mg.accent.alert.value}"
+    borderColor:
+      base:
+        value: "{color.mg.stroke.default.base.value}"
+      disabled:
+        value: transparent
+      focused:
+        value: "{color.mg.control.focus.base.value}"
+      hovered:
+        value: "{color.mg.stroke.default.hover.value}"
+      stateError:
+        base:
+          value: "{color.mg.accent.alert.value}"
+        hovered:
+          value: "{color.mg.accent.alert.value}"
+
+textinput:
+  fontFamily:
+    value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  border:
+    radius:
+      value: "{radius.mg.s.base.value}"
+  size:
+    s:
+      fontSize:
+        value: "{typography.controls.size.s.fontSize.value}"
+      height:
+        value: 32px
+      spaceAll:
+        value: 6px 12px
+      withIcon:
+        spaceRight:
+          value: 32px
+        spaceLeft:
+          value: 32px
+      icon:
+        width:
+          value: 32px
+        height:
+          value: 32px
+      hint:
+        fontSize:
+          value: 14px
+    m:
+      fontSize:
+        value: "{typography.controls.size.m.fontSize.value}"
+      height:
+        value: 36px
+      spaceAll:
+        value: 8px 16px
+      withIcon:
+        spaceRight:
+          value: 36px
+        spaceLeft:
+          value: 36px
+      icon:
+        width:
+          value: 40px
+        height:
+          value: 36px
+      hint:
+        fontSize:
+          value: 14px
+    l:
+      fontSize:
+        value: "{typography.controls.size.l.fontSize.value}"
+      height:
+        value: 44px
+      spaceAll:
+        value: 12px 20px
+      withIcon:
+        spaceRight:
+          value: 52px
+        spaceLeft:
+          value: 52px
+      icon:
+        width:
+          value: 44px
+        height:
+          value: 56px
+      hint:
+        fontSize:
+          value: 13px
+  viewMaterial:
+    typoColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+      disabled:
+        value: "{color.mg.control.disabled.typo.secondary.value}"
+    borderColor:
+      base:
+        value: "{color.mg.stroke.default.base.value}"
+    icon:
+      fillColor:
+        base:
+          value: "{color.mg.typo.secondary.value}"
+        disabled:
+          value: "{color.mg.control.disabled.typo.secondary.value}"
+    hint:
+      typoColor:
+        base:
+          value: "{color.mg.typo.secondary.value}"
+    caretColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+      stateError:
+        value: "{color.mg.typo.primary.value}"
+    placeholder:
+      typoColor:
+        base:
+          value: "{color.mg.control.placeholder.value}"
+    labelColor:
+      base:
+        value: "{color.mg.typo.secondary.value}"
+      floated:
+        base:
+          value: "{color.mg.typo.secondary.value}"
+    variant:
+      filled:
+        borderColor:
+          focused:
+            value: "{color.mg.control.focus.base.value}"
+        fillColor:
+          value: "{color.mg.button.secondary.fill.base.value}"
+        labelColor:
+          floated:
+            value: "{color.mg.typo.secondary.value}"
+      outlined:
+        borderColor:
+          base:
+            value: "{color.mg.stroke.default.base.value}"
+          focused:
+            value: "{color.mg.control.focus.base.value}"
+        labelColor:
+          floated:
+            value: "{color.mg.typo.secondary.value}"
+  viewDefault:
+    fillColor:
+      base:
+        value: "{color.mg.control.outlined.fill.value}"
+      disabled:
+        value: "{color.mg.control.disabled.fill.value}"
+      hovered:
+        value: "{color.mg.control.outlined.fill.value}"
+    typoColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+      disabled:
+        value: "{color.mg.control.disabled.typo.secondary.value}"
+    placeholder:
+      typoColor:
+        base:
+          value: "{color.mg.typo.secondary.value}"
+        disabled:
+          value: "{color.mg.control.disabled.typo.secondary.value}"
+    icon:
+      fillColor:
+        base:
+          value: "{color.mg.typo.secondary.value}"
+    clear:
+      fillColor:
+        base:
+          value: "{color.mg.typo.secondary.value}"
+        hovered:
+          value: "{color.mg.typo.primary.value}"
+    hint:
+      typoColor:
+        stateError:
+          base:
+            value: "{color.mg.accent.alert.value}"
+    borderColor:
+      base:
+        value: "{color.mg.stroke.default.base.value}"
+      disabled:
+        value: transparent
+      focused:
+        value: "{color.mg.control.focus.base.value}"
+      hovered:
+        value: "{color.mg.stroke.default.hover.value}"
+      stateError:
+        base:
+          value: "{color.mg.accent.alert.value}"
+        hovered:
+          value: "{color.mg.accent.alert.value}"

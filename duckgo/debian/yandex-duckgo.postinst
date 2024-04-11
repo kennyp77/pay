@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure)
+        adduser --system --disabled-password --disabled-login --home /var/empty \
+                --no-create-home --quiet --force-badname --group duckgo || true
+        mkdir -p /etc/yandex/yandex-duckgo/secrets
+        chown duckgo:duckgo /etc/yandex/yandex-duckgo/
+        chown duckgo:duckgo /etc/yandex/yandex-duckgo/secrets
+        chmod 755 /etc/yandex/yandex-duckgo/
+        chmod 750 /etc/yandex/yandex-duckgo/secrets
+        ;;
+esac
+
+exit 0

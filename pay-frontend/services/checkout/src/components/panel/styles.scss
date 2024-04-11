@@ -1,0 +1,69 @@
+@import '../../styles/variables.scss';
+
+.Panel {
+    position: relative;
+    z-index: 0;
+
+    display: flex;
+    overflow: hidden;
+    flex: 1 1 100%;
+    flex-direction: column;
+    align-self: stretch;
+
+    box-sizing: border-box;
+    width: 100%;
+
+    &-Header {
+        flex: 0 0;
+
+        padding: var(--space-l) var(--space-l) 0;
+    }
+
+    &-Body {
+        display: flex;
+        overflow: hidden;
+        flex: 1 1;
+
+        box-sizing: border-box;
+        width: 100%;
+        padding-top: var(--space-l);
+    }
+
+    &-InnerBody {
+        overflow: auto;
+
+        width: 100%;
+    }
+
+    &-Content {
+        padding: 0 var(--space-l) var(--space-m);
+    }
+
+    &-Footer {
+        position: relative;
+
+        box-sizing: border-box;
+        width: 100%;
+        padding: var(--space-s) var(--space-l) var(--space-l);
+
+        background-color: $color-fill-white;
+
+        &::before {
+            position: absolute;
+            top: -10px;
+            left: 0;
+
+            width: calc(100% - var(--space-l) * 2);
+            height: 10px;
+            margin: 0 var(--space-l);
+
+            content: '';
+
+            background: linear-gradient(
+                360deg,
+                rgba(0, 0, 0, 0.05) 0%,
+                rgba(241, 242, 245, 0) 100%
+            );
+        }
+    }
+}

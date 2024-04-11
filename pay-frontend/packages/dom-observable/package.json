@@ -1,0 +1,13 @@
+{
+  "name": "@trust/dom-observable",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node_modules/.bin/jest --watch",
+    "test": "../../node_modules/.bin/jest --verbose --passWithNoTests"
+  },
+  "author": "kir-9@yandex-team.ru",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.Layout {
+    display: flex;
+    overflow: hidden;
+
+    height: calc(100vh - (2 * #{$main-margin}));
+    margin: $main-margin;
+
+    border-radius: $main-radius;
+    background-color: #fff;
+}

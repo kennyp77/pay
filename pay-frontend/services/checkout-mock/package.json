@@ -1,0 +1,15 @@
+{
+  "name": "@yandex-pay/checkout-mock",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+      "build": "webpack --config .config/webpack.prod.js",
+      "start": "webpack-dev-server --config .config/webpack.dev.js",
+      "test": "jest --verbose --passWithNoTests",
+      "deploy:static": "static-uploader"
+  },
+  "author": "stepler@yandex-team.ru",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}

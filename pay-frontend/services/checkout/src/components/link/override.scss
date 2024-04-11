@@ -1,0 +1,6 @@
+@import '../../styles/variables.scss';
+
+#{$legoVariablesRoot} {
+    --link-view-default-typo-color-base: #{$color-typo-black};
+    --link-view-default-typo-color-hovered: #{$color-fill-red-dark};
+}

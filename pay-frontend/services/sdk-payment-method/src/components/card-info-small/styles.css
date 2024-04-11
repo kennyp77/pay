@@ -1,0 +1,36 @@
+.card-info-small {
+    display: block;
+
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    color: var(--color-primary);
+}
+
+.card-info-small__new-card,
+.card-info-small__network,
+.card-info-small__pan {
+    display: block;
+
+    margin: 0 auto;
+}
+
+.card-info-small__network {
+    width: 34px;
+    height: 22px;
+}
+
+.card-info-small__new-card {
+    width: 27px;
+    height: 16px;
+
+    color: var(--color-gray);
+}
+
+.card-info-small__pan {
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 500;
+    white-space: pre;
+    text-align: center;
+}

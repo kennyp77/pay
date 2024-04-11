@@ -1,0 +1,157 @@
+messageBox:
+  fontFamily:
+    value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  fontSize:
+    value: 14px
+  lineHeight:
+    value: 18px
+  hint:
+    borderRadius:
+      value: "{radius.mg.s.base.value}"
+  close:
+    fontSize:
+      value: 14px
+    indentRight:
+      value: 8px
+  size:
+    s:
+      tail:
+        size:
+          value: 20px
+      tooltip:
+        fontSize:
+          value: 14px
+      fontSize:
+        value: 14px
+      border:
+        radius:
+          value: "{radius.mg.s.base.value}"
+      content:
+        spaceAll:
+          value: 6px
+    m:
+      tail:
+        size:
+          value: 20px
+      tooltip:
+        fontSize:
+          value: 14px
+      fontSize:
+        value: 14px
+      border:
+        radius:
+          value: "{radius.mg.m.base.value}"
+      content:
+        spaceAll:
+          value: 8px
+    l:
+      fontSize:
+        value: 16px
+      functional:
+        fontSize:
+          value: 16px
+        lineHeight:
+          value: 20px
+      tail:
+        size:
+          value: 20px
+      border:
+        radius:
+          value: "{radius.mg.l.base.value}"
+      content:
+        spaceAll:
+          value: 10px
+  viewPromo:
+    fillColor:
+      value: "{color.mg.promo.fill.value}"
+    shadow:
+      value: "{effect.mg.shadow.surface.elevated.lvl3.value}"
+    typoColor:
+      value: "{color.mg.inverse.typo.value}"
+  viewDefault:
+    shadow:
+      value: "{effect.mg.shadow.surface.elevated.lvl3.value}"
+    typoColor:
+      value: "{color.mg.inverse.typo.value}"
+    fillColor:
+      value: "{color.mg.inverse.fill.value}"
+  viewInverse:
+    typoColor:
+      value: "{color.mg.typo.primary.value}"
+    fillColor:
+      value: "{color.mg.surface.elevated.lvl3.value}"
+    shadow:
+      value: "{effect.mg.shadow.surface.elevated.lvl3.value}"
+
+modal:
+  border:
+    radius:
+      value: "{radius.mg.modal.value}"
+
+popup:
+  border:
+    radius:
+      value: "{radius.mg.popup.value}"
+  viewDefault:
+    typoColor:
+      value: "{color.mg.typo.primary.value}"
+    fillColor:
+      value: "{color.mg.surface.elevated.lvl3.value}"
+
+tooltip:
+  border:
+    radius:
+      value: "{radius.mg.tooltip.value}"
+  fontFamily:
+    value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  size:
+    s:
+      fontSize:
+        value: 14px
+      lineHeight:
+        value: 18px
+      content:
+        spaceAll:
+          value: 7px 12px
+      tail:
+        size:
+          value: 16px
+    m:
+      fontSize:
+        value: 16px
+      lineHeight:
+        value: 20px
+      content:
+        spaceAll:
+          value: 12px 16px
+      tail:
+        size:
+          value: 16px
+    l:
+      lineHeight:
+        value: 20px
+      content:
+        spaceAll:
+          value: 16px 24px
+      tail:
+        size:
+          value: 20px
+  viewDefault:
+    shadow:
+      value: "{effect.mg.shadow.surface.elevated.lvl3.value}"
+    fillColor:
+      base:
+        value: "{color.mg.surface.elevated.lvl3.value}"
+      stateSuccess:
+        value: "{color.mg.accent.success.value}"
+      stateWarning:
+        value: "{color.mg.inverse.fill.value}"
+      stateAlert:
+        value: "{color.mg.accent.alert.value}"
+    typoColor:
+      stateSuccess:
+        value: "{color.mg.inverse.typo.value}"
+      stateWarning:
+        value: "{color.mg.inverse.typo.value}"
+      stateAlert:
+        value: "{color.mg.inverse.typo.value}"

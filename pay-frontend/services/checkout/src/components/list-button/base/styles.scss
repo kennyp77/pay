@@ -1,0 +1,76 @@
+@import '../../../styles/variables.scss';
+
+/* stylelint-disable length-zero-no-unit */
+
+.ListButton {
+    --list-button-space-left: 0px;
+    --list-button-space-right: 0px;
+    --list-button-space-top: 0px;
+    --list-button-space-bottom: 0px;
+    --list-button-space-inside-left: var(--space-m);
+    --list-button-space-inside-right: var(--space-m);
+    --list-button-icon-size-left: 32px;
+    --list-button-icon-size-right: 32px;
+
+    position: relative;
+
+    transition: background-color 0.3s ease;
+
+    &_noLeft {
+        --list-button-icon-size-left: 0px;
+        --list-button-space-inside-left: 0px;
+    }
+
+    &_noRight {
+        --list-button-icon-size-right: 0px;
+        --list-button-space-inside-right: 0px;
+    }
+
+    .ListButton-Icon,
+    .ListButton-SideButton {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+
+        &_side_right {
+            right: 0;
+
+            padding: var(--list-button-space-top) var(--list-button-space-right)
+                var(--list-button-space-bottom) var(--list-button-space-inside-right);
+        }
+
+        &_side_left {
+            left: 0;
+
+            padding: var(--list-button-space-top) var(--list-button-space-inside-left)
+                var(--list-button-space-bottom) var(--list-button-space-left);
+        }
+    }
+
+    .ListButton-Middle {
+        display: flex;
+        flex: 1 1 auto;
+
+        /* stylelint-disable scss/operator-no-newline-after */
+        padding: var(--list-button-space-top)
+            calc(
+                var(--list-button-space-right) + var(--list-button-space-inside-right) +
+                    var(--list-button-icon-size-right)
+            )
+            var(--list-button-space-bottom)
+            calc(
+                var(--list-button-space-left) + var(--list-button-space-inside-left) +
+                    var(--list-button-icon-size-left)
+            );
+
+        > .row {
+            /* берём максимальный из размеров добавляемых иконок */
+            min-height: max(var(--list-button-icon-size-left), var(--list-button-icon-size-right));
+        }
+    }
+}

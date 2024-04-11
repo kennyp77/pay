@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "lib": ["dom", "es2019"],
+        "jsx": "react",
+        "alwaysStrict": true,
+        "importHelpers": true,
+        "esModuleInterop": true,
+        "noImplicitAny": true
+    },
+    "include": ["services", "typings", "packages", "server"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}

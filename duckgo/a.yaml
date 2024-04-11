@@ -1,0 +1,55 @@
+service: yandexpay
+title: Duckgo
+ci:
+  secret: sec-01eq6tdg8ydmnnrfqkt63kbphp
+  runtime:
+    sandbox-owner: YANDEX-PAY
+  autocheck:
+    fast-targets:
+      - pay/duckgo/ya.make
+  releases:
+    duckgo-deploy-sandbox:
+      title: Deploy DuckGo Sandbox
+      flow: duckgo-deploy-sandbox-flow
+      branches:
+        pattern: releases/pay/duckgo-sandbox/release-${version}
+        auto-create: true
+      stages:
+        - id: build
+          title: Build
+        - id: deploy-sandbox
+          title: Sandbox
+  flows:
+    duckgo-deploy-sandbox-flow:
+      title: Duckgo Sandbox Release flow
+      jobs:
+        build:
+          title: Build package
+          task: common/arcadia/ya_package_2
+          stage: build
+          input:
+            packages: pay/duckgo/sandbox/package.json
+            resource_type: YANDEX_PAY_DUCKGO_APP
+            package_type: tarball
+            custom_version: "${context.version_info.full}"
+        deploy-sandbox:
+          needs:
+            - build
+          title: Deploy to sandbox
+          task: common/deploy/create_release
+          stage: deploy-sandbox
+          manual: true
+          input:
+            config:
+              stage_id: yandexpay-sandbox
+              patches:
+              - sandbox:
+                  sandbox_resource_type: YANDEX_PAY_DUCKGO_APP
+                  static:
+                    deploy_unit_id: api
+                    layer_ref: duckgo-app
+              - sandbox:
+                  sandbox_resource_type: YANDEX_PAY_DUCKGO_APP
+                  static:
+                    deploy_unit_id: api-internal
+                    layer_ref: duckgo-app

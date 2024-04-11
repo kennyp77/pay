@@ -1,0 +1,48 @@
+@import '../../../styles/mixins.scss';
+
+.Button2_variant_default {
+  height: auto;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: var(--fz-14);
+  font-family: var(--typography-font-family);
+  line-height: var(--lh-20);
+  border-radius: var(--radius-12);
+  background-color: var(--bg-brand);
+
+  .Button2-Text {
+    display: flex;
+    gap: var(--offset-10);
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  &_disabled,
+  &[aria-disabled='true'] {
+    background-color: var(--bg-disabled);
+
+    .Button2-Text {
+      color: var(--text-input-color-disabled);
+    }
+
+    .Button2-Icon {
+      color: var(--text-input-color-disabled);
+    }
+  }
+
+  &.Button2_size_m {
+    .Button2-Text {
+      padding: var(--offset-8) var(--offset-16);
+    }
+  }
+
+  &.Button2_size_l {
+    border-radius: var(--radius-20);
+
+    .Button2-Text {
+      padding: var(--offset-18) var(--offset-24);
+      font-size: var(--fz-16);
+    }
+  }
+}

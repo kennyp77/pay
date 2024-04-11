@@ -1,0 +1,16 @@
+.ButtonNext {
+  display: flex;
+  justify-content: center;
+  height: var(--button-size-xxl-height);
+
+  &-Icon {
+    margin-left: var(--offset-10);
+    vertical-align: middle;
+  }
+
+  .Button2-Text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

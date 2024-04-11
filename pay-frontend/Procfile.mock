@@ -1,0 +1,9 @@
+dev-proxy: node _config/dev-server/proxy
+playground: cd services/playground && npm start
+checkout-mock: cd services/checkout-mock && npm start
+sdk: cd services/sdk && npm start
+sdk-init: cd services/sdk-init && npm start
+sdk-init-speedup: cd services/sdk-init-speedup && npm start
+sdk-payment-method: cd services/sdk-payment-method && npm start
+server-tvmtool: cd server && npm run start-tvmtool
+server: cd server && npm start

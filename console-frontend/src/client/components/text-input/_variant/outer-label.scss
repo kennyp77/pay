@@ -1,0 +1,87 @@
+.Textinput_variant_outer-label {
+  .Textinput-Box {
+    z-index: 0;
+    height: var(--size-48);
+    border-color: transparent;
+    border-width: var(--form-element-border-width);
+    border-radius: var(--form-element-border-radius);
+    background-color: var(--text-input-bg);
+  }
+
+  &:hover .Textinput-Box {
+    background-color: var(--text-input-bg-action);
+  }
+
+  .Textinput-Control {
+    padding-top: var(--offset-14);
+    padding-bottom: var(--offset-14);
+    padding-left: var(--offset-24);
+
+    &.Textinput_disabled {
+      color: var(--text-input-color-disabled);
+      -webkit-text-fill-color: var(--text-input-color-disabled);
+      opacity: 1;
+    }
+
+    &.Textinput-url-format {
+      margin-left: 46px;
+    }
+
+    &.Textinput-Control:-webkit-autofill {
+      background-clip: text;
+      box-shadow: none;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+
+  &.Textinput_disabled {
+    .Textinput-Box {
+      background-color: var(--text-input-bg-action);
+    }
+
+    .Textinput-Label {
+      color: var(--text-input-color-disabled);
+    }
+  }
+
+  &.Textinput_focused .Textinput-Box,
+  &.Textinput_hovered .Textinput-Box {
+    background-color: transparent;
+  }
+
+  &.Textinput-url-format {
+    .Textinput-Label_floated ~ .Textinput-Box {
+      &:before {
+        position: absolute;
+        top: var(--offset-28);
+        left: var(--offset-22);
+        content: 'http://';
+        color: var(--color-text-secondary);
+        border-bottom: none;
+      }
+    }
+  }
+
+  &.Textinput.Textinput_state_error.Textinput_focused .Textinput-Box {
+    border-color: var(--color-error);
+    border-width: var(--form-element-border-width);
+  }
+
+  .Textinput-Icon {
+    top: var(--offset-12);
+    right: var(--offset-16);
+    width: var(--size-24);
+    height: var(--size-24);
+  }
+
+  .Textinput-Hint {
+    margin-top: var(--offset-8);
+    font-size: var(--fz-14);
+  }
+}

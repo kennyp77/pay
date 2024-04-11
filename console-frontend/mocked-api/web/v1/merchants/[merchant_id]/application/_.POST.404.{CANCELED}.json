@@ -1,0 +1,7 @@
+{
+  "status": "canceled",
+  "code": 404,
+  "data": {
+    "state": "canceled"
+  }
+}

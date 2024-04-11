@@ -1,0 +1,22 @@
+@import '../../../styles/mixins.scss';
+
+.Button2_variant_compact {
+  padding: var(--offset-10) var(--offset-12);
+  box-sizing: border-box;
+  font-size: var(--fz-16);
+  line-height: var(--lh-20);
+
+  &:before {
+    border-radius: var(--radius-12);
+    box-shadow: var(--bg-button-shadow);
+  }
+
+  .Icon + .Button2-Text {
+    margin-left: var(--offset-8);
+  }
+
+  .Button2-Text {
+    display: flex;
+    align-items: center;
+  }
+}

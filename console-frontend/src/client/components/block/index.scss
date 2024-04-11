@@ -1,0 +1,29 @@
+@import 'styles/variables.scss';
+
+.Block {
+  box-sizing: border-box;
+
+  &_shadow {
+    box-shadow: var(--bg-box-shadow);
+  }
+
+  &_bg_grey {
+    background-color: var(--bg-grey);
+  }
+
+  &_bg_white {
+    background-color: var(--bg-white);
+  }
+}
+
+@each $r in $radius {
+  .Block_radius_#{$r} {
+    border-radius: #{$r}px;
+  }
+}
+
+@each $padding in (16, 24, 32) {
+  .Block_padding_#{$padding} {
+    padding: var(--offset-#{$padding});
+  }
+}

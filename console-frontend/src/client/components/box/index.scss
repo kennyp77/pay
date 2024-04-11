@@ -1,0 +1,25 @@
+.Box {
+  display: block;
+  flex: 1 1 100%;
+  box-sizing: border-box;
+
+  &_type_inline {
+    display: inline-block;
+  }
+
+  &_type_flex {
+    display: flex;
+  }
+
+  &_align_start {
+    align-self: flex-start;
+  }
+
+  &_align_center {
+    align-self: center;
+  }
+
+  &_align_end {
+    align-self: flex-end;
+  }
+}

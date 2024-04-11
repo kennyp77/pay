@@ -1,0 +1,29 @@
+@import 'styles/mixins.scss';
+
+.Suggest {
+  position: relative;
+
+  &-popup {
+    width: 100%;
+  }
+
+  &-popup-wrapper {
+    padding: var(--offset-8) 0;
+    background-color: var(--color-white);
+  }
+
+  &-item {
+    @include transition;
+
+    padding: var(--offset-12) var(--offset-16);
+
+    &:not(&_no-hover) {
+      background-color: var(--bg-white);
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--bg-lightgray);
+      }
+    }
+  }
+}

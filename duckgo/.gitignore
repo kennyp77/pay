@@ -1,0 +1,13 @@
+.idea/
+.vscode/
+cmd/duckgo/duckgo
+cmd/make-payment-token/make-payment-token
+cmd/mastercard-mock/mastercard-mock
+example-configs/cert.cer
+example-configs/cert.key
+example-configs/cert.req
+example-configs/*.pem
+example-configs/paymenttoken-intermediate.json
+config
+yandex-duckgo-*.tar.gz
+.DS_Store

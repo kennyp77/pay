@@ -1,0 +1,38 @@
+@import '../../../styles/variables.scss';
+
+.TouchMapLayout {
+    &-TopBlock {
+        position: fixed;
+        z-index: $map-sidebar-z-index;
+        top: 0;
+
+        width: 100%;
+        height: $touch-map-top-short-height;
+
+        &_variant_touch-high-short,
+        &_variant_touch-high-high {
+            height: $touch-map-top-high-height;
+        }
+    }
+
+    &-BottomBlock {
+        position: fixed;
+        z-index: $map-sidebar-z-index;
+        bottom: 0;
+
+        width: 100%;
+
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+
+        &_variant_touch-short-short,
+        &_variant_touch-high-short {
+            height: $touch-map-bottom-short-height;
+        }
+
+        &_variant_touch-short-high,
+        &_variant_touch-high-high {
+            height: $touch-map-bottom-high-height;
+        }
+    }
+}

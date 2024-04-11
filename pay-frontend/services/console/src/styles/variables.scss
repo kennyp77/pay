@@ -1,0 +1,99 @@
+$main-width: 640px;
+$main-radius: 24px;
+$main-margin: 16px;
+$main-padding-x: 24px;
+$main-padding-y: 24px;
+
+$legoVariablesRoot: '.Theme_root_default body';
+
+/* Colors */
+$color-typo-black: #222426;
+$color-typo-grey: #939cb0;
+
+$color-fill-white: #fff;
+$color-fill-yellow: #ffdc60;
+$color-fill-yellow-dark: #fc0;
+$color-fill-red: #ff3815;
+$color-fill-red-light: #ff6044;
+$color-fill-red-dark: #d23d23;
+$color-fill-red-disabled: rgba(255, 56, 21, 0.28);
+$color-fill-grey: #f1f2f5;
+$color-fill-grey-hover: #f7f8fa;
+$color-fill-grey2: #d4d8e0;
+$color-fill-grey3: #eceef2;
+$color-fill-dark-grey: #272733;
+$color-fill-blue: #4d8eff;
+$color-fill-green: #3cc46d;
+
+/* Controls */
+$control-s-borderRadius: 8px;
+$control-s-height: 32px;
+$control-s-spaceVer: 6px;
+$control-s-spaceHor: 12px;
+$control-s-spaceAll: 6px 12px;
+
+$control-m-borderRadius: 16px;
+$control-m-height: 64px;
+$control-m-height-icon: 40px;
+$control-m-spaceVer: 10px;
+$control-m-spaceHor: 16px;
+$control-m-spaceAll: 10px 16px;
+
+$button-m-borderRadius: 16px;
+$button-s-borderRadius: 8px;
+
+/* Typography */
+$font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$typo-m-size: 16px;
+$typo-s-size: 13px;
+$typo-xs-size: 11px;
+
+$desktop-blocks-width: 383px;
+
+$overTooMuchZIndex: 10000000;
+
+@mixin typo-header-l {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+@mixin typo-header-m {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+@mixin typo-header-s {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+@mixin typo-m {
+    font-size: $typo-m-size;
+    line-height: 20px;
+}
+
+@mixin typo-s {
+    font-size: $typo-s-size;
+    line-height: 16px;
+}
+
+@mixin typo-xs {
+    font-size: $typo-xs-size;
+    line-height: 14px;
+}
+
+/* Map Layout */
+$map-sidebar-with: calc(#{$desktop-blocks-width} + 32px);
+$map-sidebar-z-index: 16;
+$map-overlay-z-index: 8;
+$map-pin-z-index: 4;
+$map-tooltip-z-index: 2;
+$map-z-index: 1;
+$touch-map-top-short-height: 64px;
+$touch-map-top-high-height: 126px;
+$touch-map-bottom-high-height: 400px;
+$touch-map-bottom-short-height: 76px;

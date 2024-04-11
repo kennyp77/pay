@@ -1,0 +1,17 @@
+@import '../../../styles/mixins.scss';
+
+.Modal_variant_default {
+  .Modal-Content {
+    max-width: var(--modal-default-width);
+    background: transparent;
+  }
+
+  .Modal-close-button {
+    @extend %clear-button;
+
+    position: absolute;
+    top: var(--offset-18);
+    right: var(--offset-18);
+    display: flex;
+  }
+}

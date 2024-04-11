@@ -1,0 +1,87 @@
+@import '../../styles/variables.scss';
+
+#{$legoVariablesRoot} {
+    --textinput-borderRadius: #{$control-m-borderRadius};
+
+    --textinput-size-m-fontSize: #{$typo-m-size};
+    --textinput-size-m-height: #{$control-m-height};
+    --textinput-size-m-control-spaceAll: 0 #{$control-m-spaceHor};
+    --textinput-hint-size-m-fontSize: #{$typo-s-size};
+
+    --textinput-size-s-height: 36px;
+
+    --textinput-view-material-space-left: 20px;
+    --textinput-view-material-variant-filled-fill-color: #{$color-fill-grey3};
+    --textinput-view-material-space-top: 0;
+    --textinput-view-material-icon-width: #{$control-m-height-icon};
+    --textinput-view-material-label-color-base: #{$color-typo-grey};
+    --textinput-view-material-variant-filled-label-color-floated: #{$color-typo-grey};
+    --textinput-view-material-space-all: 8px 0 8px;
+    --textinput-view-material-space-right: 8px;
+    --textinput-view-material-hint-font-size: #{$typo-s-size};
+}
+
+.Textinput_view_material {
+    .Textinput-Control {
+        // Из-за заливки (filled) и стилей - это лучший вариант
+        // 50000 секунд - 13.8 часов
+        &:-webkit-autofill {
+            transition: all 0s 50000s;
+        }
+    }
+
+    .Textinput-Box {
+        border: 2px solid #{$color-fill-grey3};
+    }
+
+    &.Textinput_size_m,
+    &.Textinput_size_s {
+        .Textinput-Box {
+            border-radius: #{$control-m-borderRadius};
+
+            &::before,
+            &::after {
+                border: none;
+            }
+        }
+    }
+
+    &.Textinput_disabled {
+        opacity: 0.6;
+
+        .Textinput-Control {
+            color: #{$color-typo-grey} !important;
+        }
+    }
+
+    &.Textinput_focused .Textinput-Box {
+        border-color: #{$color-fill-yellow-dark};
+        background-color: #{$color-fill-white};
+    }
+
+    &.Textinput_hovered {
+        .Textinput-Box {
+            border-color: #{$color-fill-grey2};
+        }
+
+        &.Textinput_focused {
+            .Textinput-Box {
+                border-color: #{$color-fill-yellow};
+            }
+        }
+    }
+
+    .Textinput-Label ~ .Textinput-Control {
+        padding-bottom: 0;
+    }
+
+    .Textinput-Icon {
+        padding: 12px;
+    }
+
+    &.Textinput_iconRight .Textinput-Control {
+        padding-right: calc(
+            var(--textinput-view-material-space-right) + var(--textinput-view-material-icon-width)
+        );
+    }
+}

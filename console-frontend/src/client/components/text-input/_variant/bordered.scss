@@ -1,0 +1,70 @@
+.Textinput_variant_bordered {
+  .Textinput-Box {
+    z-index: auto;
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-12);
+  }
+
+  .Textinput-Label {
+    left: var(--offset-24);
+
+    & ~ .Textinput-Control {
+      padding-top: var(--offset-14);
+      padding-bottom: var(--offset-14);
+      padding-left: var(--offset-24);
+    }
+  }
+
+  &.Textinput_disabled {
+    .Textinput-Box {
+      background-color: var(--text-input-bg-action);
+    }
+
+    .Textinput-Label {
+      color: var(--text-input-color-disabled);
+    }
+
+    .Textinput-Control {
+      color: var(--text-input-color-disabled);
+      opacity: 1;
+    }
+  }
+
+  &.Textinput_focused .Textinput-Box,
+  &.Textinput_hovered .Textinput-Box {
+    background-color: transparent;
+  }
+
+  &:hover .Textinput-Box {
+    background-color: var(--text-input-bg-action);
+  }
+
+  &:hover:not(.Textinput_disabled):not(.Textinput_focused):not(.Textinput_state_error) .Textinput-Box {
+    border-color: transparent;
+    background-color: var(--text-input-bg-action);
+  }
+
+  .Textinput-Label_floated {
+    top: var(--offset-4);
+  }
+
+  .Textinput-Box:before,
+  .Textinput-Box:after {
+    border-bottom: none;
+  }
+
+  .Textinput-Control.Textinput-Control:-webkit-autofill {
+    box-shadow: none;
+  }
+
+  &.Textinput_state_error {
+    .Textinput-Label {
+      color: var(--textinput-view-material-label-color-base);
+    }
+  }
+
+  .Textinput-Hint_view_material.Textinput-Hint_state_error {
+    margin-top: var(--offset-12);
+    font-size: var(--fz-14);
+  }
+}

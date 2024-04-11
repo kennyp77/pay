@@ -1,0 +1,72 @@
+OWNER(g:yandex-pay)
+
+PY3_LIBRARY()
+
+PEERDIR(
+    contrib/python/defusedxml
+    contrib/python/inflection
+    mail/python/sendr-qtools
+    pay/contrib/marshmallow_dataclass
+    pay/lib/entities
+    pay/lib/schemas
+    pay/lib/utils
+)
+
+PY_SRCS(
+    __init__.py
+    antifraud/__init__.py
+    antifraud/client.py
+    antifraud/entities.py
+    merchant/__init__.py
+    merchant/client.py
+    merchant/entities.py
+    merchant/exceptions.py
+    merchant/schemas.py
+    passport_addresses/__init__.py
+    passport_addresses/client.py
+    passport_addresses/entities.py
+    passport_addresses/exceptions.py
+    passport_addresses/schemas.py
+    psp/__init__.py
+    psp/payture/__init__.py
+    psp/payture/client.py
+    psp/payture/entities.py
+    psp/payture/exceptions.py
+    psp/payture/schemas.py
+    psp/rbs/__init__.py
+    psp/rbs/client.py
+    psp/rbs/entities.py
+    psp/rbs/exceptions.py
+    psp/rbs/schemas.py
+    psp/uniteller/__init__.py
+    psp/uniteller/client.py
+    psp/uniteller/entities.py
+    psp/uniteller/exceptions.py
+    psp/uniteller/schemas.py
+    sender/__init__.py
+    sender/client.py
+    sender/entities.py
+    sender/enums.py
+    sender/exceptions.py
+    sender/schemas.py
+    split/__init__.py
+    split/client.py
+    split/entities.py
+    split/exceptions.py
+    split/schemas.py
+    yandex_delivery/__init__.py
+    yandex_delivery/client.py
+    yandex_delivery/entities.py
+    yandex_delivery/exceptions.py
+    yandex_delivery/schemas.py
+    yandex_pay_admin/__init__.py
+    yandex_pay_admin/client.py
+    yandex_pay/__init__.py
+    yandex_pay/client.py
+    yandex_pay/entities.py
+    yandex_pay/exceptions.py
+    yandex_pay/schemas.py
+)
+
+
+END()

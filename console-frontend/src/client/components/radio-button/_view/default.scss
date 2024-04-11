@@ -1,0 +1,14 @@
+.RadioButton_view_default {
+  font-weight: 500;
+  font-family: var(--typography-font-family);
+  border-radius: var(--radius-12);
+
+  .RadioButton-Radio {
+    color: var(--color-text-default-soft);
+  }
+
+  .RadioButton-Plate:before,
+  .RadioButton_view_default .RadioButton-Radio:before {
+    border-radius: var(--radius-8);
+  }
+}

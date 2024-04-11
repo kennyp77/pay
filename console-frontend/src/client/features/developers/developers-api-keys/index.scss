@@ -1,0 +1,12 @@
+.DevelopersApiKeys {
+  max-width: var(--developers-api-keys-block-width);
+  padding: var(--offset-32) 0;
+}
+
+.DevelopersApiKeys-Modal {
+  overflow: hidden;
+}
+
+.DevelopersApiKeys-WarningText {
+  width: var(--developers-api-keys-warning-text-width);
+}

@@ -1,0 +1,11 @@
+.AboutSplit_width_fixed {
+    max-width: 412px;
+}
+
+.AboutSplit-SplitLogo {
+    width: 135px;
+}
+
+.AboutSplit-SplitLogo::after {
+    display: none;
+}

@@ -1,0 +1,9 @@
+@import 'styles/mixins';
+
+.BillDropdown-Icon {
+  @include transition;
+}
+
+.BillDropdown-Icon_top {
+  transform: rotate(180deg);
+}

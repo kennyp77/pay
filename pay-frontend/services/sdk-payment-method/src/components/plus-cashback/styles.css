@@ -1,0 +1,87 @@
+.plus-cashback {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 2px 5px;
+
+    border-radius: 12px 8px 9px 11px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    transform-origin: 100% 0;
+}
+
+.plus-cashback__block {
+    display: flex;
+    align-items: center;
+
+    user-select: none;
+    white-space: nowrap;
+}
+
+.plus-cashback__text,
+.plus-cashback__logo,
+.plus-cashback__amount {
+    flex-shrink: 0;
+
+    line-height: 14px;
+}
+
+.plus-cashback__text {
+    height: 14px;
+}
+
+.plus-cashback__text-return_hidden {
+    display: none;
+}
+
+.plus-cashback__logo {
+    width: 11px;
+    height: 14px;
+    margin-left: 2px;
+}
+
+.plus-cashback__amount {
+    margin-left: 2px;
+
+    font-family: 'YS Text', 'YS Text Pan', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    background: linear-gradient(
+        270.54deg,
+        #30abd1 -12.57%,
+        #397ddb 30.38%,
+        #505add 71.14%,
+        #be40c0 123.16%,
+        #f06151 156.58%,
+        #f2991d 183.1%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    /* убирает рамку от градиента в Safari*/
+    outline: 1px solid #fff;
+}
+
+
+.plus-cashback_percent .plus-cashback__block {
+    padding: 1px 0;
+}
+
+.plus-cashback_percent .plus-cashback__text,
+.plus-cashback_percent .plus-cashback__logo,
+.plus-cashback_percent .plus-cashback__amount {
+    height: 11px;
+    line-height: 13px;
+}
+
+.plus-cashback_percent .plus-cashback__text {
+    height: 12px;
+}
+
+.plus-cashback__amount_hidden {
+    display: none;
+}

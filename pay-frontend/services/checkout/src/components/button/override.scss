@@ -1,0 +1,121 @@
+@import '../../styles/variables.scss';
+
+#{$legoVariablesRoot} {
+    --button-view-action-border-color-focused: #{$color-fill-red};
+    --button-view-action-fill-color-base: #{$color-fill-red};
+    --button-view-action-fill-color-disabled: #{$color-fill-red-disabled};
+    --button-view-action-fill-color-hovered: #{$color-fill-red-light};
+    --button-view-action-fill-color-progress-base: #{$color-fill-red};
+    --button-view-action-fill-color-progress-process: #{$color-fill-red-light};
+    --button-view-action-typo-color-base: #{$color-fill-white};
+    --button-view-action-typo-color-disabled: #{$color-fill-white};
+    --button-view-action-typo-color-hovered: #{$color-fill-white};
+    --button-view-action-typo-color-progress-base: #{$color-fill-white};
+
+    --button-view-pseudo-border-color-base: #{$color-fill-grey};
+    --button-view-pseudo-fill-color-checked-base: #{$color-fill-white};
+    --button-view-pseudo-fill-color-checked-hovered: #{$color-fill-white};
+
+    --button-view-default-fill-color-base: #{color-fill-white};
+    --button-view-default-fill-color-hovered: #{$color-fill-grey-hover};
+
+    --button-size-s-height: 28px;
+    --button-size-s-lineHeight: 28px;
+    --button-size-s-font: #{$typo-s-size};
+    --button-size-s-icon-indentRight: 30px;
+    --button-size-s-icon-indentLeft: 30px;
+    --button-size-s-text-indentAll: 0 var(--space-xs);
+
+    --button-size-m-font: #{$typo-m-size};
+    --button-size-m-icon-indentRight: 35px;
+    --button-size-m-icon-indentLeft: 35px;
+
+    --button-size-l-font: #{$typo-m-size};
+    --button-size-l-icon-indentRight: 56px;
+    --button-size-l-icon-indentLeft: 56px;
+    --button-size-l-height: 56px;
+    --button-size-l-icon-width: 56px;
+}
+
+.Button2 .Button2-Icon {
+    display: inline-block;
+
+    box-sizing: border-box;
+
+    font-size: 0;
+    line-height: 0;
+
+    svg {
+        display: block;
+    }
+}
+
+.Button2_size_s .Button2-Icon {
+    padding: 8px;
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.Button2_size_m .Button2-Icon {
+    padding: 8px;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.Button2_size_l .Button2-Icon {
+    padding: 22px;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.Button2_view_link {
+    height: unset;
+
+    line-height: unset;
+    /* При перекрытии через var сбрасывается цвет на hover */
+    color: #{$color-fill-blue};
+
+    &::before {
+        border: none !important;
+        background: none !important;
+    }
+
+    .Button2-Text {
+        margin: 0;
+    }
+}
+
+.Button2.Button2_view_pseudo {
+    &::before {
+        background-color: #{$color-fill-grey};
+    }
+
+    &.Button2_checked {
+        color: #{$color-typo-black} !important;
+
+        &::before {
+            background-color: #{$color-fill-white};
+        }
+    }
+}
+
+.Button2.Button2_view_default {
+    &::before {
+        border: 1px solid $color-fill-grey2;
+    }
+
+    &.Button2_pressed {
+        &::before {
+            background-color: #{$color-fill-grey};
+        }
+    }
+}

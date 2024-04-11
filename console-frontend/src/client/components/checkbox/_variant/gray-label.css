@@ -1,0 +1,12 @@
+.Checkbox_variant_gray-label {
+  display: block;
+}
+
+.Checkbox_variant_gray-label .Checkbox-Label {
+  color: var(--checkbox-text-color);
+}
+
+.Checkbox_variant_gray-label .Checkbox-Label a {
+  color: var(--checkbox-view-default-typo-color-base);
+  text-decoration: none;
+}

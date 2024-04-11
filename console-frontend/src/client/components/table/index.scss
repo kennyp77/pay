@@ -1,0 +1,105 @@
+@import 'styles/mixins';
+
+.Table {
+  $root: &;
+
+  margin-top: calc(var(--offset-10) * -1);
+  border-spacing: 0 var(--offset-10);
+
+  &-Row {
+    &_BeforeHoverRows {
+      #{$root}-Col:first-child:not(#{$root}-Col_Align_left) {
+        padding-left: var(--offset-20);
+      }
+    }
+
+    &_Hovered {
+      cursor: pointer;
+
+      &:hover #{$root}-Col {
+        background-color: var(--color-mg-tint-superlight);
+      }
+
+      #{$root}-Col {
+        @include transition;
+
+        &:first-child {
+          border-top-left-radius: var(--radius-12);
+          border-bottom-left-radius: var(--radius-12);
+          &:not(#{$root}-Col_Align_left) {
+            padding-left: var(--offset-20);
+          }
+        }
+
+        &:last-child {
+          border-top-right-radius: var(--radius-12);
+          border-bottom-right-radius: var(--radius-12);
+        }
+      }
+    }
+  }
+
+  &-Col {
+    &_Heading {
+      padding: 0 var(--offset-24) 0 0;
+      text-align: start;
+    }
+
+    &_Is_sortable {
+      cursor: pointer;
+    }
+
+    &:not(&_Heading) {
+      padding-top: var(--offset-14);
+      padding-right: var(--offset-24);
+      padding-bottom: var(--offset-14);
+      font-size: var(--fz-16);
+      line-height: var(--lh-22);
+    }
+
+    &_Align_right {
+      text-align: end;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      #{$root}-HeadingBox {
+        justify-content: flex-end;
+      }
+    }
+
+    &_Align_left {
+      text-align: start;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      #{$root}-HeadingBox {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &-HeadingBox {
+    gap: var(--offset-4);
+    align-items: center;
+  }
+
+  &-Icon {
+    @include transition;
+
+    display: none;
+    transform: scaleY(0);
+
+    &_IsActive {
+      display: block;
+      transform: scaleY(1);
+
+      &#{$root}-Icon_Reverse {
+        transform: scaleY(-1);
+      }
+    }
+  }
+}

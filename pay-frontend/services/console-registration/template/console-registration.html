@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7,IE=edge" />
+        <title>Yandex Pay Console</title>
+        <script>
+            window.__CONFIG = {
+                version: '%%version%%',
+                env: '%%env%%',
+                uid: '%%uid%%',
+                email: '%%email%%',
+                reqid: '%%reqid%%',
+                csrfToken: '%%csrfToken%%',
+                metrikaId: '%%metrikaId%%',
+                metrikaSessionId: '%%metrikaSessionId%%',
+                services: '%%services%%',
+                experiment: '%%experiment%%',
+            };
+        </script>
+    </head>
+    <body>
+        <!-- Preloader -->
+        <div class="init-preloader" data-label="initial-preloader">
+            <style>
+                .init-preloader {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    z-index: 99999;
+                    width: 100vw;
+                    height: 100vh;
+                    background: #fff;
+                }
+                .init-spin {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    display: block;
+                    width: 76px;
+                    height: 76px;
+                    margin: -39px 0 0 -39px;
+                    border: 1px solid transparent;
+                    border-radius: 50%;
+                    background: linear-gradient(
+                            180deg,
+                            rgba(255, 204, 0, 0) 0%,
+                            rgba(255, 204, 0, 0.25) 50%,
+                            rgba(255, 204, 0, 0.48) 100%
+                        ),
+                        #f00;
+                    background-clip: content-box;
+                }
+                .init-spin::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #fff;
+                    border-radius: 50%;
+                    transform: scale(0.9, 0.9);
+                }
+                .init-spin::after {
+                    content: '';
+                    position: absolute;
+                    top: -1px;
+                    left: -1px;
+                    box-sizing: border-box;
+                    width: calc(50% + 1px);
+                    height: calc(50% + 1px);
+                    background: #fff;
+                    border-top-left-radius: 50%;
+                    transform-origin: 100% 100%;
+                    animation: init-spinner-rotation 1s 0.21s infinite linear;
+                    backface-visibility: hidden;
+                }
+                @keyframes init-spinner-rotation {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(359deg);
+                    }
+                }
+                .Theme_dark .init-preloader,
+                .Theme_dark .init-spin::before,
+                .Theme_dark .init-spin::after {
+                    background: #333;
+                }</style
+            ><i class="init-spin"></i>
+        </div>
+        <!-- /Preloader -->
+        <div id="root"></div>
+        <script type="text/template" id="user_template">
+            ##userTemplate##
+        </script>
+    </body>
+</html>

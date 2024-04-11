@@ -1,0 +1,36 @@
+{
+  "status": "success",
+  "code": 200,
+  "data": {
+    "layouts": [
+      {
+        "document": {
+          "mime": "string",
+          "created": "[#faker:datatype:uuid]",
+          "updated": "[#faker:datatype:uuid]",
+          "document_id": "[#faker:datatype:uuid]",
+          "name": "string"
+        },
+        "layout_id": "[#faker:datatype:uuid]",
+        "origin_id": "[#faker:datatype:uuid]",
+        "created": "[#faker:datatype:uuid]",
+        "updated": "[#faker:datatype:uuid]",
+        "type": "string"
+      }
+    ],
+    "partner_id": "[#faker:datatype:uuid]",
+    "moderation": {
+      "approved": "b:[#faker:datatype:boolean]",
+      "resolved": "b:[#faker:datatype:boolean]",
+      "origin_id": "string",
+      "created": "[#faker:datatype:uuid]",
+      "origin_moderation_id": "[#faker:datatype:uuid]",
+      "updated": "[#faker:datatype:uuid]"
+    },
+    "merchant_id": "[#faker:datatype:uuid]",
+    "created": "[#faker:datatype:uuid]",
+    "origin": "string",
+    "origin_id": "[#faker:datatype:uuid]",
+    "updated": "[#faker:datatype:uuid]"
+  }
+}

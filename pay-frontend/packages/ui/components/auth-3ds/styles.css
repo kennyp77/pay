@@ -1,0 +1,10 @@
+.Auth3dsFrame {
+    display: block;
+
+    width: 100%;
+    min-width: 300px;
+    height: 100%;
+    min-height: 500px;
+    margin: 0;
+    padding: 0;
+}

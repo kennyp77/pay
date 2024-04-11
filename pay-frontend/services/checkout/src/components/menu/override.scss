@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+
+#{$legoVariablesRoot} {
+    --menu-size-s-fontSize: #{$typo-s-size};
+    --menu-size-s-item-icon-indentRight: 0;
+    --menu-size-m-lineHeight: 40px;
+    --menu-size-m-fontSize: #{$typo-m-size};
+    --menu-size-m-item-icon-indentRight: 0;
+
+    --menu-view-default-fill-color-base: #{$color-fill-white};
+    --menu-view-default-fill-color-hovered: #{$color-fill-grey};
+    --menu-view-default-typo-color-base: #{$color-typo-black};
+    --menu-view-default-typo-color-hovered: #{$color-typo-black};
+    --menu-view-default-typo-color-disabled: #{$color-typo-grey};
+}
+
+.Menu_view_default {
+    border-radius: $control-m-borderRadius;
+    box-shadow: 0 0 2px rgba(147, 156, 176, 0.1), 0 8px 28px rgba(147, 156, 176, 0.3);
+}
+
+.Menu-Item {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.Menu-Item .Icon {
+    flex: 0 0 auto;
+}
+
+.Menu-Text {
+    overflow: hidden;
+    order: -1;
+
+    min-width: 0; /* Важно! не дает блоку растягиваться по контенту превышая размеры родителя */
+    margin-right: auto;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

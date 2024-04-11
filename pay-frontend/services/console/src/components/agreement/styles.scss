@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+.Agreement {
+    position: relative;
+
+    &-Button {
+        position: relative;
+
+        margin-top: 20px;
+
+        .Button2 {
+            height: 56px !important;
+
+            cursor: pointer;
+        }
+    }
+
+    &-Email {
+        z-index: 1;
+
+        margin-top: 10px;
+    }
+
+    &-Checkbox {
+        display: block;
+        margin-top: 12px;
+    }
+}

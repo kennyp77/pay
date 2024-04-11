@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+NEXT_PUBLIC_RESTAPIFY_OFF=true npx lint-staged
+echo 'Не забудь запустить команды \033[1;33mnpm run lint\033[0m и \033[1;33mnpm run stylelint\033[0m и пофиксить ворнинги! 💪'

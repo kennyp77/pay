@@ -1,0 +1,11 @@
+.PanelWrapper,
+.PanelWrapper > form,
+.PanelWrapper > div {
+    display: flex;
+
+    width: 100%;
+}
+
+.PanelWrapper {
+    overflow: hidden;
+}

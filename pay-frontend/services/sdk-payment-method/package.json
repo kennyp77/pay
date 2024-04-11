@@ -1,0 +1,14 @@
+{
+  "name": "@yandex-pay/sdk-payment-method",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "inazarov-mi@yandex-team.ru",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config .config/webpack.prod.js",
+    "start": "webpack-dev-server --config .config/webpack.dev.js",
+    "test": "jest --verbose --passWithNoTests",
+    "deploy:static": "static-uploader"
+  }
+}

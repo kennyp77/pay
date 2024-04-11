@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.Layout {
+    display: flex;
+
+    height: 100vh;
+
+    border-radius: $main-radius;
+    background-color: #fff;
+}

@@ -1,0 +1,37 @@
+.highlighter {
+    position: relative;
+
+    padding: 20px;
+
+    font-size: 14px;
+
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.highlighter pre,
+.highlighter code {
+    margin: 0;
+    padding: 0;
+}
+
+.highlighter__copy {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    padding: 4px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    transition: opacity 0.2s;
+}
+
+.highlighter:hover .highlighter__copy {
+    opacity: 1;
+}

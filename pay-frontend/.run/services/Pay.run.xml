@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Pay Service" type="CompoundRunConfigurationType">
+    <toRun name="proxy.js" type="NodeJSConfigurationType" />
+    <toRun name="tvmtool" type="js.build_tools.npm" />
+    <toRun name="server" type="js.build_tools.npm" />
+    <toRun name="sdk" type="js.build_tools.npm" />
+    <toRun name="sdk-init" type="js.build_tools.npm" />
+    <toRun name="sdk-payment-method" type="js.build_tools.npm" />
+    <toRun name="sdk-ready-check" type="js.build_tools.npm" />
+    <toRun name="pay-form" type="js.build_tools.npm" />
+    <toRun name="checkout" type="js.build_tools.npm" />
+    <toRun name="playground" type="js.build_tools.npm" />
+    <method v="2" />
+  </configuration>
+</component>

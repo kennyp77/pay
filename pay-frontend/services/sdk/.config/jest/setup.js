@@ -1,0 +1,11 @@
+global.__ASSETS_URL__ = 'http://localhost';
+global.__FORM_URL__ = 'http://localhost/form';
+global.__CHECKOUT_FORM_URL__ = 'http://localhost/checkout';
+global.__SDK_INIT_URL__ = 'http://localhost/sdk/init';
+global.__SDK_READY_CHECK_URL__ = 'http://localhost/sdk/ready-check';
+global.__SDK_PAYMENT_METHOD_URL__ = 'http://localhost/sdk/payment-method';
+global.__METRIKA_ID__ = 0;
+global.__METRIKA_URL__ = 'http://localhost';
+global.__ERROR_LOGGER_URL__ = 'http://localhost';
+global.__ERROR_LOGGER_ENV__ = 'testing';
+global.__BUILD_VERSION__ = process.env.BUILD_VERSION;

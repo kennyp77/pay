@@ -1,0 +1,146 @@
+color:
+  mg:
+    typo:
+      primary:
+        value: rgba(247, 247, 255, 0.9)
+      secondary:
+        value: rgba(247, 247, 255, 0.5)
+    accent:
+      brand:
+        value: "#FFDC60"
+      alert:
+        value: "#fb5c56"
+      success:
+        value: "#55c151"
+    tint:
+      superlight:
+        value: rgba(255, 255, 255, 0.07)
+      light:
+        value: rgba(255, 255, 255, 0.10)
+      overlay:
+        value: rgba(0, 0, 0, 0.50)
+    link:
+      default:
+        base:
+          value: "#56a8fc"
+        hover:
+          value: "#fb5c56"
+    stroke:
+      default:
+        base:
+          value: rgba(211, 211, 222, 0.2)
+        hover:
+          value: rgba(211, 211, 222, 0.25)
+    button:
+      primary:
+        fill:
+          base:
+            value: "#FFDC60"
+          hover:
+            value: "#FFD21F"
+        typo:
+          value: "#222426"
+      secondary:
+        fill:
+          base:
+            value: rgba(211, 211, 222, 0.15)
+          hover:
+            value: rgba(211, 211, 222, 0.12)
+        typo:
+          value: rgba(247, 247, 255, 0.90)
+    surface:
+      primary:
+        value: "#131317"
+      submerged:
+        value: "#0E0E0E"
+      elevated:
+        lvl1:
+          value: "#1d1e22"
+        lvl2:
+          value: "#25262a"
+        lvl3:
+          value: "#2e2f34"
+    spectre:
+      red:
+        value: "#fb5c56"
+      yellow:
+        value: "#FFDC60"
+      green:
+        value: "#55C151"
+      blue:
+        value: "#56A8FC"
+      purple:
+        value: "#b079ff"
+    control:
+      checked:
+        fill:
+          base:
+            value: rgba(255, 255, 255, 0.4)
+          hover:
+            value: rgba(255, 255, 255, 0.46)
+      placeholder:
+        value: rgba(247, 247, 255, 0.1)
+      disabled:
+        typo:
+          primary:
+            value: rgba(247, 247, 255, 0.4)
+          secondary:
+            value: rgba(247, 247, 255, 0.2)
+        stroke:
+          value: rgba(211, 211, 222, 0.12)
+        fill:
+          value: "{color.mg.tint.superlight.value}"
+      focus:
+        base:
+          value: "{color.mg.button.primary.fill.base.value}"
+      outlined:
+        fill:
+          value: transparent
+    promo:
+      fill:
+        value: "#067AFF"
+    inverse:
+      fill:
+        value: "#393940"
+      typo:
+        value:  "#F7F7FF"
+effect:
+  mg:
+    shadow:
+      surface:
+        elevated:
+          lvl05:
+            value: 0px 2px 4px rgba(0, 0, 0, 0.30), 0px 0px 2px rgba(0, 0, 0, 0.10)
+          lvl1:
+            value: 0px 4px 12px rgba(0, 0, 0, 0.30), 0px 0px 2px rgba(0, 0, 0, 0.10)
+          lvl2:
+            value: 0px 6px 20px rgba(0, 0, 0, 0.30), 0px 0px 2px rgba(0, 0, 0, 0.10)
+          lvl3:
+            value: 0px 8px 28px rgba(0, 0, 0, 0.30), 0px 0px 2px rgba(0, 0, 0, 0.10)
+      fromTop:
+        value: 0px 8px 20px rgba(0, 0, 0, 0.10)
+      fromBottom:
+        value: 0px -4px 20px rgba(0, 0, 0, 0.10)
+radius:
+  mg:
+    s:
+      base:
+        value: 8px
+      inner:
+        value: 6px
+    m:
+      base:
+        value: 12px
+      inner:
+        value: 10px
+    l:
+      base:
+        value: 16px
+      inner:
+        value: 14px
+    tooltip:
+      value: 8px
+    popup:
+      value: 12px
+    modal:
+      value: 24px

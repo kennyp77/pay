@@ -1,0 +1,21 @@
+@import 'fonts.css';
+@import 'variables.scss';
+@import 'breakpoints.scss';
+
+html {
+  font-size: var(--fz-16);
+  line-height: 1.25;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--color-text-default-soft);
+  font-family: var(--control-font-family);
+  overflow-y: hidden;
+}
+
+a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}

@@ -1,0 +1,25 @@
+.bank-cards {
+    width: 100%;
+    max-width: 425px;
+    margin: 0 auto;
+}
+
+.bank-cards__list {
+    display: block;
+
+    margin: 0;
+    padding: 0;
+}
+
+.bank-cards__item {
+    display: block;
+
+    margin: 0 0 20px;
+    padding: 0;
+}
+
+.bank-cards__item-title {
+    display: block;
+
+    margin: 0 0 5px 10px;
+}

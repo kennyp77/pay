@@ -1,0 +1,5 @@
+@import '../constants.css';
+
+.order-input {
+    margin-top: var(--space-12);
+}

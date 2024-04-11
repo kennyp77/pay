@@ -1,0 +1,18 @@
+.MessageBox.MessageBox_variant_critical {
+  .MessageBox-Backdrop:before {
+    background-color: var(--color-error);
+  }
+
+  .MessageBox-TextLeft {
+    margin-right: var(--offset-12);
+
+    .Icon {
+      width: var(--size-20);
+      height: var(--size-20);
+    }
+  }
+
+  .MessageBox-Text {
+    color: var(--color-white);
+  }
+}

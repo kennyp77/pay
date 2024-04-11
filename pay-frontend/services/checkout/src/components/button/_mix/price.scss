@@ -1,0 +1,16 @@
+@import '../../../styles/variables.scss';
+
+.Button2-Price {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+
+    height: $control-s-height;
+    padding-right: $control-s-spaceHor;
+    padding-left: $control-s-spaceHor;
+
+    border-radius: $control-s-borderRadius;
+    background: rgba($color-fill-white, 0.22);
+
+    @include typo-s;
+}

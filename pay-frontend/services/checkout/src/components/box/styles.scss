@@ -1,0 +1,24 @@
+.box {
+    display: block;
+    flex: 1 1 auto;
+
+    &_shrink {
+        flex: 0 0 auto;
+    }
+
+    &_type_inline {
+        display: inline-block;
+    }
+
+    &_align_start {
+        align-self: flex-start;
+    }
+
+    &_align_center {
+        align-self: center;
+    }
+
+    &_align_end {
+        align-self: flex-end;
+    }
+}

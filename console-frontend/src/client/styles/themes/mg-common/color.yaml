@@ -1,0 +1,231 @@
+color:
+  base:
+    value: "{color.mg.typo.primary.value}"
+  project:
+    value: "{color.mg.accent.brand.value}"
+  path:
+    value: "{color.mg.link.default.base.value}"
+  success:
+    value: "{color.mg.accent.success.value}"
+  alert:
+    value: "{color.mg.accent.alert.value}"
+  system:
+    value: "{color.mg.typo.secondary.value}"
+  normal:
+    value: "{color.mg.tint.light.value}"
+  promo:
+    value: "{color.mg.promo.fill.value}"
+  hover:
+    value: "{color.mg.link.default.hover.value}"
+  fillColor:
+    inverse:
+      value: "{color.mg.inverse.fill.value}"
+    brand:
+      value: "{color.mg.accent.brand.value}"
+    action:
+      value: "{color.mg.accent.brand.value}"
+    stripe:
+      value: "{color.mg.stroke.default.base.value}"
+    border:
+      value: "{color.mg.stroke.default.base.value}"
+    hover:
+      value: "{color.mg.tint.superlight.value}"
+    selection:
+      value: "#FFEDAF"
+    ghost:
+      value: "{color.mg.tint.superlight.value}"
+    success:
+      value: "{color.mg.accent.success.value}"
+    alert:
+      value: "{color.mg.accent.alert.value}"
+    normal:
+      value: "{color.mg.tint.light.value}"
+    link:
+      value: "{color.mg.link.default.base.value}"
+    promo:
+      value: "{color.mg.promo.fill.value}"
+    system:
+      value: "{color.mg.typo.secondary.value}"
+    soft:
+      value: "{color.mg.surface.primary.value}"
+    default:
+      value: "{color.mg.surface.primary.value}"
+    warning:
+      value: "{color.mg.typo.primary.value}"
+    tone:
+      value: "{color.mg.typo.primary.value}"
+  typo:
+    brand:
+      value: "{color.mg.accent.brand.value}"
+    primary:
+      value: "{color.mg.typo.primary.value}"
+    promo:
+      value: "{color.mg.promo.fill.value}"
+    secondary:
+      value: "{color.mg.typo.secondary.value}"
+    ghost:
+      value: "{color.mg.typo.secondary.value}"
+    disable:
+      value: "{color.mg.control.disabled.typo.secondary.value}"
+    success:
+      value: "{color.mg.accent.success.value}"
+    alert:
+      value: "{color.mg.accent.alert.value}"
+    warning:
+      value: "{color.mg.typo.primary.value}"
+    inverse:
+      value: "{color.mg.inverse.typo.value}"
+  link:
+    base:
+      value: "{color.mg.link.default.base.value}"
+    external:
+      value: "{color.mg.link.default.base.value}"
+    minor:
+      value: "{color.mg.link.default.base.value}"
+    hover:
+      value: "{color.mg.link.default.hover.value}"
+  control:
+    borderColor:
+      prism:
+        value: "{color.mg.control.focus.base.value}"
+      focus:
+        value: "{color.mg.control.focus.base.value}"
+    typo:
+      primary:
+        value: "{color.mg.typo.primary.value}"
+      secondary:
+        value: "{color.mg.typo.secondary.value}"
+      ghost:
+        value: "{color.mg.typo.secondary.value}"
+      passive:
+        value: "{color.mg.typo.primary.value}"
+      link:
+        value: "{color.mg.link.default.base.value}"
+      error:
+        value: "{color.mg.accent.alert.value}"
+      disable:
+        value: "{color.mg.control.disabled.typo.secondary.value}"
+      faint:
+        value: "{color.mg.inverse.typo.value}"
+    type:
+      default:
+        fillColor:
+          base:
+            value: "{color.mg.button.secondary.fill.base.value}"
+          hover:
+            value: "{color.mg.button.secondary.fill.hover.value}"
+          press:
+            value: "{color.mg.button.secondary.fill.hover.value}"
+          disable:
+            value: "{color.mg.control.disabled.fill.value}"
+        borderColor:
+          base:
+            value: "{color.mg.stroke.default.base.value}"
+          hover:
+            value: "{color.mg.stroke.default.hover.value}"
+          press:
+            value: "{color.mg.stroke.default.hover.value}"
+          disable:
+            value: "{color.mg.control.disabled.stroke.value}"
+          error:
+            base:
+              value: "{color.mg.accent.alert.value}"
+            hover:
+              value: "{color.mg.accent.alert.value}"
+      pseudo:
+        fillColor:
+          base:
+            value: "{color.mg.control.outlined.fill.value}"
+          hover:
+            value: "{color.mg.tint.superlight.value}"
+        borderColor:
+          base:
+            value: "{color.mg.stroke.default.base.value}"
+      action:
+        fillColor:
+          base:
+            value: "{color.mg.button.primary.fill.base.value}"
+          hover:
+            value: "{color.mg.button.primary.fill.hover.value}"
+          press:
+            value: "{color.mg.button.primary.fill.hover.value}"
+      passive:
+        fillColor:
+          base:
+            value: "{color.mg.control.outlined.fill.value}"
+      progress:
+        fillColor:
+          base:
+            value: "{color.mg.button.primary.fill.base.value}"
+          process:
+            value: "{color.mg.button.primary.fill.hover.value}"
+      blank:
+        fillColor:
+          base:
+            value: "{color.mg.control.outlined.fill.value}"
+          hover:
+            value: "{color.mg.control.outlined.fill.value}"
+          disable:
+            value: "{color.mg.control.disabled.fill.value}"
+        borderColor:
+          base:
+            value: "{color.mg.stroke.default.base.value}"
+          hover:
+            value: "{color.mg.stroke.default.hover.value}"
+          disable:
+            value: "{color.mg.control.disabled.stroke.value}"
+      faint:
+        fillColor:
+          base:
+            value: "{color.mg.control.outlined.fill.value}"
+          disable:
+            value: "{color.mg.control.disabled.fill.value}"
+      check:
+        fillColor:
+          base:
+            value: "{color.mg.button.primary.fill.base.value}"
+          hover:
+            value: "{color.mg.button.primary.fill.hover.value}"
+          press:
+            value: "{color.mg.button.primary.fill.hover.value}"
+          disable:
+            value: "{color.mg.control.disabled.fill.value}"
+        borderColor:
+          base:
+            value: transparent
+          hover:
+            value: transparent
+          press:
+            value: transparent
+      link:
+        fillColor:
+          base:
+            value: "{color.mg.control.outlined.fill.value}"
+          hover:
+            value: "{color.mg.control.outlined.fill.value}"
+        borderColor:
+          base:
+            value: "{color.mg.link.default.base.value}"
+          hover:
+            value: "{color.mg.link.default.base.value}"
+      raised:
+        typo:
+          base:
+            value: "{color.mg.typo.primary.value}"
+          disable:
+            value: "{color.mg.control.disabled.typo.primary.value}"
+        fillColor:
+          hover:
+            value: "{color.mg.tint.superlight.value}"
+          disable:
+            value: "{color.mg.control.disabled.fill.value}"
+          check:
+            value: "{color.mg.control.outlined.fill.value}"
+          base:
+            value: "{color.mg.control.outlined.fill.value}"
+  phantom:
+    value: "{color.mg.typo.primary.value}"
+  warning:
+    value: "{color.mg.typo.primary.value}"
+  essential:
+    value: "{color.mg.surface.primary.value}"

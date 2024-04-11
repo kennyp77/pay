@@ -1,0 +1,23 @@
+@import '../constants.css';
+
+.new-card {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-card__meta {
+    display: flex;
+    align-items: center;
+
+    margin-left: 6px;
+}
+
+.new-card__label {
+    font-weight: 500;
+
+    color: var(--color-common-black);
+
+    @apply --text-size-20;
+}

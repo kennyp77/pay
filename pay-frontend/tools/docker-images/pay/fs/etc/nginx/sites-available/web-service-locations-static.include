@@ -1,0 +1,145 @@
+location = /favicon.ico {
+    alias           /usr/src/public/sdk/v1/_/favicon.ico;
+}
+
+####################
+# PUBLIC SDK
+####################
+
+location ~ ^/sdk/v(\d+)/pay.js$ {
+    include         /etc/nginx/nginx.no-cache.include;
+    alias           /usr/src/public/sdk/v$1/pay.js;
+}
+
+location ~ ^/web/sdk/(.+\.(?:png|svg))$ {
+    include         /etc/nginx/nginx.cache.include;
+    alias           /usr/src/public/sdk/$1;
+}
+
+####################
+# PLAYGROUND
+####################
+
+location /web/playground {
+    return 404;
+}
+
+####################
+# DEMO
+####################
+
+location = /web/demo {
+    return 404;
+}
+
+####################
+# METRIKA-PROXY
+####################
+
+location /web/watch/ {
+    rewrite     /web/(.*)   /$1     break;
+    proxy_pass                      https://mc.yandex.ru;
+    proxy_set_header                Host mc.yandex.ru;
+    proxy_pass_request_headers      on;
+}
+
+####################
+# ERROR-BOOSTER-PROXY
+####################
+
+location /web/clck/ {
+    rewrite     /web/(.*)   /$1     break;
+    proxy_pass                      https://yandex.ru;
+    proxy_set_header                Host yandex.ru;
+    proxy_pass_request_headers      on;
+}
+
+####################
+# MOBILE ASSETS
+####################
+
+location = /web/api/mobile/v1/bank_logos {
+    include         /etc/nginx/nginx.cache.include;
+    alias           /usr/src/public/mobile-api-assets/mobicon-manifest-v1.json;
+}
+
+location = /web/api/mobile/v2/bank_logos {
+    include         /etc/nginx/nginx.cache.include;
+    alias           /usr/src/public/mobile-api-assets/mobicon-manifest-v2.json;
+}
+
+
+####################################################
+####################################################
+############### O L D  C O N F I G #################
+####################################################
+####################################################
+
+####################
+# PUBLIC SDK
+####################
+
+location ~ ^/sdk/(.+\.(?:png|svg))$ {
+    include         /etc/nginx/nginx.cache.include;
+    alias           /usr/src/public/sdk/$1;
+}
+
+####################
+# PLAYGROUND
+####################
+
+location /playground {
+    return 404;
+}
+
+####################
+# DEMO
+####################
+
+location = /demo {
+    return 404;
+}
+
+####################
+# METRIKA-PROXY
+####################
+
+location /watch/ {
+    proxy_pass                      https://mc.yandex.ru;
+    proxy_set_header                Host mc.yandex.ru;
+    proxy_pass_request_headers      on;
+}
+
+####################
+# ERROR-BOOSTER-PROXY
+####################
+
+location /clck/ {
+    proxy_pass                      https://yandex.ru;
+    proxy_set_header                Host yandex.ru;
+    proxy_pass_request_headers      on;
+}
+
+####################
+# MOBILE ASSETS
+####################
+
+location = /web-api/mobile/v1/bank_logos {
+    include         /etc/nginx/nginx.cache.include;
+    alias           /usr/src/public/mobile-api-assets/mobicon-manifest-v1.json;
+}
+
+location = /web-api/mobile/v2/bank_logos {
+    include         /etc/nginx/nginx.cache.include;
+    alias           /usr/src/public/mobile-api-assets/mobicon-manifest-v2.json;
+}
+
+location = /web/web-api/mobile/v1/bank_logos {
+    include         /etc/nginx/nginx.cache.include;
+    alias           /usr/src/public/mobile-api-assets/mobicon-manifest-v1.json;
+}
+
+location = /web/web-api/mobile/v2/bank_logos {
+    include         /etc/nginx/nginx.cache.include;
+    alias           /usr/src/public/mobile-api-assets/mobicon-manifest-v2.json;
+}

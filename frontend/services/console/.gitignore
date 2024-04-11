@@ -1,0 +1,36 @@
+.DS_Store
+*.iml
+
+# Temporary
+tmp
+images
+
+# husky
+.husky
+
+# editors
+.idea
+.vscode
+
+# node modules
+node_modules
+
+# local dev
+.env
+client/dist
+server/dist
+
+# tvm
+.tvm-keys.cache
+.tvm-tickets.cache
+.tvm.key
+.tvm.json
+
+# configs
+configs/.env.production
+configs/.env.testing
+
+# templates
+server/templates/*.html
+!server/templates/4xx.html
+!server/templates/5xx.html

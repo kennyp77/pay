@@ -1,0 +1,17 @@
+@import '../../../../styles/variables.scss';
+
+.PickupHeaderTouch {
+    .ShippingTypeComponent-Radio {
+        margin-top: var(--space-l);
+    }
+
+    &_ob {
+        .Panel-Header {
+            padding-top: var(--space-s);
+        }
+
+        .ShippingTypeComponent-Radio {
+            margin-top: 0;
+        }
+    }
+}

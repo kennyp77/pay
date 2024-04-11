@@ -1,0 +1,52 @@
+@import '../../../styles/variables.scss';
+
+.ListButton_view_input {
+    border: 2px solid $color-fill-grey;
+    border-radius: var(--space-m);
+    background-color: $color-fill-grey;
+
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+
+    .ListButton-ArrowDownIcon {
+        transition: transform 0.3s ease;
+    }
+
+    &.ListButton_size_s {
+        --list-button-space-left: var(--space-l);
+        --list-button-space-right: var(--space-m);
+        --list-button-space-top: var(--space-xs);
+        --list-button-space-bottom: var(--space-xs);
+        --list-button-space-inside-left: 0px; // stylelint-disable-line length-zero-no-unit
+        --list-button-icon-size-left: 0px; // stylelint-disable-line length-zero-no-unit
+        --list-button-icon-size-right: 24px;
+    }
+
+    &.ListButton_size_m {
+        --list-button-space-left: var(--space-l);
+        --list-button-space-right: var(--space-m);
+        --list-button-space-top: var(--space-s);
+        --list-button-space-bottom: var(--space-s);
+        --list-button-space-inside-left: 0px; // stylelint-disable-line length-zero-no-unit
+        --list-button-icon-size-left: 0px; // stylelint-disable-line length-zero-no-unit
+        --list-button-icon-size-right: 24px;
+    }
+
+    &.hovered {
+        background-color: $color-fill-grey-hover;
+    }
+
+    &.ListButton_active {
+        border-color: $color-fill-yellow;
+        border-radius: var(--space-m);
+        background-color: $color-fill-white;
+
+        &.hovered {
+            border-color: $color-fill-yellow-dark;
+            background-color: $color-fill-white;
+        }
+
+        .ListButton-ArrowDownIcon {
+            transform: rotate(-180deg);
+        }
+    }
+}

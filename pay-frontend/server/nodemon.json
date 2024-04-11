@@ -1,0 +1,17 @@
+{
+    "verbose": false,
+    "env": {
+        "YA_ENV": "development",
+        "DEBUG": "core:*,server:*",
+        "NODE_ENV": "development",
+        "NODE_TLS_REJECT_UNAUTHORIZED": "0",
+        "DEPLOY_TVM_TOOL_URL": "http://localhost:8001",
+        "TVMTOOL_LOCAL_AUTHTOKEN": "tvmtool-development-access-token",
+        "NODE_OPTIONS": "--max-http-header-size=65536"
+    },
+    "ext": "js,json,html",
+    "delay": 1,
+    "exec": "node -r dotenv/config ./node_modules/.bin/duffman --dev --routes ./dist/duffman -p 3099",
+    "signal": "SIGQUIT",
+    "watch": ["dist/**/*", "templates/**"]
+}

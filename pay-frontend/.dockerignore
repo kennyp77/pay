@@ -1,0 +1,5 @@
+node_modules
+*.sock
+server/ping.sock
+server/node_modules
+server/dist

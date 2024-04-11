@@ -1,0 +1,45 @@
+version: '2.1'
+
+services:
+  sprint_db:
+    build:
+      dockerfile: ./postgre/Dockerfile
+      context: .
+    image: sprint_db
+    ports:
+      - '5252:5432'
+    volumes:
+      - ${SPRINT_MIGRATIONS_ROOT:-.}/postgre:/var/lib/dist/schema
+    environment:
+      POSTGRES_PASSWORD: 'P@ssw0rd'
+      POSTGRES_USER: 'sprint'
+      POSTGRES_DB: 'sprint_db'
+    healthcheck:
+      test: psql 'host=localhost port=5432 dbname=sprint_db user=sprint password=P@ssw0rd' -qtA -c 'select 1;' || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  sprint_db_migrate:
+    image: sprint_db
+    command: pgmigrate -d /var/lib/dist/schema -c 'host=sprint_db dbname=sprint_db user=sprint port=5432 password=P@ssw0rd' -t latest migrate
+    volumes:
+      - ${SPRINT_MIGRATIONS_ROOT:-.}/postgre:/var/lib/dist/schema
+    depends_on:
+      sprint_db:
+        condition: service_healthy
+
+  sprint_db_migrated:
+    image: sprint_db
+    command: tail -f /dev/null
+    volumes:
+      - ${SPRINT_MIGRATIONS_ROOT:-.}/postgre:/var/lib/dist/schema
+    depends_on:
+      sprint_db_migrate:
+        condition: service_started
+    healthcheck:
+      test: "[ \"$$(pgmigrate -d /var/lib/dist/schema -c 'host=sprint_db dbname=sprint_db user=sprint port=5432 password=P@ssw0rd' info | jq 'to_entries[-1].value.installed_on')\" != 'null' ] && exit 0 || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+

@@ -1,0 +1,55 @@
+@use 'sass:math';
+
+@import '../../styles/variables.scss';
+
+.Fullscreen {
+    display: flex;
+    overflow: auto;
+    flex: 1 1 100%;
+
+    width: 100%;
+
+    &_fixed {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        width: 100vw;
+        min-height: 0;
+    }
+
+    &_fullHeight {
+        .Panel {
+            .Panel-Footer {
+                position: fixed;
+                z-index: 10;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+            .Panel-Body {
+                padding-bottom: 90px;
+            }
+        }
+    }
+
+    /* bg */
+    &_bg_white {
+        background: $color-fill-white;
+    }
+
+    &_bg_grey {
+        background: $color-fill-grey;
+    }
+
+    &_bg_red {
+        background: $color-fill-red;
+    }
+
+    &_bg_red-light {
+        background: $color-fill-red-light;
+    }
+}

@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'YS Text Pan';
+    src: url('./assets/ys-text-pan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+body.theme_white,
+body.theme_white-outlined {
+    --color-background: #fff;
+    --color-primary: #000;
+    --color-gray: rgba(0, 0, 0, 0.07);
+}
+
+body.theme_black {
+    --color-background: #000;
+    --color-primary: #fff;
+    --color-gray: rgba(255, 255, 255, 0.2);
+}
+
+body.theme_yellow {
+    --color-background: #ffd633;
+    --color-primary: #000;
+    --color-gray: rgba(255, 255, 255, 0.5);
+}
+
+html,
+body {
+    overflow: hidden;
+
+    height: 100%;
+}
+
+body {
+    position: relative;
+
+    margin: 0;
+
+    font-family: 'YS Text Pan', sans-serif;
+    cursor: pointer;
+    user-select: none;
+
+    background-color: var(--color-background);
+}

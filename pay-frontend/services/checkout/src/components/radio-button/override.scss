@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+#{$legoVariablesRoot} {
+    --radioButton-size-m-fontSize: #{$typo-s-size};
+    --radioButton-size-l-fontSize: 14px;
+    --radioButton-size-l-lineHeight: 18px;
+    --radioButton-size-l-space: 12px 20px;
+    --radioButton-indent: 4px;
+    --radioButton-after-borderRadius: #{$control-s-borderRadius};
+    --radioButton-borderRadius: 12px;
+    --radio-button-view-default-fill-color-base: #{$color-fill-grey};
+    --radio-button-view-default-typo-color-base: #{$color-typo-grey};
+}

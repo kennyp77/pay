@@ -1,0 +1,32 @@
+@import '../../../styles/variables.scss';
+
+/* base */
+.Button2_variant_split.Button2_view_action::before {
+    background-color: $color-fill-dark-grey;
+}
+
+/* hover */
+.Button2_variant_split.Button2_view_action:not([aria-disabled='true']):hover::before {
+    background-color: $color-fill-dark-grey-light;
+}
+
+/* disable */
+.Button2_variant_split.Button2_view_action[aria-disabled='true']::before {
+    background-color: rgba($color-fill-dark-grey, 0.4);
+}
+
+/* progress */
+.Button2_variant_split.Button2_view_action.Button2_progress::before {
+    background-image: repeating-linear-gradient(
+            -45deg,
+            $color-fill-dark-grey,
+            $color-fill-dark-grey 4px,
+            $color-fill-dark-grey-light 4px,
+            $color-fill-dark-grey-light 8px
+    );
+}
+
+/* focus */
+.utilityfocus .Button2_variant_split.Button2_view_action:focus::before {
+    border: 2px solid $color-fill-dark-grey;
+}

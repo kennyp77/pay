@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+
+.MainScreen {
+    .MainDeliveryBlock-DeliveryType {
+        margin-bottom: var(--space-s);
+    }
+
+    &-Payment,
+    &-Delivery {
+        position: relative;
+    }
+
+    &-Separator {
+        height: var(--space-xs);
+
+        background: #{$color-fill-grey};
+
+        &::before,
+        &::after {
+            position: relative;
+            z-index: -1;
+            top: -30px;
+
+            display: block;
+
+            width: 100%;
+            height: 30px;
+
+            content: '';
+
+            background: #{$color-fill-grey};
+        }
+    }
+
+    &-Panel {
+        padding: 0;
+
+        .Panel-Header {
+            padding: 0;
+        }
+
+        .Panel-Body {
+            padding-top: 0;
+        }
+
+        .Panel-Content {
+            padding: 0;
+        }
+
+        .Panel-Footer {
+            padding-bottom: var(--space-s);
+        }
+    }
+
+    .MainDeliveryBlock,
+    .MainPaymentBlock {
+        &-ListButtonLoader {
+            padding-left: var(--list-button-space-left);
+        }
+    }
+}

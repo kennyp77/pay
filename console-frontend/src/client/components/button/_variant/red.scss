@@ -1,0 +1,61 @@
+.Button2_variant_red {
+  padding: var(--offset-18);
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: var(--fz-16);
+  font-family: var(--typography-font-family);
+  border-radius: var(--form-element-border-radius);
+  box-shadow: var(--button-box-shadow);
+
+  &:before {
+    border-radius: var(--form-element-border-radius);
+    background-color: var(--button-bg-primary);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:empty {
+    display: none;
+  }
+
+  &:not([aria-disabled='true']) {
+    &:hover {
+      color: var(--color-white);
+
+      &:before {
+        background-color: var(--button-bg-primary-hover);
+      }
+    }
+
+    &:focus:before {
+      border-color: var(--button-bg-primary-active);
+      background-color: var(--button-bg-primary-active);
+    }
+  }
+
+  &[aria-disabled='true'] {
+    color: var(--color-white);
+
+    &:before {
+      background-color: var(--button-bg-primary-disabled);
+    }
+  }
+
+  // progess styles
+  &.Button2_progress {
+    color: var(--color-white);
+
+    &:before {
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          var(--button-bg-primary),
+          var(--button-bg-primary) 4px,
+          var(--button-bg-primary-hover) 4px,
+          var(--button-bg-primary-hover) 8px
+        );
+    }
+  }
+}

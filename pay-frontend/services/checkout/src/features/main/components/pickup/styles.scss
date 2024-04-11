@@ -1,0 +1,11 @@
+@import '../../../../styles/variables.scss';
+
+.MainPickupBlock {
+    &-Address {
+        line-height: 28px;
+    }
+
+    &-Amount {
+        color: $color-fill-green;
+    }
+}

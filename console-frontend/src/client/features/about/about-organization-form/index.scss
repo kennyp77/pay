@@ -1,0 +1,8 @@
+.AboutOrganizationForm {
+  max-width: var(--about-block-width);
+  padding: var(--offset-32) 0;
+
+  &-checkbox-text {
+    color: var(--color-text-main);
+  }
+}

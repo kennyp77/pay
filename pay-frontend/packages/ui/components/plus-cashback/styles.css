@@ -1,0 +1,33 @@
+@import '../constants.css';
+
+.plus-cashback {
+    display: flex;
+    align-items: center;
+
+    margin-top: var(--space-28);
+
+    font-size: 14px;
+}
+
+.plus-cashback__logo {
+    width: 32px;
+    height: 32px;
+}
+
+.plus-cashback__info {
+    margin-left: var(--space-16);
+}
+
+.plus-cashback__info-link {
+    margin-left: var(--space-4);
+}
+
+.plus-cashback__plus-info {
+    font-weight: 500;
+    white-space: nowrap;
+
+    background-image: linear-gradient(101.66deg, #505add 34.4%, #be40c0 66.11%, #fba82b 96.37%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}

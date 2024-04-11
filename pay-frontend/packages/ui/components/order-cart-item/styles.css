@@ -1,0 +1,24 @@
+@import '../constants.css';
+
+.order-cart-item td {
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+
+    font-weight: normal;
+    line-height: 0;
+    cursor: default;
+    word-break: break-word;
+}
+
+.order-cart-item__label {
+    padding-right: var(--space-12);
+
+    @apply --text-size-16;
+}
+
+.order-cart-item__amount {
+    text-align: right;
+    white-space: nowrap;
+
+    @apply --text-size-16;
+}

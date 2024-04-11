@@ -1,0 +1,18 @@
+@import '../constants.css';
+
+.payment-preloader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-preloader__text {
+    margin-top: var(--space-12);
+
+    text-align: center;
+
+    color: var(--color-text-tetriary);
+
+    @apply --text-size-14;
+}

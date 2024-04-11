@@ -1,0 +1,9 @@
+{
+  "name": "@yandex-pay/pay-common",
+  "version": "1.0.0",
+  "description": "",
+  "author": "kir-9",
+  "license": "ISC",
+  "scripts": {},
+  "devDependencies": {}
+}

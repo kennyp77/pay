@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.Modal {
+    &.Modal_theme_normal {
+        .Modal-Overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .Modal-Content {
+            margin: var(--space-m);
+
+            background: none;
+        }
+    }
+}

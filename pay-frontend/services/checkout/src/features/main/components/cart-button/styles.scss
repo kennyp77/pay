@@ -1,0 +1,29 @@
+@import '../../../../styles/variables.scss';
+
+.MainCartButton {
+    .MainCartButton-ArrowDownIcon {
+        transition: transform 0.3s ease;
+    }
+
+    .Dropdown-Button {
+        &.Button2_checked {
+            .MainCartButton-ArrowDownIcon {
+                transform: rotate(-180deg);
+            }
+        }
+
+        .Button2-Text {
+            height: 100%;
+        }
+    }
+
+    .MainCartButton-DropdownContent {
+        width: 80vw;
+        max-width: 400px;
+        padding: var(--space-m);
+    }
+
+    .MainCartButton-Content {
+        height: 100%;
+    }
+}

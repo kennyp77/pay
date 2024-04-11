@@ -1,0 +1,11 @@
+{
+  "name": "@yandex-pay/demo-page-nda",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "../../node_modules/.bin/webpack-dev-server --config .config/webpack.dev.js",
+    "test": "../../node_modules/.bin/jest --verbose --passWithNoTests"
+  },
+  "author": "stepler@yandex-team.ru",
+  "license": "ISC"
+}

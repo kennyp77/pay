@@ -1,0 +1,123 @@
+OWNER(hmnid)
+
+PY3_LIBRARY()
+
+PEERDIR(
+    contrib/python/aiosocksy
+    contrib/python/marshmallow-enum/py2
+    contrib/python/uvloop
+    library/python/resource
+    mail/python/sendr-qtools
+    pay/contrib/marshmallow_dataclass
+)
+
+PY_SRCS(
+    __init__.py
+    api/app.py
+    api/schemas/base.py
+    api/schemas/common.py
+    api/schemas/project.py
+    api/schemas/sprint.py
+    api/schemas/sprint_goal.py
+    api/schemas/sprint_resource.py
+    api/schemas/story.py
+    api/schemas/user.py
+    api/exceptions.py
+    api/handlers/base.py
+    api/handlers/projects.py
+    api/handlers/sprints.py
+    api/handlers/sprint_goal.py
+    api/handlers/sprint_goals.py
+    api/handlers/sprint_resources.py
+    api/handlers/stories.py
+    api/handlers/user.py
+    api/handlers/utility.py
+    api/middlewares.py
+    api/routes/user.py
+    api/routes/utility.py
+    api/routes/web.py
+    commands/pg_pinger_env.py
+    commands/runserver.py
+    commands/runworkers.py
+    conf.py
+    core/actions/base.py
+    core/actions/ping_db.py
+    core/actions/user.py
+    core/actions/project/create.py
+    core/actions/sprint/list.py
+    core/actions/sprint/create.py
+    core/actions/sprint_goal/create.py
+    core/actions/sprint_goal/update.py
+    core/actions/sprint_resource/upsert.py
+    core/actions/story/create.py
+    core/entities/project.py
+    core/entities/sprint.py
+    core/entities/sprint_goal.py
+    core/entities/sprint_resource.py
+    core/entities/story.py
+    core/context.py
+    core/exceptions.py
+    interactions/__init__.py
+    interactions/base.py
+    manage.py
+    storage/__init__.py
+    storage/db/tables.py
+    storage/entities/enums.py
+    storage/entities/user.py
+    storage/entities/base.py
+    storage/entities/project.py
+    storage/entities/story.py
+    storage/entities/sprint.py
+    storage/entities/resource_type.py
+    storage/entities/sprint_goal.py
+    storage/entities/sprint_resource.py
+    storage/entities/sprint_story_resource.py
+    storage/entities/task.py
+    storage/exceptions.py
+    storage/mappers/base.py
+    storage/mappers/project/data.py
+    storage/mappers/project/mapper.py
+    storage/mappers/story/data.py
+    storage/mappers/story/mapper.py
+    storage/mappers/sprint/data.py
+    storage/mappers/sprint/mapper.py
+    storage/mappers/sprint_goal/data.py
+    storage/mappers/sprint_goal/mapper.py
+    storage/mappers/resource_type/data.py
+    storage/mappers/resource_type/mapper.py
+    storage/mappers/sprint_resource/data.py
+    storage/mappers/sprint_resource/mapper.py
+    storage/mappers/sprint_story_resource/data.py
+    storage/mappers/sprint_story_resource/mapper.py
+    storage/mappers/task.py
+    storage/mappers/user.py
+    storage/mappers/worker.py
+    storage/types.py
+    taskq/__init__.py
+    taskq/app.py
+    taskq/arbiter.py
+    taskq/workers/__init__.py
+    taskq/workers/action.py
+    taskq/workers/base.py
+    utils/cli.py
+    utils/db.py
+    utils/logging.py
+    utils/stats.py
+    utils/tvm.py
+)
+
+RESOURCE_FILES(
+    settings/000-logging.conf
+    settings/010-common.conf
+    settings/020-database.conf
+    settings/020-database.conf.development
+    settings/020-database.conf.testing
+    settings/030-interactions.conf
+    settings/040-tvm.conf
+    settings/040-tvm.conf.development
+    settings/050-taskq.conf
+)
+
+END()
+
+RECURSE_FOR_TESTS(tests)

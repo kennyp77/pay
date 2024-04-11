@@ -1,0 +1,7 @@
+{
+  "extends": "@yandex/ui/Theme/themes/default.theme.json",
+  "sources": [
+    "./src/client/styles/themes/mg-dark/*.yaml",
+    "./src/client/styles/themes/mg-common/*.yaml"
+  ]
+}

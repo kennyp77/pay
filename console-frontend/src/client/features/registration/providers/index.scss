@@ -1,0 +1,8 @@
+@import 'styles/breakpoints.scss';
+@import 'styles/mixins.scss';
+
+@include media($tablet, below) {
+  .Providers-Row {
+    flex-direction: column;
+  }
+}

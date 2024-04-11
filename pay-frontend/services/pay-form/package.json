@@ -1,0 +1,16 @@
+{
+  "name": "@yandex-pay/pay-form",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "../../node_modules/.bin/webpack --config .config/webpack.prod.js",
+    "start": "../../node_modules/.bin/webpack-dev-server --config .config/webpack.dev.js",
+    "test": "../../node_modules/.bin/jest --verbose --passWithNoTests",
+    "deploy:static": "static-uploader"
+  },
+  "author": "stepler@yandex-team.ru",
+  "license": "ISC",
+  "dependencies": {
+    "@yandex-trust-sdk/base": "1.6.0"
+  }
+}

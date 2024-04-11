@@ -1,0 +1,49 @@
+{
+  "name": "@trust/pay-web",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "postinstall": "npm run fix:cleanup",
+    "fix:cleanup": "./tools/npm-cleanup.sh",
+    "compile": "tsc -p .",
+    "start": "npm-run-all --parallel start:*",
+    "start:compile": "tsc -p . --watch",
+    "start:server": "nodemon --config ./nodemon.json",
+    "start-tvmtool": "tvmtool --port 8001 --auth tvmtool-development-access-token",
+    "debug": "YA_ENV=development NODE_ENV=development DEPLOY_TVM_TOOL_URL=http://localhost:8001 TVMTOOL_LOCAL_AUTHTOKEN=tvmtool-development-access-token node --max-http-header-size=65536 -r dotenv/config ./node_modules/.bin/duffman --dev --routes ./dist/duffman -p 3099"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/body-parser": "1.19.0",
+    "@types/lodash": "4.14.165",
+    "@types/node": "14.14.8",
+    "@types/serialize-javascript": "5.0.0",
+    "@yandex-int/abt": "0.3.0",
+    "@yandex-int/csrf": "2.1.0",
+    "@yandex-int/duffman": "5.0.0-beta.18",
+    "@yandex-int/express-blackbox": "6.4.0",
+    "@yandex-int/express-tvm": "7.0.0",
+    "@yandex-int/express-uatraits": "3.0.0",
+    "@yandex-int/express-yandex-csp": "4.0.1",
+    "@yandex-int/maps-proto-schemas": "19.0.0",
+    "@yandex-lego/components": "2.47.8",
+    "@yandex-lego/serp-header": "4.33.1",
+    "axios": "0.26.1",
+    "body-parser": "1.19.0",
+    "btoa": "1.2.1",
+    "express": "4.17.1",
+    "express-bunker": "6.1.0",
+    "jose": "4.6.0",
+    "lodash": "4.17.20",
+    "protobufjs": "6.11.2",
+    "serialize-javascript": "5.0.1",
+    "tslib": "2.0.3",
+    "typescript": "4.4.4"
+  },
+  "devDependencies": {
+    "dotenv": "8.2.0",
+    "nodemon": "2.0.6",
+    "npm-run-all": "4.1.5"
+  }
+}

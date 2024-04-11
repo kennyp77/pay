@@ -1,0 +1,258 @@
+@use 'sass:math';
+
+@import '../../../../styles/variables.scss';
+
+$pickup-loader-size: 32px;
+$pickup-margin: calc(50% - #{math.div($pickup-loader-size, 2)});
+
+.pickup-loader-container {
+    position: absolute;
+    z-index: 1;
+    top: $pickup-margin;
+    left: $pickup-margin;
+}
+
+.pickup-loader {
+    display: block;
+
+    width: $pickup-loader-size;
+    height: $pickup-loader-size;
+    margin: auto;
+
+    -webkit-animation: loader-1 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    animation: loader-1 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        right: auto;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+
+        width: 8px;
+        height: 8px;
+        margin: auto;
+
+        content: '';
+
+        border-radius: 50%;
+        background: $color-fill-red;
+
+        -webkit-animation: loader-2 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+        animation: loader-2 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+
+        display: block;
+
+        width: 8px;
+        height: 8px;
+        margin: auto;
+
+        content: '';
+
+        border-radius: 50%;
+        background: $color-fill-red;
+
+        -webkit-animation: loader-3 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+        animation: loader-3 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+
+        width: $pickup-loader-size;
+        height: $pickup-loader-size;
+        margin: auto;
+    }
+
+    span::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: 0;
+
+        display: block;
+
+        width: 8px;
+        height: 8px;
+        margin: auto;
+
+        content: '';
+
+        border-radius: 50%;
+        background: $color-fill-red;
+
+        -webkit-animation: loader-4 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+        animation: loader-4 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    }
+
+    span::after {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+
+        width: 8px;
+        height: 8px;
+        margin: auto;
+
+        content: '';
+
+        border-radius: 50%;
+        background: $color-fill-red;
+
+        -webkit-animation: loader-5 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+        animation: loader-5 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+    }
+}
+
+@-webkit-keyframes loader-1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes loader-2 {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        -webkit-transform: translate3d(24px, 0, 0) scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes loader-2 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(24px, 0, 0) scale(0.5);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@-webkit-keyframes loader-3 {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        -webkit-transform: translate3d(-24px, 0, 0) scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes loader-3 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(-24px, 0, 0) scale(0.5);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@-webkit-keyframes loader-4 {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        -webkit-transform: translate3d(0, 24px, 0) scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes loader-4 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(0, 24px, 0) scale(0.5);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@-webkit-keyframes loader-5 {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        -webkit-transform: translate3d(0, -24px, 0) scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes loader-5 {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(0, -24px, 0) scale(0.5);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}

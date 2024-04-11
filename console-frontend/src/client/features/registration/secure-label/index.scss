@@ -1,0 +1,13 @@
+.SecureLabel {
+  max-width: var(--secure-label-width);
+
+  &-Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--locked-elem-height);
+    max-width: var(--locked-elem-width);
+    border-radius: var(--locked-elem-radius);
+    background: var(--color-locked-elem);
+  }
+}

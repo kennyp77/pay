@@ -1,0 +1,66 @@
+@import '../../../styles/variables.scss';
+
+.ListButton_view_radio {
+    border-radius: var(--space-m);
+
+    &.ListButton_size_s,
+    &.ListButton_size_m {
+        --list-button-icon-size-left: 20px;
+        --list-button-icon-size-right: 16px;
+    }
+
+    .ListButton_radio_right {
+        --list-button-icon-size-left: 16px;
+        --list-button-icon-size-right: 20px;
+    }
+
+    &.ListButton_size_s {
+        --list-button-space-left: var(--space-xs);
+        --list-button-space-right: var(--space-xs);
+        --list-button-space-top: var(--space-xs);
+        --list-button-space-bottom: var(--space-xs);
+    }
+
+    &.ListButton_size_m {
+        --list-button-space-left: var(--space-m);
+        --list-button-space-right: var(--space-m);
+        --list-button-space-top: var(--space-m);
+        --list-button-space-bottom: var(--space-m);
+    }
+
+    &.ListButton_active {
+        background-color: $color-fill-grey;
+    }
+
+    .ListButton-RadioIcon {
+        color: $color-fill-grey3;
+    }
+
+    .ListButton-RadioIcon_active_no {
+        transition: color 0.3s ease;
+    }
+
+    &.hovered {
+        background-color: $color-fill-grey-hover;
+
+        .ListButton-RadioIcon_active_no {
+            color: $color-fill-grey2;
+        }
+    }
+
+    &.ListButton_disabled {
+        opacity: 0.5;
+    }
+
+    .ListButton-EditIcon {
+        color: $color-fill-grey2;
+
+        transition: color 0.3s ease;
+    }
+
+    .ListButton-SideButton.hovered {
+        .ListButton-EditIcon {
+            color: $color-typo-black;
+        }
+    }
+}

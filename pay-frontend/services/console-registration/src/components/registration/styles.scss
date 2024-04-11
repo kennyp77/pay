@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+
+.Registration {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    width: $main-width;
+    padding: $main-padding-y $main-padding-x;
+    padding-bottom: 0;
+
+    &-Logo {
+        width: 90px;
+        height: 36px;
+
+        color: #000;
+
+        .icon {
+            max-height: 100%;
+        }
+    }
+
+    &-Header {
+        display: flex;
+        flex: 0 0;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 28px;
+    }
+
+    &-Content {
+        padding-bottom: $main-padding-y;
+    }
+
+    &-Error {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-ErrorMessage {
+        margin-bottom: 12px;
+    }
+}

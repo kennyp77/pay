@@ -1,0 +1,65 @@
+/* Colors */
+$color-typo-black: #222426;
+$color-typo-grey: #939cb0;
+
+$color-fill-white: #fff;
+$color-fill-yellow: #ffdc60;
+$color-fill-yellow-dark: #fc0;
+$color-fill-grey: #eceef2;
+$color-fill-grey2: #d4d8e0;
+
+$color-success: #32b343;
+
+/* Controls */
+$control-s-borderRadius: 8px;
+$control-s-height: 32px;
+$control-s-spaceVer: 6px;
+$control-s-spaceHor: 12px;
+$control-s-spaceAll: 6px 12px;
+$control-m-borderRadius: 8px;
+$control-m-height: 40px;
+$control-m-spaceVer: 10px;
+$control-m-spaceHor: 16px;
+$control-m-spaceAll: 10px 16px;
+
+$radioButton-l-height: 48px;
+
+/* Typography */
+$font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$typo-m-size: 16px;
+$typo-s-size: 14px;
+$typo-xs-size: 13px;
+
+@mixin typo-header-l {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+@mixin typo-header-m {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+@mixin typo-header-s {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+@mixin typo-m {
+    font-size: $typo-m-size;
+    line-height: 20px;
+}
+
+@mixin typo-s {
+    font-size: $typo-s-size;
+    line-height: 20px;
+}
+
+@mixin typo-xs {
+    font-size: $typo-xs-size;
+    line-height: 16px;
+}

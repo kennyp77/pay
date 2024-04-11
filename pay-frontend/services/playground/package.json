@@ -1,0 +1,27 @@
+{
+  "name": "@yandex-pay/playground",
+  "version": "1.0.0",
+  "description": "Playground for Yandex.PAY projects",
+  "scripts": {
+    "build": "webpack --config .config/webpack.prod.js",
+    "start": "webpack-dev-server --config .config/webpack.dev.js",
+    "test": "jest --verbose --passWithNoTests"
+  },
+  "author": "polrk@yandex-team.ru",
+  "dependencies": {
+    "constate": "3.3.0",
+    "date-fns": "2.25.0",
+    "ms": "2.1.3",
+    "ts-toolbelt": "9.6.0"
+  },
+  "devDependencies": {
+    "@types/ms": "0.7.31",
+    "tailwindcss": "3.0.0-alpha.1"
+  },
+  "peerDependencies": {
+    "@bem-react/classnames": "^1.3.10",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-router-dom": "5.3.0"
+  }
+}

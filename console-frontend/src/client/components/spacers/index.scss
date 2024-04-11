@@ -1,0 +1,28 @@
+$spaces: auto, 4, 8, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 50, 56, 64;
+$spaces: auto, 4, 8, 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48, 50, 56;
+
+@function setSpacer($value) {
+  @if $value == 'auto' {
+    @return $value;
+  }
+
+  @return #{$value}px;
+}
+
+.Spacer {
+  margin: 0;
+}
+
+@each $space in $spaces {
+  @each $variant in ('top', 'bottom', 'left', 'right') {
+    .Spacer_#{$variant}_#{$space} {
+      margin-#{$variant}: setSpacer($space);
+    }
+  }
+  .Spacer_all_#{$space} {
+    margin: setSpacer($space);
+  }
+  .Gap_all_#{$space} {
+    gap: #{$space}px;
+  }
+}

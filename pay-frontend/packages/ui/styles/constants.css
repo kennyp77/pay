@@ -1,0 +1,69 @@
+/**
+ Инклуд для local-dev
+*/
+@import './theme_default.css';
+@import './theme_dark.css';
+
+@custom-selector :--theme-dark .Theme_dark;
+@custom-selector :--mobile .Template_mobile;
+@custom-selector :--desktop .Template_desktop;
+@custom-selector :--with-modal-shown .with-modal-shown;
+
+$font-ys-family: 'YS Text', arial, sans-serif;
+
+$space-4: 4px;
+$space-8: 8px;
+$space-12: 12px;
+$space-14: 14px;
+$space-16: 16px;
+$space-18: 18px;
+$space-20: 20px;
+$space-24: 24px;
+$space-28: 28px;
+$space-32: 32px;
+$space-36: 36px;
+$space-40: 40px;
+$space-48: 48px;
+$space-76: 76px;
+$space-92: 92px;
+
+$border-radius-4: 4px;
+$border-radius-16: 16px;
+
+$transition-color: 0.15s linear;
+$transition-visibility: 0.2s linear;
+
+:root {
+    --text-size-12: {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    --text-size-14: {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    --text-size-16: {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    --text-size-18: {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    --text-size-20: {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    --text-size-24: {
+        font-size: 24px;
+        line-height: 26px;
+    }
+    --text-size-28: {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    --text-size-36: {
+        font-size: 36px;
+        line-height: 42px;
+    }
+}

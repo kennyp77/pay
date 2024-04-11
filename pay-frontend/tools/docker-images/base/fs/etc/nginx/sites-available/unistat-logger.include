@@ -1,0 +1,10 @@
+log_by_lua_block {
+    increment_metric("nginx_request_" .. url_handler(ngx.var.uri, 5) .. "_" .. status_to_category(ngx.status) .. "_deee", 1)
+    increment_metric("nginx_request_" .. url_handler(ngx.var.uri, 5) .. "_" .. ngx.status .. "_deee", 1)
+
+    increment_metric("nginx_request_" .. status_to_category(ngx.status) .. "_count_deee", 1)
+    increment_metric("nginx_request_" .. ngx.status .. "_count_deee", 1)
+
+    increment_metric("nginx_request_total_count_deee", 1)
+    add_to_histogram("nginx_request_total_time_hgram", tonumber(ngx.var.request_time))
+}

@@ -1,0 +1,9 @@
+@import '../../../styles/mixins.scss';
+
+.Modal_variant_no-cross {
+  .Modal-Content {
+    width: var(--modal-default-width);
+    max-width: var(--modal-default-width);
+    background: transparent;
+  }
+}

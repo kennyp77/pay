@@ -1,0 +1,60 @@
+@import 'styles/mixins';
+@import 'styles/breakpoints.scss';
+
+.SideMenu {
+  width: var(--size-side-menu);
+  padding: var(--offset-20);
+  overflow: auto;
+
+  &-Organisation {
+    flex-shrink: 0;
+    padding: var(--offset-8) var(--offset-12);
+  }
+
+  .Menu {
+    @include transition;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .Menu-Item {
+      padding: 0;
+      border-radius: var(--radius-8);
+
+      &:not(&:last-child) {
+        margin-bottom: var(--offset-8);
+      }
+
+      & > .Icon_hasGlyph {
+        display: none;
+      }
+
+      &_checked {
+        background: var(--button-bg-secondary);
+      }
+
+      &_disabled {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@include media($tablet-horizontal, below) {
+  .SideMenu {
+    width: var(--size-tablet-side-menu);
+
+    &-Organisation {
+      padding: var(--offset-10);
+    }
+
+    &-OrganisationTitle {
+      display: none;
+    }
+
+    &-YaPayIcon {
+      transform: rotate(270deg);
+    }
+  }
+}

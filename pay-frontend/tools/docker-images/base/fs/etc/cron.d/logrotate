@@ -1,0 +1,4 @@
+SHELL=/bin/sh
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+
+*/30 * * * * root /opt/logrotate-rotate.sh

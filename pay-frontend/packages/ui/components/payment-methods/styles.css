@@ -1,0 +1,13 @@
+@import '../constants.css';
+
+.payment-methods {
+    display: none;
+}
+
+.payment-methods_active {
+    display: block;
+}
+
+.payment-methods__header {
+    margin-bottom: var(--space-32);
+}

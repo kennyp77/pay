@@ -1,0 +1,24 @@
+@import 'styles/mixins';
+
+// усиливаем селекторы
+button.Button2.Button2_variant_cleared-with-effects {
+  @extend %clear-button;
+  @include transition;
+
+  padding: var(--offset-10);
+  line-height: 1px;
+  border-radius: 100%;
+
+  &:hover {
+    background-color: var(--button-bg-secondary);
+  }
+
+  &:focus,
+  &.Button2_pressed {
+    background-color: var(--button-bg-secondary);
+  }
+
+  &:empty {
+    display: none;
+  }
+}

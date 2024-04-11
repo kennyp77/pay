@@ -1,0 +1,21 @@
+@import '../../../styles/variables.scss';
+
+.MapLayout {
+    &-Content {
+        position: fixed;
+        z-index: $map-sidebar-z-index;
+
+        display: flex;
+        overflow: hidden;
+
+        height: 100vh;
+        max-height: 550px;
+    }
+
+    .MapLayout-Block {
+        display: flex;
+        flex-direction: row;
+
+        width: $desktop-blocks-width;
+    }
+}

@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+
+/**
+ * TODO: Create a custom user component for the lego components package.
+ */
+
+.passport-user {
+    height: 28px;
+
+    .legouser__current-account {
+        &.user-account {
+            pointer-events: none;
+        }
+
+        .user-account__name {
+            display: none;
+        }
+
+        .user-account__pic {
+            width: 28px;
+            height: 28px;
+        }
+
+        .user-account__ticker {
+            top: 0;
+            right: auto;
+            left: 100%;
+
+            margin-right: auto;
+            margin-left: -45px;
+        }
+    }
+
+    .user-pic__camera {
+        display: none;
+
+        pointer-events: none;
+    }
+}

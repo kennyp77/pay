@@ -1,0 +1,102 @@
+.Text {
+  @each $weight in 400, 500, 700 {
+    &_weight_#{$weight} {
+      font-weight: $weight;
+    }
+  }
+
+  &_color_primary {
+    color: var(--color-text-main);
+  }
+
+  &_color_secondary {
+    color: var(--color-text-secondary);
+  }
+
+  &_color_tertiary {
+    color: var(--color-text-tertiary);
+  }
+
+  &_color_error {
+    color: var(--color-error);
+  }
+
+  &_align_left {
+    text-align: start;
+  }
+
+  &_align_right {
+    text-align: end;
+  }
+
+  &_align_center {
+    text-align: center;
+  }
+
+  &_variant_header_xl {
+    font-size: var(--fz-40);
+    line-height: var(--lh-44);
+  }
+
+  &_variant_header_l {
+    font-size: var(--fz-28);
+    line-height: var(--lh-32);
+  }
+
+  &_variant_header_m {
+    font-weight: 500;
+    font-size: var(--fz-20);
+    font-family: var(--typography-font-family);
+    line-height: var(--lh-24);
+  }
+
+  &_variant_header_s {
+    font-size: var(--fz-18);
+    line-height: var(--lh-22);
+  }
+
+  &_variant_label {
+    color: var(--color-text-label);
+    font-size: var(--fz-14);
+    line-height: var(--lh-20);
+  }
+
+  &_overflow_ellipsis {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &_size_14 {
+    font-size: var(--fz-14);
+    line-height: var(--lh-18);
+  }
+
+  &_size_12 {
+    font-size: var(--fz-12);
+    line-height: var(--lh-14);
+  }
+
+  &_transform_uppercase {
+    text-transform: uppercase;
+  }
+
+  &_is_content {
+    p {
+      margin-top: 0;
+      margin-bottom: var(--offset-20);
+    }
+
+    table {
+      margin-bottom: var(--offset-20);
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: var(--offset-4);
+      border: 1px solid var(--border-primary);
+    }
+  }
+}

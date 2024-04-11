@@ -1,0 +1,10 @@
+dev-proxy: node _config/dev-server/proxy
+tuneller: TUNNELER_HOST=ws1-tunnelerapi.tunneler-si.yandex-team.ru dk tun 3099:8080
+playground: npm start --prefix services/playground
+checkout: npm start --prefix services/checkout
+sdk: npm start --prefix services/sdk
+sdk-init: npm start --prefix services/sdk-init
+sdk-init-speedup: cd services/sdk-init-speedup && npm start
+sdk-payment-method: npm start --prefix services/sdk-payment-method
+server-tvmtool: npm run start-tvmtool --prefix server
+server: npm start --prefix server

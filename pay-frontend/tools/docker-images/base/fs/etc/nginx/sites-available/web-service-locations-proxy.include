@@ -1,0 +1,25 @@
+location /ping {
+    proxy_connect_timeout 500ms;
+    proxy_read_timeout 1;
+    proxy_send_timeout 1;
+    proxy_pass http://unix:/usr/src/web-service/duffman.sock;
+}
+
+location / {
+    limit_except GET POST {
+        deny all;
+    }
+
+    proxy_connect_timeout 200ms;
+    proxy_read_timeout  35;
+    proxy_send_timeout  5;
+
+    proxy_ignore_headers "X-Accel-Redirect" "Expires" "Cache-Control" "Vary";
+    proxy_pass_header "X-Accel-Redirect";
+
+    proxy_set_header Host $host;
+    proxy_set_header X-Request-Id $request_id;
+    proxy_pass http://web-service-backend;
+
+    include sites-available/unistat-logger.include;
+}

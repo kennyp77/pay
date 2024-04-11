@@ -1,0 +1,20 @@
+@import '../../../styles/variables.scss';
+
+.DrawerLayout {
+    .Drawer-Content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &.Drawer[class] {
+        top: auto;
+        bottom: 0;
+    }
+
+    &_fullHeight {
+        .Drawer-Curtain,
+        .Drawer-Content {
+            height: 100%;
+        }
+    }
+}

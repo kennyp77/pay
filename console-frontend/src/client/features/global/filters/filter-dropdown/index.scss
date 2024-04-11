@@ -1,0 +1,9 @@
+@import 'styles/mixins';
+
+.FilterDropdown-Icon {
+  @include transition;
+}
+
+.FilterDropdown-Icon_top {
+  transform: rotate(180deg);
+}

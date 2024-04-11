@@ -1,0 +1,6 @@
+{
+    "name": "@yandex-pay/config",
+    "version": "1.0.0",
+    "author": "stepler@yandex-team.ru",
+    "dependencies": {}
+}

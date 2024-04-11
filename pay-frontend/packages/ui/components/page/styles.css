@@ -1,0 +1,228 @@
+@import '../constants.css';
+@import './styles/normalize.css';
+@import './styles/fonts.css';
+
+/**
+ * TODO: Remove the common styles from here.
+ */
+html {
+    font-family: var(--font-family);
+
+    background-color: var(--color-bg-primary);
+}
+
+button {
+    padding: 0;
+
+    font-family: var(--font-family);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    text-decoration: none;
+
+    border: none;
+    border-width: 0;
+    outline: none;
+    background: transparent;
+    touch-action: manipulation;
+    -moz-user-focus: ignore;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+body {
+    background: var(--color-bg-tetriary);
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+}
+
+.page__header-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex: none;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 35px 40px 0;
+
+    color: var(--ya-page-header-typo);
+}
+
+.page__content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex: 1 0;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--space-40) var(--space-20) var(--space-20);
+}
+
+.page__background,
+.page__background::before {
+    @apply --overlay-cover;
+}
+
+.page__background {
+    position: fixed;
+
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+
+@media only screen and (min-height: 0), only screen and (min-width: 0) {
+    .page__background {
+        background-image: url('./assets/background-1.jpg');
+    }
+}
+
+@media only screen and (min-height: 720px), only screen and (min-width: 1280px) {
+    .page__background {
+        background-image: url('./assets/background-2.jpg');
+    }
+}
+
+@media only screen and (min-height: 810px), only screen and (min-width: 1440px) {
+    .page__background {
+        background-image: url('./assets/background-3.jpg');
+    }
+}
+
+@media only screen and (min-height: 945px), only screen and (min-width: 1680px) {
+    .page__background {
+        background-image: url('./assets/background-4.jpg');
+    }
+}
+
+@media only screen and (min-height: 1080px), only screen and (min-width: 1920px) {
+    .page__background {
+        background-image: url('./assets/background-5.jpg');
+    }
+}
+
+.page__background::before {
+    content: '';
+
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.page_monochromeBackground {
+    .page__background {
+        background: #f1f2f5;
+
+        &::before {
+            background: transparent;
+        }
+    }
+
+    .page__header {
+        position: relative;
+    }
+
+    .page__header-content {
+        width: 100%;
+        min-width: var(--form-width);
+        max-width: var(--form-width);
+        margin: auto;
+    }
+
+    .page__content {
+        align-items: flex-start;
+
+        padding: var(--space-12) var(--space-20) var(--space-20);
+    }
+
+    .legouser > .user-account > .user-account__name {
+        display: none;
+    }
+}
+
+:--mobile {
+    @media screen and (max-width: 374px) {
+        .page__header-content {
+            padding: 20px 12px 0;
+        }
+
+        .page__content {
+            padding: var(--space-12);
+        }
+    }
+
+    /* stylelint-disable */
+    & {
+        display: block;
+
+        width: 100%;
+    }
+
+    #root {
+        @apply --mobile-content;
+    }
+    /* stylelint-enable */
+
+    .page__header {
+        position: static;
+    }
+
+    .page__header-content {
+        padding: 25px 16px 0;
+
+        color: var(--ya-page-header-mobile-typo);
+    }
+
+    .page__content {
+        align-items: flex-start;
+
+        padding: var(--space-20) var(--space-16);
+    }
+
+    .page__background {
+        display: none;
+    }
+
+    .page_monochromeBackground {
+        .page__header-content {
+            width: auto;
+            min-width: auto;
+            max-width: none;
+        }
+    }
+}
+
+/* noinspection CssInvalidMediaFeature */
+@media (--slim-screen) {
+    .page__header {
+        position: static;
+    }
+
+    .page__content {
+        padding-top: var(--space-20);
+    }
+}

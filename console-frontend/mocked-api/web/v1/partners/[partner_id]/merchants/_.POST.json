@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "code": 200,
+  "data": {
+    "partner_id": "[#faker:datatype:uuid]",
+    "merchant_id": "[#faker:datatype:uuid]",
+    "updated": "[#faker:date:recent]",
+    "created": "[#faker:date:recent]",
+    "name": "string"
+  }
+}

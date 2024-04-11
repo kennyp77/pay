@@ -1,0 +1,73 @@
+.snippet__actions,
+.snippet__view {
+    padding: 16px;
+}
+
+.snippet__actions {
+    display: flex;
+
+    margin: 0 -8px;
+}
+
+.snippet__action {
+    padding: 0 8px;
+}
+
+.snippet__select {
+    display: inline-block;
+
+    width: 100%;
+}
+
+.snippet__select select {
+    width: 100%;
+    margin-top: 6px;
+}
+
+.snippet__view {
+    background-color: #c5c5c5;
+}
+
+.snippet__data {
+    display: flex;
+}
+
+.snippet__data-title {
+    height: 24px;
+    margin-top: 10px;
+
+    line-height: 24px;
+}
+
+.snippet__logs {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    width: 50%;
+    max-height: 400px;
+}
+
+.snippet__logs-content {
+    width: 100%;
+
+    font-family: monospace;
+    white-space: break-spaces;
+    word-break: break-all;
+}
+
+.snippet__sheet {
+    width: 50%;
+}
+
+.snippet__sheet textarea {
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 400px;
+    padding: 10px 10px 10px 0;
+
+    font-family: monospace;
+
+    border: none;
+}

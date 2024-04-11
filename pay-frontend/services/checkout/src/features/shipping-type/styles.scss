@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+.ShippingTypeComponent {
+    &-Radio {
+        width: 100%;
+    }
+
+    &-Popup {
+        --tooltip-view-default-fill-color-base: #{$color-fill-white};
+        --popup-view-default-fill-color: #{$color-fill-dark-grey};
+        --popup-view-default-typo-color: #{$color-fill-white};
+        --tooltip-borderRadius: 12px;
+    }
+}

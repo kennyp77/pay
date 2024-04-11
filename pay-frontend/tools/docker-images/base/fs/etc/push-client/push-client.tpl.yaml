@@ -1,0 +1,19 @@
+logger:
+  file: '/var/log/statbox/watcher.log'
+  level: 5
+  mode: file
+  timeformat: '%d.%m.%Y-%H.%M.%S'
+
+network:
+  master-addr: logbroker.yandex.net
+  proto: pq
+  transport: ipv6
+
+watcher:
+  state: '/var/lib/push-client'
+
+files:
+- topic: %topic-prefix%access-log
+  name: /var/log/nginx/web-service/access.tskv
+- topic: %topic-prefix%duffman-log
+  name: /var/log/duffman/duffman-http.tskv

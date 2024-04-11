@@ -1,0 +1,12 @@
+.slider__param {
+    flex: 1;
+}
+
+.slider__param .Slider_view_default .Slider-Container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.slider__param-label {
+    margin-bottom: 8px;
+}

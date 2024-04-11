@@ -1,0 +1,14 @@
+strict: true
+
+docs-viewer:
+  project-name: pay
+  show-revision: false
+  releasers:
+    - perseus
+  index-page:
+    title: Pay
+    hidden: false
+    description: Описание проектов Pay
+  auto-release-to:
+    testing: true
+    prod: true

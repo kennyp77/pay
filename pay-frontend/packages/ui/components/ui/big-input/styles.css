@@ -1,0 +1,113 @@
+@import '../../constants.css';
+
+.big-input {
+    --color-secondary-fill-base: #eceef2;
+    --color-secondary-fill-hover: #e3e5ed;
+    --color-accent-brand: #ffdc60;
+    --color-accent-brand-focus: #ffd21f;
+    --color-text-secondary: #939cb0;
+    --color-text: #222426;
+    --color-accent-alert: #f00;
+}
+
+.big-input .Textinput {
+    width: 100%;
+    height: 74px;
+
+    border: 1px solid var(--color-secondary-fill-base);
+    border-radius: var(--space-12);
+    background-color: var(--color-secondary-fill-base);
+
+    transition: background-color var(--transition-color), border-color var(--transition-color);
+
+    @apply --text-size-18;
+}
+
+.big-input .Textinput .Textinput-Control {
+    height: 100%;
+    padding: var(--space-20);
+
+    color: var(--color-text) !important;
+}
+
+.big-input .Textinput .Textinput-Label {
+    left: var(--space-20);
+
+    color: var(--color-text-secondary) !important;
+
+    @apply --text-size-18;
+}
+
+.big-input .Textinput_iconLeft .Textinput-Control {
+    padding-left: var(--space-56);
+}
+
+.big-input_disabled .Textinput .Textinput-Control {
+    color: var(--color-text-secondary) !important;
+}
+
+.big-input .Textinput .Textinput-Label ~ .Textinput-Control {
+    padding-bottom: 0;
+}
+
+.big-input .Textinput .Textinput-Label_floated {
+    top: 16px;
+
+    transform: none;
+
+    @apply --text-size-14;
+}
+
+.big-input .Textinput-Hint {
+    color: var(--color-text-secondary) !important;
+}
+
+.big-input .Textinput-Hint_state_error {
+    color: var(--color-accent-alert) !important;
+
+    @apply --text-size-14;
+}
+
+.big-input .Textinput_focused {
+    border-color: var(--color-accent-brand-focus);
+    background-color: var(--color-white);
+}
+
+.big-input .Textinput_focused.Textinput_hovered {
+    border-color: var(--color-accent-brand);
+    background-color: var(--color-white);
+}
+
+.big-input .Textinput_hovered {
+    border-color: var(--color-secondary-fill-hover);
+    background-color: var(--color-secondary-fill-hover);
+}
+
+.big-input .Textinput_iconLeft .Textinput-Label {
+    left: var(--space-56);
+}
+
+.big-input .Textinput_iconLeft .Textinput-Icon {
+    width: 24px !important;
+    height: 24px !important;
+
+    color: var(--color-text-secondary);
+
+    transition: color var(--transition-color);
+}
+
+.big-input .Textinput_iconLeft .Textinput-Icon:hover {
+    color: var(--color-text);
+}
+
+.big-input .Textinput_iconLeft .Textinput-Icon_side_left {
+    left: var(--space-20);
+}
+
+.big-input .Textinput_iconLeft .Textinput-Icon_side_right {
+    right: var(--space-20);
+}
+
+.big-input_disabled {
+    opacity: 0.6;
+}

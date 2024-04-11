@@ -1,0 +1,19 @@
+{
+    "name": "@yandex-pay/monorepo",
+    "private": true,
+    "repository": {
+        "type": "arc",
+        "url": "https://a.yandex-team.ru/arc_vcs/pay/frontend"
+    },
+    "engines": {
+        "node": "16.13.2",
+        "pnpm": "6.28.0"
+    },
+    "scripts": {
+        "preinstall": "npx only-allow pnpm",
+        "install:deps": "cmd() { pnpm i --filter !@yandex-pay/monorepo \"$@\" && pnpm rebuild -r \"$@\"; }; cmd",
+        "install:globals": "npm install -g pnpm@6.28.0",
+        "build": "pnpm run build --filter !@yandex-pay/monorepo",
+        "bootstrap": "cmd() { pnpm run install:deps -- \"$@\" && pnpm run build -- \"$@\"; }; cmd"
+    }
+}

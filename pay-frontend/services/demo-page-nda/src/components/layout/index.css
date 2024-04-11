@@ -1,0 +1,14 @@
+@import '../constants.css';
+
+.layout__screens {
+    padding-top: 40px;
+}
+
+@media (--screen-mobile) {
+    .layout__tabs > ul > li {
+        display: block !important;
+
+        margin: 10px 0 0 !important;
+        padding-bottom: 5px !important;
+    }
+}

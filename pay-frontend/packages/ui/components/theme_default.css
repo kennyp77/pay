@@ -1,0 +1,44 @@
+.Theme_default {
+    --color-text-primary: rgba(0, 0, 0, 0.8);
+    --color-text-secondary: rgba(0, 0, 0, 0.6);
+    --color-text-tetriary: rgba(0, 0, 0, 0.4);
+
+    --color-bg-primary: #f6f6f6;
+    --color-bg-secondary: #f2f2f2;
+    --color-bg-tetriary: #fff;
+
+    --color-separator-primary: rgba(0, 0, 0, 0.1);
+    --color-separator-secondary: rgba(0, 0, 0, 0.05);
+
+    --color-btn-tetriary: #198cff;
+    --color-btn-disabled: #e2e2e2;
+
+    --color-box-shadow-primary: rgba(255, 56, 21, 0.25);
+    --color-box-shadow: rgba(2, 1, 1, 0.16);
+
+    --color-blue: #067aff;
+    --color-red: #ff3737;
+    --color-grey-light: #e6e6e6;
+    --color-grey: #f2f2f2;
+
+    /* Общие цвета для всех тем */
+    --color-common-yellow: #fdde55;
+    --color-common-black: #000;
+    --color-common-white: #fff;
+
+    --color-common-text-dark: rgba(0, 0, 0, 0.8);
+
+    /* AdditionalInformation */
+    --ya-additional-information-typo: var(--color-text-primary);
+    --ya-additional-information-typo-2: var(--color-text-tetriary);
+    --ya-additional-information-inverse-typo: #fff;
+    --ya-additional-information-inverse-typo-2: rgba(255, 255, 255, 0.7);
+
+    /* PassportUser */
+    --ya-passport-user-typo: #fff;
+    --ya-passport-user-typo-2: #000;
+
+    /* Page */
+    --ya-page-header-typo: #fff;
+    --ya-page-header-mobile-typo: #000;
+}

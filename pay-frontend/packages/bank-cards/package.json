@@ -1,0 +1,13 @@
+{
+  "name": "@trust/bank-cards",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node_modules/.bin/jest --watch",
+    "test": "../../node_modules/.bin/jest --verbose --passWithNoTests"
+  },
+  "author": "stepler@yandex-team.ru",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}

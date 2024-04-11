@@ -1,0 +1,32 @@
+.Theme_default {
+    --color-text-primary: rgba(0, 0, 0, 0.8);
+    --color-text-secondary: rgba(0, 0, 0, 0.6);
+    --color-text-tetriary: rgba(0, 0, 0, 0.4);
+
+    --color-bg-primary: #f6f6f6;
+    --color-bg-secondary: #f2f2f2;
+    --color-bg-tetriary: #fff;
+
+    --color-separator-primary: rgba(0, 0, 0, 0.1);
+    --color-separator-secondary: rgba(0, 0, 0, 0.05);
+
+    /* Нет в компонентах */
+    --color-separator-tetriary: rgba(0, 0, 0, 0.2);
+
+    --color-btn-tetriary: #198cff;
+    --color-btn-disabled: #f6f6f6;
+
+    --color-box-shadow: rgba(0, 0, 0, 0.16);
+
+    --color-blue: #067aff;
+    --color-red: #ff3737;
+    --color-grey-light: #e6e6e6;
+    --color-grey: #f2f2f2;
+
+    /* Общие цвета для всех тем */
+    --color-common-yellow: #fdde55;
+    --color-common-black: #000;
+    --color-common-white: #fff;
+
+    --color-common-text-dark: rgba(0, 0, 0, 0.8);
+}

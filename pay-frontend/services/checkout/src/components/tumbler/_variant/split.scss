@@ -1,0 +1,25 @@
+@import '../../../styles/variables.scss';
+
+.Tumbler_view_default.Tumbler_variant_split .Tumbler-Button {
+    background-color: $color-fill-grey3;
+}
+
+.Tumbler_view_default.Tumbler_variant_split .Tumbler-Button:hover {
+    background-color: $color-fill-grey2;
+}
+
+.Tumbler_view_default.Tumbler_variant_split .Tumbler-Button[aria-pressed='true'] {
+    background-color: $color-fill-cyan;
+}
+
+.Tumbler_view_default.Tumbler_variant_split .Tumbler-Button[aria-pressed='true']:hover {
+    background-color: $color-fill-cyan2;
+}
+
+.Tumbler_view_default[aria-disabled='true'][class].Tumbler_variant_split .Tumbler-Button {
+    background-color: $color-fill-grey3;
+}
+
+.Tumbler_view_default[aria-disabled='true'][class].Tumbler_variant_split .Tumbler-Button[aria-pressed='true'] {
+    background-color: $color-fill-cyan;
+}

@@ -1,0 +1,38 @@
+@import './styles/normalize.css';
+@import './styles/fonts.css';
+@import '../constants.css';
+
+.page {
+    width: 700px;
+    min-width: 360px;
+    margin: 0 auto;
+}
+
+.page__logo {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 20px;
+}
+
+.page__logo svg {
+    width: 140px;
+}
+
+.page__content {
+    padding-top: 30px;
+}
+
+@media (--screen-mobile) {
+    .page {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 700px;
+        padding: 0 20px 40px;
+    }
+}
+
+/* Перекрытие для оверлея, чтобы был доступ к странице */
+html > body > div:last-child {
+    visibility: hidden;
+}

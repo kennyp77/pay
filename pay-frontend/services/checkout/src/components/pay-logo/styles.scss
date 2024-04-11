@@ -1,0 +1,9 @@
+@import '../../styles/variables.scss';
+
+.PayLogo {
+    height: 28px;
+
+    > svg {
+        height: 100%;
+    }
+}

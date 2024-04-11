@@ -1,0 +1,23 @@
+@import '../../constants.css';
+
+.card-not-allowed {
+    display: flex;
+    align-items: center;
+
+    padding: var(--space-16) var(--space-20);
+
+    border-radius: var(--border-radius-16);
+    background: rgba(255, 0, 0, 0.04);
+}
+
+.card-not-allowed__description {
+    margin-left: var(--space-20);
+
+    color: rgba(0, 0, 0, 0.7);
+
+    @apply --text-size-16;
+}
+
+.card-not-allowed .icon {
+    width: 40px;
+}

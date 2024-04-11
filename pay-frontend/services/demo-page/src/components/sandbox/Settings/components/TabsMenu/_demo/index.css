@@ -1,0 +1,41 @@
+.TabsMenu_view_demo {
+    font-family: var(--typography-font-family);
+    line-height: initial;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.TabsMenu_view_demo .TabsMenu-Tab {
+    position: relative;
+
+    margin-right: 58px;
+    padding-bottom: 20px;
+
+    font-size: 20px;
+
+    color: rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+.TabsMenu_view_demo .TabsMenu-Tab:last-child {
+    margin-right: 0;
+}
+
+.TabsMenu_view_demo .TabsMenu-Tab.TabsMenu-Tab_active {
+    color: #000;
+}
+
+.TabsMenu_view_demo.TabsMenu_layout_horiz .TabsMenu-Tab_active::after {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+
+    height: 1px;
+
+    content: '';
+
+    background-color: var(--color-bg-brand);
+
+    transition: background-color 0.15s ease-out;
+}

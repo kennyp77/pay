@@ -1,0 +1,95 @@
+.Textinput_variant_outlined {
+  .Textinput-Box {
+    z-index: 0;
+    border-color: transparent;
+    border-width: 2px;
+    border-radius: var(--form-element-border-radius);
+    background-color: var(--text-input-bg);
+  }
+
+  .Textinput-Label {
+    left: var(--offset-24);
+
+    & ~ .Textinput-Control {
+      padding-top: var(--offset-14);
+      padding-bottom: var(--offset-14);
+      padding-left: var(--offset-24);
+    }
+  }
+
+  &.Textinput_disabled {
+    .Textinput-Box {
+      background-color: var(--text-input-bg-action);
+    }
+
+    .Textinput-Label {
+      color: var(--text-input-color-disabled);
+    }
+
+    .Textinput-Control {
+      -webkit-text-fill-color: var(--text-input-color-disabled);
+      color: var(--text-input-color-disabled);
+      opacity: 1;
+    }
+  }
+
+  &.Textinput_focused .Textinput-Box,
+  &.Textinput_hovered .Textinput-Box {
+    background-color: transparent;
+  }
+
+  &:hover .Textinput-Box {
+    background-color: var(--text-input-bg-action);
+  }
+
+  &.Textinput-url-format {
+    .Textinput-Label_floated ~ .Textinput-Box {
+      &:before {
+        position: absolute;
+        top: var(--offset-28);
+        left: var(--offset-22);
+        content: 'http://';
+        color: var(--color-text-secondary);
+        border-bottom: none;
+      }
+    }
+
+    .Textinput-Control {
+      padding-left: 71px;
+    }
+
+    &.Textinput_disabled {
+      .Textinput-Label_floated ~ .Textinput-Box {
+        &:before {
+          color: var(--text-input-color-disabled);
+        }
+      }
+    }
+  }
+
+  &:hover:not(.Textinput_disabled):not(.Textinput_focused):not(.Textinput_state_error) .Textinput-Box {
+    border-color: transparent;
+    background-color: var(--text-input-bg-action);
+  }
+
+  .Textinput-Label_floated {
+    top: var(--offset-4);
+  }
+
+  .Textinput-Control.Textinput-Control:-webkit-autofill {
+    -webkit-background-clip: text;
+    background-clip: text;
+    box-shadow: none;
+  }
+
+  &.Textinput_state_error {
+    .Textinput-Label {
+      color: var(--textinput-view-material-label-color-base);
+    }
+  }
+
+  .Textinput-Hint_view_material.Textinput-Hint_state_error {
+    margin-top: var(--offset-12);
+    font-size: var(--fz-14);
+  }
+}

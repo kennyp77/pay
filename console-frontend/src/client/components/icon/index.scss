@@ -1,0 +1,5 @@
+.Icon {
+  &:not(&.Textinput-Icon, &.Button2-Icon) {
+    background-size: contain;
+  }
+}

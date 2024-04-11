@@ -1,0 +1,65 @@
+@import 'styles/breakpoints.scss';
+@import 'styles/mixins.scss';
+
+.RegistrationStep {
+  width: var(--progress-width);
+
+  .RegistrationStep-Bar {
+    @include transition;
+
+    width: 100%;
+    height: var(--progress-height);
+    border-radius: var(--radius-32);
+    background-color: var(--color-mg-button-secondary-fill-base);
+  }
+
+  .RegistrationStep-Text {
+    @include transition;
+
+    color: var(--color-mg-control-placeholder);
+  }
+
+  &_complete {
+    .RegistrationStep-Bar {
+      background-color: var(--button-bg-primary);
+      opacity: 0.2;
+    }
+
+    .RegistrationStep-Text {
+      color: var(--color-mg-typo-secondary);
+    }
+  }
+
+  &_active {
+    .RegistrationStep-Bar {
+      background-color: var(--button-bg-primary);
+    }
+
+    .RegistrationStep-Text {
+      color: var(--color-mg-typo-primary);
+    }
+  }
+
+  &:not(&_comlpete) {
+    .RegistrationStep-Link {
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        .RegistrationStep-Bar {
+          opacity: 0.4;
+        }
+
+        .RegistrationStep-Text {
+          color: var(--color-mg-typo-primary);
+        }
+      }
+    }
+  }
+}
+
+@include media($tablet, below) {
+  .RegistrationStep {
+    width: 30%;
+  }
+}

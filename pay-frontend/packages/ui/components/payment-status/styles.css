@@ -1,0 +1,67 @@
+@import '../constants.css';
+
+.payment-status {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-status__logo {
+    flex: none;
+}
+
+.payment-status__logo-icon {
+    width: 61px;
+    height: 24px;
+
+    color: var(--color-text-primary);
+}
+
+.payment-status__content {
+    display: flex;
+    flex: 1 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-status__icon {
+    width: 48px;
+    height: 48px;
+    margin: 48px 0 0;
+}
+
+.payment-status__message {
+    margin: 16px 0 0;
+
+    font-weight: 500;
+    text-align: center;
+
+    color: var(--color-text-primary);
+
+    @apply --text-size-20;
+}
+
+.payment-status__label-session-id {
+    margin: 48px 0 0;
+
+    text-align: center;
+
+    color: var(--color-text-primary);
+
+    @apply --text-size-14;
+}
+
+.payment-status__session-id {
+    margin: 8px 0 0;
+
+    font-family: monospace, monospace;
+    text-align: center;
+
+    color: var(--color-text-tetriary);
+
+    @apply --text-size-14;
+}
+
+.payment-status__action {
+    margin: 32px 0 0;
+}

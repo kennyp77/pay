@@ -1,0 +1,65 @@
+@import '../../styles/variables.scss';
+
+$spaces: (
+    '3xl': var(--space-3-xl),
+    '2xl': var(--space-2-xl),
+    'xl': var(--space-xl),
+    'l': var(--space-l),
+    'm': var(--space-m),
+    's': var(--space-s),
+    'xs': var(--space-xs),
+    '2xs': var(--space-2-xs),
+    '3xs': var(--space-3-xs),
+);
+
+/**
+ * Внешние отступы
+ */
+.spacer {
+    margin: 0;
+}
+
+@each $space, $size in $spaces {
+    @each $variant in (top, bottom, left, right) {
+        .spacer_#{$variant}_#{$space} {
+            margin-#{$variant}: $size;
+        }
+    }
+    .spacer_all_#{$space} {
+        margin: $size;
+    }
+}
+
+/**
+ * Внутренние отступы
+ * Делаются отдельными элементами
+ */
+@each $space, $size in $spaces {
+    .gap_width_#{$space} {
+        width: $size;
+    }
+
+    .gap_height_#{$space} {
+        height: $size;
+    }
+}
+
+/**
+ * Небольшой хак
+ * Глобальный класс для 100% ширины с учетом отступа
+ */
+.w100 {
+    width: 100%;
+}
+
+@each $space, $size in $spaces {
+    .w100.spacer_all_#{$space},
+    .w100.spacer_left_#{$space}.spacer_right_#{$space} {
+        width: calc(100% - #{$size} * 2);
+    }
+
+    .w100.spacer_left_#{$space},
+    .w100.spacer_right_#{$space} {
+        width: calc(100% - #{$size});
+    }
+}

@@ -1,0 +1,29 @@
+.scenario span,
+.scenario select,
+.scenario button {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.scenario__apply {
+    display: flex;
+
+    margin-bottom: 10px;
+}
+
+.scenario__shipping {
+    margin-bottom: 10px;
+}
+
+.scenario textarea {
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 400px;
+    padding: 10px 10px 10px 0;
+
+    font-family: monospace;
+
+    border: none;
+}

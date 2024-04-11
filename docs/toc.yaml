@@ -1,0 +1,16 @@
+title: pay
+href: index.md
+items:
+  - name: Введение
+    href: index.md
+  - name: Болтификация (Yandex Pay Checkout)
+    expanded: true
+    items:
+      - name: Введение
+        href: checkout/index.md
+      - name: API для фронтенда
+        href: checkout/front_api.md
+        expanded: true
+        items:
+          - name: Корзина
+            href: checkout/cart.md

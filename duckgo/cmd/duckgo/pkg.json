@@ -1,0 +1,24 @@
+{
+    "meta": {
+        "name": "yandex-duckgo",
+        "maintainer": "Yandex Pay <pay@yandex-team.ru>",
+        "description": "Cryptography API for Yandex Pay",
+        "version": "{revision}"
+    },
+    "build": {
+        "targets": [
+            "pay/duckgo/cmd/duckgo/"
+        ]
+    },
+    "data": [
+        {
+            "source": {
+                "type": "BUILD_OUTPUT",
+                "path": "pay/duckgo/cmd/duckgo/duckgo"
+            },
+            "destination": {
+                "path": "/usr/bin/"
+            }
+        }
+    ]
+}

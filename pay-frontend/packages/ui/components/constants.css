@@ -1,0 +1,133 @@
+/**
+ Инклуд для local-dev
+*/
+@import './theme_default.css';
+@import './theme_dark.css';
+@import './service-override.css';
+
+@custom-selector :--theme-dark .Theme_dark;
+@custom-selector :--mobile .Template_mobile;
+@custom-selector :--desktop .Template_desktop;
+
+@custom-media --slim-screen (max-width: 959px);
+
+:root {
+    --font-family: 'YS Text', arial, sans-serif;
+
+    --form-width: 490px;
+    --form-height: 370px;
+
+    --space-4: 4px;
+    --space-8: 8px;
+    --space-12: 12px;
+    --space-14: 14px;
+    --space-16: 16px;
+    --space-18: 18px;
+    --space-20: 20px;
+    --space-24: 24px;
+    --space-28: 28px;
+    --space-32: 32px;
+    --space-36: 36px;
+    --space-40: 40px;
+    --space-46: 46px;
+    --space-48: 48px;
+    --space-52: 52px;
+    --space-56: 56px;
+    --space-76: 76px;
+    --space-92: 92px;
+
+    --border-radius-4: 4px;
+    --border-radius-6: 6px;
+    --border-radius-8: 8px;
+    --border-radius-12: 12px;
+    --border-radius-16: 16px;
+    --border-radius-24: 24px;
+
+    --z-index-input-label: 1;
+    --z-index-action-button: 100;
+    --z-index-modal: 200;
+    --z-index-overlap-screen: 300;
+
+    --transition-color: 0.15s linear;
+    --transition-position: 0.15s linear;
+    --transition-visibility: 0.2s linear;
+
+    --yandex-pay-color: #ff3815;
+    --yandex-pay-color-hovered: #ff5031;
+    --yandex-pay-gradient: radial-gradient(circle, #ff3815 0%, #ff5031 100%);
+
+    --text-size-12: {
+        font-size: 12px;
+        line-height: 14px;
+    };
+    --text-size-14: {
+        font-size: 14px;
+        line-height: 18px;
+    };
+    --text-size-16: {
+        font-size: 16px;
+        line-height: 20px;
+    };
+    --text-size-18: {
+        font-size: 18px;
+        line-height: 22px;
+    };
+    --text-size-20: {
+        font-size: 20px;
+        line-height: 24px;
+    };
+    --text-size-24: {
+        font-size: 24px;
+        line-height: 26px;
+    };
+    --text-size-28: {
+        font-size: 28px;
+        line-height: 32px;
+    };
+    --text-size-36: {
+        font-size: 36px;
+        line-height: 42px;
+    };
+
+    --mounted-hidden: {
+        position: absolute;
+
+        overflow: hidden;
+        /* Нужен именно 1х1, чтобы браузер не сбрасывал состояния элементов */
+        width: 1px;
+        height: 1px;
+
+        user-select: none;
+        pointer-events: none;
+
+        opacity: 0;
+    };
+
+    --overlay-cover: {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    };
+
+    --mobile-content: {
+        box-sizing: border-box;
+        min-width: 320px;
+        max-width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+    };
+
+    --safari-overflow-fix: {
+        transform: translate3d(0, 0, 0); /* fix дёрганья на safari */
+    };
+}

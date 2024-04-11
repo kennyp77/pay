@@ -1,0 +1,219 @@
+fbadge:
+  fontFamily:
+    value: "'YS Text Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  border:
+    color:
+      value: "{color.mg.surface.primary.value}"
+  fillColor:
+    value: "{color.mg.accent.alert.value}"
+  typoColor:
+    value: white
+
+divider:
+  fillColor:
+    value: "{color.mg.stroke.default.base.value}"
+
+link:
+  viewDefault:
+    typoColor:
+      base:
+        value: "{color.mg.link.default.base.value}"
+      disabled:
+        value: "{color.mg.control.disabled.typo.secondary.value}"
+      hovered:
+        value: "{color.mg.link.default.hover.value}"
+    outlineColor:
+      value: "{color.mg.control.focus.base.value}"
+
+menu:
+  size:
+    s:
+      fontSize:
+        value: "{typography.controls.size.s.fontSize.value}"
+      lineHeight:
+        value: 32px
+      spaceVertical:
+        value: 8px
+      group:
+        spaceVertical:
+          value: 8px
+      itemIcon:
+        indentRight:
+          value: 8px
+    m:
+      fontSize:
+        value: "{typography.controls.size.m.fontSize.value}"
+      lineHeight:
+        value: 36px
+      spaceVertical:
+        value: 8px
+      group:
+        spaceVertical:
+          value: 8px
+      itemIcon:
+        indentRight:
+          value: 12px
+    l:
+      fontSize:
+        value: "{typography.controls.size.l.fontSize.value}"
+      lineHeight:
+        value: 44px
+      spaceVertical:
+        value: 5px
+      group:
+        spaceVertical:
+          value: 8px
+        spaceHorizontal:
+          value: 0
+        indentBottom:
+          value: 5px
+      item:
+        spaceVertical:
+          value: 4px
+        spaceHorizontal:
+          value: 15px
+        indentBottom:
+          value: 5px
+      itemIcon:
+        indentRight:
+          value: 6px
+      titleSibling:
+        indentLeft:
+          value: 20px
+  viewDefault:
+    borderColor:
+      base:
+        value: "{color.mg.stroke.default.base.value}"
+    fillColor:
+      base:
+        value: "{color.mg.surface.elevated.lvl3.value}"
+      hovered:
+        value: "{color.mg.tint.superlight.value}"
+    typoColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+      secondary:
+        value: "{color.mg.typo.secondary.value}"
+      disabled:
+        value: "{color.mg.control.disabled.typo.secondary.value}"
+      hovered:
+        value: "{color.mg.typo.primary.value}"
+  fontFamily:
+    value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+
+progress:
+  inner:
+    fillColor:
+      value: "{color.mg.button.primary.fill.base.value}"
+
+slider:
+  viewDefault:
+    typoColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+    track:
+      fillColor:
+        base:
+          value: "{color.mg.button.secondary.fill.base.value}"
+        hovered:
+          value: "{color.mg.button.secondary.fill.hover.value}"
+    range:
+      fillColor:
+        base:
+          value: "{color.mg.button.primary.fill.base.value}"
+        hovered:
+          value: "{color.mg.button.primary.fill.hover.value}"
+        disabled:
+          value: "{color.mg.control.disabled.fill.value}"
+    thumb:
+      width:
+        value: 24px
+      height:
+        value: 24px
+      fillColor:
+        base:
+          value: "{color.mg.surface.elevated.lvl1.value}"
+        disabled:
+          value: "{color.mg.control.disabled.fill.value}"
+    tick:
+      fillColor:
+        base:
+          value: "{color.mg.surface.primary.value}"
+      width:
+        value: 4px
+    tickLabel:
+      fontSize:
+        value: 14px
+  fontFamily:
+    value: "'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+
+spin:
+  viewDefault:
+    borderColor:
+      value: "{color.mg.button.primary.fill.base.value}"
+
+tabsMenu:
+  fontFamily:
+    value: "'YS Text Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  size:
+    s:
+      fontSize:
+        value: 14px
+      lineHeight:
+        value: 36px
+    m:
+      fontSize:
+        value: 16px
+      lineHeight:
+        value: 40px
+  viewDefault:
+    outlineColor:
+      value: "{color.mg.button.primary.fill.base.value}"
+    activeLine:
+      fillColor:
+        active:
+          value: "{color.mg.button.primary.fill.base.value}"
+    typoColor:
+      base:
+        value: "{color.mg.typo.primary.value}"
+
+attach:
+  fontFamily:
+    value: "'YS Text Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+  typoColor:
+    value: "{color.mg.typo.primary.value}"
+  reset:
+    width:
+      value: 16px
+    height:
+      value: 16px
+    indentLeft:
+      value: 6px
+  iconFile:
+    indentRight:
+      value: 6px
+  size:
+    s:
+      fontSize:
+        value: "{typography.controls.size.s.fontSize.value}"
+      lineHeight:
+        value: "{button.size.s.lineHeight.value}"
+      holder:
+        indentLeft:
+          value: 8px
+    m:
+      fontSize:
+        value: "{typography.controls.size.m.fontSize.value}"
+      lineHeight:
+        value: "{button.size.m.lineHeight.value}"
+      holder:
+        indentLeft:
+          value: 8px
+    l:
+      fontSize:
+        value: "{typography.controls.size.l.fontSize.value}"
+      lineHeight:
+        value: "{button.size.l.lineHeight.value}"
+      holder:
+        indentLeft:
+          value: 12px

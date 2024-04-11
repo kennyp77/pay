@@ -1,0 +1,14 @@
+@import '../../../styles/variables.scss';
+
+.ModalLayout {
+    &-Block {
+        max-height: 90vh;
+    }
+
+    &_width_fixed {
+        .ModalLayout-Block {
+            width: $desktop-blocks-width;
+            -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+        }
+    }
+}

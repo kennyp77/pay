@@ -1,0 +1,9 @@
+@import '../constants.css';
+
+.payment-methods-list__item {
+    margin-bottom: var(--space-20);
+}
+
+.payment-methods-list__item:last-child {
+    margin-bottom: 0;
+}

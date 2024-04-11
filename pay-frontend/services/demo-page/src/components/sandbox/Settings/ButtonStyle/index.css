@@ -1,0 +1,54 @@
+@import '../../../constants.css';
+
+.button-style {
+}
+
+.button-style__box {
+    display: flex;
+    gap: 20px;
+}
+
+.button-style__hl {
+    margin-top: 20px;
+}
+
+.button-style__select {
+    flex: 1;
+}
+
+.button-style__select-label {
+    padding-bottom: 12px;
+}
+
+.button-style__custom-styles {
+    margin-top: 20px;
+}
+
+.button-style__content {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.button-style__remount {
+    margin-top: 10px;
+
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+@media (--screen-mobile) {
+    .button-style__box {
+        display: block;
+    }
+
+    .button-style__select {
+        display: block;
+    }
+
+    .button-style__select + .button-style__select {
+        margin-top: 10px;
+    }
+}

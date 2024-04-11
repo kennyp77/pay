@@ -1,0 +1,76 @@
+@import '../../constants.css';
+
+/*  Сброс стилей кнопки */
+.link {
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    background: none;
+}
+
+.link {
+    display: inline-block;
+
+    transition: color var(--transition-color), fill var(--transition-color);
+
+    &,
+    &:link,
+    &:hover,
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+.link_inline {
+    display: inline;
+
+    cursor: pointer;
+}
+
+.link_disabled {
+    cursor: default;
+    pointer-events: none;
+
+    opacity: 0.5;
+}
+
+.link__icon {
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+.link__icon_left {
+    margin-right: var(--space-12);
+}
+
+.link__icon_right {
+    margin-left: var(--space-12);
+}
+
+.link__text {
+    display: inline-block;
+
+    vertical-align: middle;
+}
+
+.link_inline .link__text {
+    display: inline;
+}
+
+.link_theme_normal {
+    color: var(--color-blue);
+
+    &:hover {
+        color: var(--color-red);
+    }
+}
+
+.link_theme_grey {
+    color: var(--color-text-tetriary);
+
+    &:hover {
+        color: var(--color-text-primary);
+    }
+}

@@ -1,0 +1,67 @@
+@import '../../constants.css';
+
+.icon {
+    display: block;
+}
+
+.icon_chevron {
+    width: 7px;
+    height: 14px;
+}
+
+.link__icon .icon_chevron {
+    width: 6px;
+    height: 10px;
+}
+
+.link__icon_right .icon_chevron {
+    transform: rotate(180deg);
+}
+
+.icon_ya-pay-logo {
+    width: 24px;
+    height: 24px;
+}
+
+.icon_payment-error,
+.icon_payment-success,
+.icon_payment-connection-interrupted {
+    width: 50px;
+    height: 50px;
+}
+
+.mobile .icon_payment-error,
+.mobile .icon_payment-success,
+.mobile .icon_payment-connection-interrupted {
+    width: 45px;
+    height: 45px;
+}
+
+.icon_lock {
+    width: 32px;
+    height: 32px;
+}
+
+.icon_plus-return-text {
+    max-width: 100%;
+    height: 100%;
+}
+
+.icon_question-mark {
+    width: 17px;
+    height: 16px;
+}
+
+.icon_close {
+    width: 20px;
+    height: 20px;
+}
+
+:--mobile {
+    .icon_payment-error,
+    .icon_payment-success,
+    .icon_payment-connection-interrupted {
+        width: 45px;
+        height: 45px;
+    }
+}

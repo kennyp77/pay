@@ -1,0 +1,10 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "strict": true,
+        "strictNullChecks": true,
+        "rootDir": ".",
+        "baseUrl": "src"
+    },
+    "include": ["../../typings", "src"]
+}

@@ -1,0 +1,21 @@
+.RegistrationBgImage {
+  position: relative;
+  height: 100%;
+
+  &-Img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-Button {
+    position: absolute;
+    left: var(--offset-20);
+    bottom: var(--offset-20);
+  }
+
+  &-ButtonIcon {
+    width: var(--size-24);
+    margin-right: var(--offset-8);
+  }
+}

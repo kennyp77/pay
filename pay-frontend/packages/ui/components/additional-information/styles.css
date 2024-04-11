@@ -1,0 +1,88 @@
+@import '../constants.css';
+
+.additional-information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.additional-information__content {
+    display: flex;
+    align-items: center;
+}
+
+.additional-information__lock {
+    width: 32px;
+    height: 32px;
+    margin-left: var(--space-12);
+}
+
+.additional-information__agreement {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    @apply --text-size-14;
+}
+
+.additional-information__agreement-text {
+    display: block;
+}
+
+.additional-information__agreement-link {
+    display: block;
+}
+
+.additional-information__agreement-link .link:hover {
+    color: inherit;
+}
+
+.additional-information__protection {
+    display: flex;
+    align-items: center;
+}
+
+.additional-information__protection-text {
+    text-align: right;
+
+    @apply --text-size-14;
+}
+
+.additional-information__agreement-text,
+.additional-information__protection-text {
+    color: var(--ya-additional-information-typo-2);
+}
+
+.additional-information__agreement-text_bold {
+    color: var(--ya-additional-information-typo);
+}
+
+.additional-information_inverse .additional-information__agreement-text,
+.additional-information_inverse .additional-information__protection-text {
+    color: var(--ya-additional-information-inverse-typo-2);
+}
+
+.additional-information_inverse .additional-information__agreement-text_bold {
+    color: var(--ya-additional-information-inverse-typo);
+}
+
+:--mobile {
+    .additional-information {
+        margin: var(--space-20) 0 var(--space-8);
+    }
+
+    .additional-information__protection-text {
+        display: none;
+    }
+}
+
+.page_monochromeBackground {
+    .additional-information_inverse .additional-information__agreement-text,
+    .additional-information_inverse .additional-information__protection-text {
+        color: var(--ya-additional-information-typo-2);
+    }
+
+    .additional-information_inverse .additional-information__agreement-text_bold {
+        color: var(--ya-additional-information-typo);
+    }
+}

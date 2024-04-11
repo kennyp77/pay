@@ -1,0 +1,63 @@
+.Button2_variant_outlined {
+  padding: var(--offset-18);
+  box-sizing: border-box;
+  color: var(--color-text-default-soft);
+  font-weight: 500;
+  font-size: var(--fz-16);
+  font-family: var(--typography-font-family);
+  border-radius: var(--form-element-border-radius);
+
+  &:before {
+    border: 1px solid var(--color-border-outlined);
+    border-radius: var(--form-element-border-radius);
+    background-color: transparent;
+  }
+
+  &:hover:before {
+    background-color: var(--color-mg-control-disabled-fill);
+  }
+
+  .utilityfocus &:focus:before {
+    border: 2px solid var(--color-border-outlined);
+    background-color: var(--color-mg-button-secondary-fill-base);
+  }
+
+  &.Button2_pressed:not([aria-disabled='true']):before {
+    background-color: var(--color-mg-button-secondary-fill-base);
+  }
+
+  .Button2-Text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &[aria-disabled='true'] {
+    color: var(--color-mg-control-disabled-typo-primary);
+
+    &:before {
+      background-color: var(--color-mg-control-disabled-fill);
+    }
+  }
+
+  &.Button2_size_s {
+    height: auto;
+    padding: var(--offset-8) var(--offset-16);
+    font-size: var(--fz-14);
+    line-height: var(--lh-20);
+
+    .Button2-Text {
+      margin: 0 var(--offset-8);
+    }
+  }
+
+  &.Button2_size_m {
+    height: auto;
+    padding: var(--offset-12);
+    line-height: var(--lh-20);
+
+    .Button2-Text {
+      margin: 0 var(--offset-8);
+    }
+  }
+}

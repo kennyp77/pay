@@ -1,0 +1,17 @@
+@import '../constants.css';
+
+.payment-methods-header__title {
+    margin-bottom: var(--space-12);
+
+    color: var(--color-text-primary);
+
+    @apply --text-size-16;
+}
+
+.payment-methods-header__subtitle {
+    font-weight: 500;
+
+    color: var(--color-text-primary);
+
+    @apply --text-size-28;
+}

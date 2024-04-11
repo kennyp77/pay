@@ -1,0 +1,50 @@
+@import '../../../../styles/variables.scss';
+
+.SplitPlan {
+    display: flex;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    &-Item {
+        left: 0;
+
+        display: block;
+
+        padding: 0 var(--space-2-xs) 0 0;
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    &-PayLine {
+        display: block;
+
+        height: 10px;
+
+        border-radius: 10px;
+        background: #e8f0ea;
+
+        &_disabled[class] {
+            background: #e6e9f0;
+        }
+
+        &_status_paid {
+            background: #9ee7a5;
+        }
+
+        &_status_failed {
+            background: #ff4726;
+        }
+
+        &_next {
+            background: #50bfb4;
+        }
+    }
+
+    &-Pay-Amount {
+        font-weight: 500;
+    }
+}

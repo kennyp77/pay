@@ -1,0 +1,97 @@
+format: 0.2
+
+env:
+  DEBUG: 'si:*,serp:*'
+  CI: true
+  npm_config_registry: 'https://npm.yandex-team.ru/'
+  npm_config_user_agent: 'npm/6.14.10 (verdaccio yandex canary)'
+  npm_config_audit: false
+  npm_config_ensure: true
+  npm_config_prefer_offline: true
+  TRENDBOX_JOB_LXC_CONTAINER_ID: '2601952909' # Built via https://sandbox.yandex-team.ru/task/1145029178
+  GRPC_DNS_RESOLVER: 'native' # Позволяет избегать ошибок DNS resolution failed (FEI-18594)
+
+priority: 'low'
+
+preset:
+  name: node_js
+  node_js: 16.13.2
+
+cloud:
+  type: sandbox
+  owner: YANDEX-PAY
+
+# TODO: перейти на ramdisk после https://st.yandex-team.ru/FEI-14483
+agent:
+  cpu:
+    cores: 8
+  ram: 16GB
+  disk:
+    space: 40GB
+
+container:
+  type: LXC
+  storage:
+    # Должен быть синхронизирован с переменной окружения TRENDBOX_JOB_LXC_CONTAINER_ID
+    resource: 2601952909 # Built via https://sandbox.yandex-team.ru/task/1145029178
+
+lifecycle:
+  prepare:
+    - "echo 'ENV Variables: '; node -p 'Object.entries(process.env).map(([k,v])=>`${k}=${/(pass|secret|ssh|token|auth|key)/i.test(k)?`(${v.length} bytes)`:JSON.stringify(v)}`).join(`\n`)'"
+    - export TRENDBOX_JOB_ROOT="${PWD}"
+    - export SANDBOX_OAUTH_TOKEN="${SANDBOX_AUTH_TOKEN}"
+    - export USE_DUMP_ENTRY_TREE_HASH="true" # see for more FEI-20935
+    - export NVM_DIR="/opt/nvm"
+    - export npm_config_nodedir="${NVM_DIR}/versions/node/v${node_js_version}"
+    - nvm use $node_js_version
+    - trendbox checkout -c "${checkout_config}" --dir sources && echo "Working copy has been checkouted"
+    - cd sources
+    - hash -r
+    - wait
+  install:
+    - pnpm run install:deps
+
+jobs:
+  'Linters':
+    timeout: 1h30m
+    lifecycle:
+      script: pnpm run ci:lint
+
+  'Typecheck':
+    timeout: 1h30m
+    lifecycle:
+      script: pnpm run ci:typecheck
+
+  'Testcheck':
+    timeout: 1h30m
+    lifecycle:
+      script: pnpm run ci:testcheck
+
+  'Build':
+    timeout: 1h30m
+    lifecycle:
+      script: pnpm run ci:build
+
+  'Deploy':
+    timeout: 1h30m
+    env:
+      SANDBOX_PRIVILEGED_CONTAINER: true
+    lifecycle:
+      script: pnpm run ci:deploy
+
+workflows:
+  build:
+    graph:
+      - job: 'Build'
+      - job: 'Linters'
+      - job: 'Typecheck'
+      - job: 'Testcheck'
+      - job: 'Deploy'
+
+triggers:
+  - trigger: branch
+    workflows: build
+    filters:
+      names:
+        only:
+          - trunk

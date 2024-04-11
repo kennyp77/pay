@@ -1,0 +1,9 @@
+@import 'styles/mixins';
+
+.Button2_variant_pure {
+  @extend %clear-button;
+
+  &:empty {
+    display: none;
+  }
+}

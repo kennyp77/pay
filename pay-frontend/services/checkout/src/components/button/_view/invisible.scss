@@ -1,0 +1,20 @@
+@import '../../../styles/variables.scss';
+
+.Button2_view_invisible {
+    height: unset;
+
+    line-height: unset;
+
+    color: unset !important;
+
+    &::before {
+        border: none;
+        background: none !important;
+    }
+
+    .Button2-Text {
+        margin: 0;
+
+        white-space: normal;
+    }
+}

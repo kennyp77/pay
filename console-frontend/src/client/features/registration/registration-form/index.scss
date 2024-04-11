@@ -1,0 +1,23 @@
+@import 'styles/mixins.scss';
+@import 'styles/breakpoints.scss';
+
+.RegistrationForm {
+  width: var(--registration-form-width);
+  max-width: var(--registration-form-width);
+  padding: var(--offset-36);
+  box-sizing: border-box;
+}
+
+@include media($desktop-full, above) {
+  .RegistrationForm {
+    width: var(--registration-form-full-width);
+    max-width: var(--registration-form-full-width);
+  }
+}
+
+@include media($tablet, below) {
+  .RegistrationForm {
+    width: auto;
+    padding: var(--offset-20);
+  }
+}

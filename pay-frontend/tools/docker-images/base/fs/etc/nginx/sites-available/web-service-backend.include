@@ -1,0 +1,3 @@
+upstream web-service-backend {
+    least_conn;
+}

@@ -1,0 +1,7 @@
+Source: yandex-duckgo
+Maintainer: Ivan Khvatov <ivaxer@yandex-team.ru>
+Build-Depends: debhelper (>= 11)
+
+Package: yandex-duckgo
+Architecture: any
+Description: Cryptography API for Yandex Pay

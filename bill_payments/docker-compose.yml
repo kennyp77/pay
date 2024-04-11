@@ -1,0 +1,46 @@
+version: '2.1'
+
+services:
+  bill_payments_db:
+    build:
+      dockerfile: ./postgre/Dockerfile
+      context: .
+    image: bill_payments_db
+    ports:
+      - '5252:5432'
+    volumes:
+      - ${BILL_PAYMENTS_MIGRATIONS_ROOT:-.}/postgre:/var/lib/dist/schema
+    environment:
+      POSTGRES_PASSWORD: 'P@ssw0rd'
+      POSTGRES_USER: 'bill_payments'
+      POSTGRES_DB: 'bill_payments_db'
+    healthcheck:
+      test: psql 'host=localhost port=5432 dbname=bill_payments_db user=bill_payments password=P@ssw0rd' -qtA -c 'select 1;' || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    command: ["postgres", "-c", "log_statement=all"]
+
+  bill_payments_db_migrate:
+    image: bill_payments_db
+    command: pgmigrate -d /var/lib/dist/schema -c 'host=bill_payments_db dbname=bill_payments_db user=bill_payments port=5432 password=P@ssw0rd' -t latest migrate
+    volumes:
+      - ${BILL_PAYMENTS_MIGRATIONS_ROOT:-.}/postgre:/var/lib/dist/schema
+    depends_on:
+      bill_payments_db:
+        condition: service_healthy
+
+  bill_payments_db_migrated:
+    image: bill_payments_db
+    command: tail -f /dev/null
+    volumes:
+      - ${BILL_PAYMENTS_MIGRATIONS_ROOT:-.}/postgre:/var/lib/dist/schema
+    depends_on:
+      bill_payments_db_migrate:
+        condition: service_started
+    healthcheck:
+      test: "[ \"$$(pgmigrate -d /var/lib/dist/schema -c 'host=bill_payments_db dbname=bill_payments_db user=bill_payments port=5432 password=P@ssw0rd' info | jq 'to_entries[-1].value.installed_on')\" != 'null' ] && exit 0 || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+

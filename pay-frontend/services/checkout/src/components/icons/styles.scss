@@ -1,0 +1,28 @@
+@use 'sass:math';
+
+@import '../../styles/variables.scss';
+
+$sizes: (
+    'l': 32px,
+    'm': 24px,
+    's': 20px,
+    'xs': 16px,
+);
+
+.Icon {
+    line-height: 0;
+    font-size: 0;
+}
+
+@each $s, $size in $sizes {
+    .Icon_size_#{$s}, .Icon_size_#{$s} svg, .Icon_size_#{$s} img {
+        display: inline-block;
+        width: $size;
+        height: $size;
+    }
+
+    /* Отключаем выравнивание для baseline при явно заданно размере */
+    .Icon.Icon_size_#{$s}::after {
+        display: none;
+    }
+}

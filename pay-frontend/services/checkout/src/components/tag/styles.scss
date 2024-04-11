@@ -1,0 +1,48 @@
+@import '../../styles/variables.scss';
+
+.Tag {
+    display: inline-flex;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    user-select: none;
+
+    background: $color-fill-grey;
+}
+
+.Tag_bg_red {
+    background: $color-fill-red-light;
+}
+
+.Tag-Text {
+    display: block;
+}
+
+.Tag-Button {
+    opacity: 0.5;
+}
+
+.Tag_size_s {
+    height: $control-s-height;
+    padding-right: $control-s-spaceHor;
+    padding-left: $control-s-spaceHor;
+
+    border-radius: $control-s-borderRadius;
+}
+
+.Tag_size_m {
+    height: $control-m-height;
+    padding-right: $control-m-spaceHor;
+    padding-left: $control-m-spaceHor;
+
+    border-radius: $control-m-borderRadius;
+}
+
+.Tag_closable {
+    padding-right: 0;
+}
+
+.Tag_disabled {
+    opacity: 0.6;
+}

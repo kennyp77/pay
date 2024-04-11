@@ -1,0 +1,12 @@
+{
+  "name": "@yandex-pay/react-services",
+  "version": "1.0.0",
+  "description": "",
+  "author": "stepler@yandex-team.ru",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5"
+  }
+}

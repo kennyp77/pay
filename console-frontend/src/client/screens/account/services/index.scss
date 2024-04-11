@@ -1,0 +1,28 @@
+.AccountServices {
+  &-Block {
+    padding: var(--offset-32) var(--offset-24);
+  }
+
+  &-CheckoutMessage {
+    padding: var(--offset-4) var(--offset-8);
+    color: var(--color-text-secondary);
+    border-radius: var(--radius-8);
+    background-color: var(--message-box-bg-success);
+  }
+
+  &-ButtonIconRight {
+    margin-left: var(--offset-10);
+  }
+
+  &-ButtonIconLeft {
+    margin-right: var(--offset-10);
+  }
+
+  &-CheckoutIcon {
+    flex-shrink: 0;
+  }
+
+  &-CheckoutPhone {
+    margin-bottom: calc(-1 * var(--offset-32));
+  }
+}

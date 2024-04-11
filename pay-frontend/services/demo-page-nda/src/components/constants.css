@@ -1,0 +1,5 @@
+/* From bootstrap */
+@custom-media --screen-watch (max-width: 575px);
+@custom-media --screen-mobile (max-width: 767px);
+@custom-media --screen-tablet (max-width: 991px);
+@custom-media --screen-laptop (max-width: 1199px);

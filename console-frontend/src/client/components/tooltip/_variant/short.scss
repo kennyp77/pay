@@ -1,0 +1,29 @@
+.Tooltip_variant_short {
+  max-width: 350px;
+
+  .Tooltip-Content {
+    color: var(--color-white);
+    border-bottom-right-radius: var(--radius-12);
+    border-bottom-left-radius: var(--radius-12);
+    background-color: var(--bg-lightblack);
+  }
+
+  .Tooltip-Backdrop {
+    &:before {
+      border-radius: var(--radius-12);
+      background-color: var(--bg-lightblack);
+      box-shadow: none;
+      filter: var(--tooltip-filter);
+    }
+  }
+
+  .Popup2-TailSvg .Popup2-TailFill {
+    fill: var(--bg-lightblack);
+  }
+
+  &.Popup2[data-popper-placement^='top'] {
+    .Popup2-Tail {
+      left: var(--offset-8) !important;
+    }
+  }
+}

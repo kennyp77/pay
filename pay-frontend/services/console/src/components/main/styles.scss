@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+.Main {
+    position: relative;
+
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: $main-width;
+    padding: $main-padding-y $main-padding-x;
+
+    &-Logo {
+        height: 28px;
+
+        color: #000;
+
+        .icon {
+            max-height: 100%;
+        }
+    }
+
+    &-Header {
+        flex: 0 0;
+
+        margin-bottom: 24px;
+    }
+
+    &-Content {
+        display: flex;
+        overflow: hidden;
+        flex: 1 1;
+
+        padding-bottom: 24px;
+    }
+
+    &-Footer {
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: calc(-1 * #{$main-padding-x});
+        margin-left: calc(-1 * #{$main-padding-x});
+        padding: $main-padding-x $main-padding-y;
+
+        border-radius: $main-radius;
+        background-color: #fff;
+        box-shadow: 0 -4px 44px rgba(38, 38, 51, 0.24);
+    }
+}

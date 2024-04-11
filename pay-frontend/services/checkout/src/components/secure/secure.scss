@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.SecureInfo {
+    &-PayIcon {
+        height: 24px;
+
+        > svg {
+            height: 100%;
+        }
+    }
+}

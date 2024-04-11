@@ -1,0 +1,6 @@
+BLACKBOX_TVM_ID = 222
+
+TVM_ALLOWED_CLIENTS = (
+  2031689, # bills-api-production
+  2021183, # yandex-order-history-frontend
+)

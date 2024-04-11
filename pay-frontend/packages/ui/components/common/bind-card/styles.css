@@ -1,0 +1,20 @@
+@import '../../constants.css';
+
+.bind-card {
+    display: block;
+}
+
+.bind-card_active {
+    display: block;
+}
+
+.bind-card__footer,
+.bind-card__warning {
+    margin-top: var(--space-40);
+}
+
+:--mobile {
+    .bind-card__footer {
+        height: 158px;
+    }
+}

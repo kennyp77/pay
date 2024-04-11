@@ -1,0 +1,74 @@
+@import 'styles/mixins';
+
+.Select2 {
+  .Icon {
+    @include transition;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: var(--offset-20);
+    width: var(--size-24);
+    height: var(--size-24);
+    margin: auto;
+  }
+
+  &_variant_outlined {
+    .Select2-Button {
+      width: 100%;
+
+      &:before {
+        border-radius: var(--form-element-border-radius);
+        background-color: var(--text-input-bg);
+      }
+
+      &:not([aria-disabled='true']):hover:before {
+        background-color: var(--text-input-bg-action);
+      }
+
+      &.Button2_pressed {
+        transform: scale(1);
+      }
+    }
+
+    .Button2-Text {
+      margin-top: var(--textinput-view-material-space-top);
+      padding-top: var(--offset-14);
+      padding-bottom: var(--offset-14);
+      padding-left: var(--offset-24);
+      font-size: var(--textinput-view-material-font-size);
+      line-height: var(--lh-20);
+    }
+
+    .Select2-Menu {
+      padding: var(--offset-6) 0;
+    }
+
+    .Menu-Item_type_option {
+      margin: 0 var(--offset-6);
+      padding: var(--offset-12) var(--offset-14);
+
+      &:hover {
+        border-radius: var(--radius-12);
+        background-color: var(--text-input-bg-action);
+      }
+
+      .Icon {
+        display: none;
+      }
+    }
+  }
+
+  [aria-expanded='true'] .Icon {
+    transform: scaleY(-1);
+  }
+
+  &-Label {
+    position: absolute;
+    left: var(--offset-24);
+    z-index: 1;
+    transform: translate(0, 9.5px) scale(0.75);
+    transform-origin: left top;
+    pointer-events: none;
+  }
+}

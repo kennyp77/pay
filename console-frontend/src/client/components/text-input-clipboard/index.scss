@@ -1,0 +1,19 @@
+.TextinputClipboard {
+  position: relative;
+  width: 100%;
+}
+
+.TextinputClipboard-Input {
+  padding-right: var(--text-input-clipboard-offset-right);
+}
+
+.TextinputClipboard-Input .Textinput-Control {
+  height: var(--text-input-clipboard-height);
+}
+
+.TextinputClipboard-ButtonCopy.Button2 {
+  position: absolute;
+  top: 50%;
+  right: var(--offset-12);
+  transform: translateY(-50%);
+}

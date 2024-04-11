@@ -1,0 +1,65 @@
+service: yandexpay
+title: Yandex.Pay Console Frontend
+arcanum:
+  auto_merge:
+    enabled: true
+    requirements:
+      - system: arcanum
+        type: approved
+        data:
+          min_approvers_count: 1
+          ignore_self_ship: false
+      - system: arcanum
+        type: comment_issues_closed
+      - system: arcanum
+        type: st_issue_linked
+ci:
+  release-title-source: flow
+  secret: sec-01ftjv8y5d2dh3n58a28vyssrp
+  runtime:
+    sandbox:
+      owner: YANDEX-PAY
+      tags: [ YANDEX_PAY_CONSOLE ]
+      kill-timeout: 1h 30m
+  releases:
+    yandex-pay-console-deploy:
+      title: Deploy Yandex Pay Console
+      flow: yandex-pay-console-deploy-flow
+      branches:
+        pattern: releases/pay/frontend/console/${version}
+        auto-create: true
+      stages:
+        - id: build
+          title: Build
+        - id: deploy
+          title: Deploy
+  flows:
+    yandex-pay-console-deploy-flow:
+      title: Release flow
+      jobs:
+        build:
+          title: Build
+          task: common/arcadia/ya_package_2
+          stage: build
+          input:
+            packages: pay/frontend/pkg-console.json
+            package_type: docker
+            docker_image_repository: yandex-pay-console
+            docker_user: robot-yandex-pay
+            docker_token_vault_name: ROBOT_YANDEX_PAY_DOCKER_REGISTRY_OAUTH
+            docker_push_image: true
+            custom_version: "${context.version_info.full}"
+        deploy:
+          needs: build
+          title: Deploy
+          task: common/deploy/create_release
+          stage: deploy
+          input:
+            config:
+              stage_id: yandexpay-admin-front-testing
+              patches:
+                - docker:
+                    docker_image_ref:
+                      deploy_unit_id: front
+                      box_id: front
+                    image_name: "yandex-pay-console/yandex-pay-console-frontend:${context.version_info.full}"

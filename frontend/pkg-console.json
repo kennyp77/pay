@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "name": "yandex-pay-console-frontend",
+    "version": "{revision}.{branch}",
+    "maintainer": "g:yandex-pay-front"
+  },
+  "data": [
+    {
+      "source": {
+        "type": "ARCADIA",
+        "path": "pay/frontend/packages"
+      },
+      "destination": {
+        "path": "/"
+      }
+    },
+    {
+      "source": {
+        "type": "ARCADIA",
+        "path": "pay/frontend/services/console"
+      },
+      "destination": {
+        "path": "/services/"
+      }
+    },
+    {
+      "source": {
+        "type": "ARCADIA",
+        "path": "pay/frontend",
+        "files": [
+          ".npmrc",
+          ".nvmrc",
+          "pnpm-lock.yaml",
+          "pnpm-workspace.yaml"
+        ]
+      },
+      "destination": {
+        "path": "/"
+      }
+    },
+    {
+      "source": {
+        "type": "RELATIVE",
+        "path": "services/console/Dockerfile"
+      },
+      "destination": {
+        "path": "/Dockerfile"
+      }
+    }
+  ]
+}

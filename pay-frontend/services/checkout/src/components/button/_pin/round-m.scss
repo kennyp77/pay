@@ -1,0 +1,7 @@
+@import '../../../styles/variables.scss';
+
+.Button2_pin_round-m {
+    &::before {
+        border-radius: $button-m-borderRadius;
+    }
+}

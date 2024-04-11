@@ -1,0 +1,123 @@
+@import '../constants.css';
+
+.payment-method-details {
+    position: relative;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 102px;
+
+    cursor: pointer;
+
+    border: 1px solid var(--color-separator-primary);
+    border-radius: var(--border-radius-12);
+
+    transition: transform var(--transition-position);
+}
+
+.payment-method-details:hover {
+    cursor: pointer;
+
+    transform: translateY(-2px);
+}
+
+.payment-method-details__container {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: var(--space-40) var(--space-32);
+
+    @apply --safari-overflow-fix;
+}
+
+.payment-method-details__selected-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: none;
+
+    width: 34px;
+    height: 22px;
+
+    color: #fff;
+    border: 1px solid var(--yandex-pay-color-hovered);
+    border-radius: 0 var(--border-radius-12) 0 var(--border-radius-12);
+    background: var(--yandex-pay-color);
+}
+
+.payment-method-details_selected .payment-method-details__selected-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-method-details__selected-icon .payment-method-details__check-icon {
+    width: 11px;
+    height: 8px;
+
+    color: var(--color-bg-tetriary);
+}
+
+.payment-method-details__disabled-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: none;
+
+    box-sizing: border-box;
+    height: 24px;
+    padding: 3px 12px;
+
+    color: #fff;
+    border-radius: 0 var(--border-radius-12) 0 var(--border-radius-12);
+    background: #000;
+
+    @apply --text-size-14;
+}
+
+.payment-method-details_disabled {
+    pointer-events: none;
+
+    border-color: transparent;
+    background: var(--color-bg-primary);
+    box-shadow: none;
+}
+
+.payment-method-details_disabled .payment-method-details__container {
+    opacity: 0.5;
+}
+
+.payment-method-details_disabled .payment-method-details__disabled-icon {
+    display: block;
+}
+
+.payment-method-details_disabled .payment-method-details__selected-icon {
+    display: none;
+}
+
+:--mobile {
+    .payment-method-details__container {
+        padding: var(--space-20);
+    }
+
+    .payment-method-details {
+        height: 79px;
+    }
+
+    .payment-method-details:hover {
+        top: 0;
+
+        cursor: inherit;
+    }
+
+    .payment-method-details__selected-icon {
+        width: 30px;
+        height: 20px;
+    }
+}

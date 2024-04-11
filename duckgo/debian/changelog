@@ -1,0 +1,259 @@
+yandex-duckgo (1.5.1) unstable; urgency=low
+
+   See arc diff tags/releases/pay/duckgo/v1.4.0 tags/releases/pay/duckgo/v1.5.1 for full log
+ -- ivaxer <ivaxer@yandex-team.ru>  Fri, 08 Jul 2022 10:52:01 +0300
+
+yandex-duckgo (1.4.0) unstable; urgency=low
+
+   See git@github.yandex-team.ru:yandex-pay/duckgo.git for full log
+   * dd1b701 YANDEXPAY-2933. mastercard: kids logging, verification keys handling
+   * 7bdd595 YANDEXPAY-2958. Visa: superkeys support in /paymentData
+   * ed5720c Refactor testPSP.
+   * d945541 YANDEXPAY-3025. Add ECI for visa token
+   * f99aeae YANDEXPAY-3023. Update go to 1.17.5
+   * 9666589 YANDEXPAY-2578. Disable stacktrace
+   * 050ef1d YANDEXPAY-2462. Move to yandex-pay gh org.
+   * c0f9dea YANDEXPAY-2061. Rotate mastercard keys.
+   * ef2b3a4 v1.3.0
+   * 4f24807 YANDEXPAY-1814. make-payment-token: fix token expiration
+   * e1f3fe8 YANDEXPAY-1588 шифрование карты для Thales
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Wed, 29 Dec 2021 17:07:09 +0300
+
+yandex-duckgo (1.3.0) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * 4f24807 YANDEXPAY-1814. make-payment-token: fix token expiration
+   * e1f3fe8 YANDEXPAY-1588 шифрование карты для Thales
+ -- perseus <perseus@yandex-team.ru>  Fri, 6 Aug 2021 13:51:59 +0400
+
+yandex-duckgo (1.2.6) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * f806c00 Fix generate-local-config.bash
+   * 0fa5c40 YANDEXPAY-1654. Fix relationshipID parameter.
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Fri, 16 Jul 2021 12:13:09 +0400
+
+yandex-duckgo (1.2.5) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * 97cea69 YANDEXPAY-1659. Update go 1.16.6
+   * cca77ae YANDEXPAY-1654. Visa relationship id support
+   * b225ee0 YANDEXPAY-1652. Correlation headers forwarding and logging
+   * 88a8958 YANDEXPAY-1431. mastercard mock: Required fields in MaskedCard.
+   * 143a8af YANDEXPAY-1417. Add verification key in sandbox
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Fri, 16 Jul 2021 11:07:58 +0400
+
+yandex-duckgo (1.2.4) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * df6ea61 YANDEXPAY-1420. Fix visa correlation/response-ids logging
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Fri, 4 Jun 2021 16:48:48 +0300
+
+yandex-duckgo (1.2.3) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * e1cd2ca YANDEXPAY-1241 sort query params before signing
+   * a1c9a3d YANDEXPAY-1204 client_payment_data_id is provided by client
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Wed, 12 May 2021 16:06:21 +0300
+
+yandex-duckgo (1.2.2) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * f2498af YANDEXPAY-496. Fix TestExampleConfig after 8ab79ac90
+   * 8bc648c YANDEXPAY-1116. Use log.Duration
+   * 68e7a46 YANDEXPAY-1116. Enable log levels
+   * 2449413 YANDEXPAY-1116. Switch to ctxlog
+   * 7191f42 YANDEXPAY-1116. Switch to arcadia logger
+   * 8ab79ac YANDEXPAY-496. generate-local-config: verification key & visa
+   * ace1c26 YANDEXPAY-893. Add handler to verify recipient key.
+   * 4f1880b YANDEXPAY-496. Cleanup RecipientKeySigner API
+   * 0dac0cc YANDEXPAY-496. Recipient public key verification.
+   * 5257472 YANDEXPAY-496. Implement verifier
+   * 1338551 YANDEXPAY-496. Use custom clock in recipient key signer.
+   * 52241b2 YANDEXPAY-1083 visa support multiple outbound keys
+   * 01fa3cc YANDEXPAY-1090: make-payment-token: gateway-merchant-id option
+   * 08af676 YANDEXPAY-1079. Don't require cardholderFullName
+   * 6593b3c YANDEXPAY-1066: use outbound key for signature checking
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Tue, 20 Apr 2021 19:24:22 +0300
+
+yandex-duckgo (1.2.1) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * d4335f0 YANDEXPAY-495. Change signing key format.
+   * 6687141 remove tab from log
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Mon, 12 Apr 2021 18:31:50 +0300
+
+yandex-duckgo (1.2.0) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * 4df7522 YANDEXPAY-1029. Add sign-recipient-key to deb package
+   * 009bfa6 YANDEXPAY-980. Renames for new arcadia TVM client
+   * 3a11b52 visa checkout api change param name emailHash -> email_hash
+   * 20cea8a YANDEXPAY-495. Add clockwork dep
+   * 353fa12 YANDEXPAY-495. Implement sign-recipient-key
+   * ec5d059 YANDEXPAY-776. mastercard: don't send empty cardholderFullName
+   * 8a19f5f YANDEXPAY-921. Add yandex-boinic-testing repo
+   * ad1b373 YANDEXPAY-915. Fix mastercard test flapping.
+   * 46a27f1 YANDEXPAY-891. debian: update go to 1.16.2
+   * b922ccc YANDEXPAY-73 check signature handler
+   * 260a3d7 YANDEXPAY-266 fix naming query -> url
+   * bd5e5b9 YANDEXPAY-820 disable visa from config
+   * d3a24a1 YANDEXPAY-268 visa api support: enroll/checkout card, sign visa request
+   * afa9a51 YANDEXPAY-676. Replace mocked Mastercard's DPAN.
+   * c2c40d4 YANDEXPAY-184 update makefile
+   * 1151e8b YANDEXPAY-676. Replace sandbox cards.
+   * 1efb936 YANDEXPAY-184 sandbox deploy scripts
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Tue, 6 Apr 2021 15:15:26 +0300
+
+yandex-duckgo (1.1.3) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * a4d4ca0 Set cache file mode to 640 YANDEXPAY-642
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Tue, 16 Feb 2021 17:59:00 +0300
+
+yandex-duckgo (1.1.2) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * b85aee4 YANDEXPAY-484. Fix changelog generator
+   * c4c08ca Fix TestCache YANDEXPAY-628
+   * ada7f56 YANDEXPAY-484. deb: add build and compare bash scripts
+   * ae739d7 debian: update go to 1.15.8
+   * 3a451b5 YANDEXPAY-584. Rename CRYPTOGRAM_3DS to CLOUD_TOKEN.
+   * 5ed8203 checkstyle
+   * c53e4e4 YANDEXPAY-133 review issues
+   * 50fd6ab YANDEXPAY-184 add sandbox cards
+   * 04e2e75 YANDEXPAY-481. Add mastercad keys cache to example config
+   * f52a2ee YANDEXPAY-467. standalone Mastercard API mock.
+   * d63bcd2 Add mastercard keys cache path to config YANDEXPAY-481
+   * eebbc7f YANDEXPAY-483. Increase keys download timeout.
+   * f99be7d YANDEXPAY-560. make-payment-token
+   * ad3838a Store mastercard keys in filesystem YANDEXPAY-481
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Mon, 15 Feb 2021 18:10:59 +0300
+
+yandex-duckgo (1.0.0) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * 9ce2f02 debian: update go to 1.15.7
+   * b4bdd4c YANDEXPAY-377. messageId/messageExpiration from mastercard/checkout request
+   * 6c42cfd YANDEXPAY-367. json format for "stdout" logger's sink
+   * 7d1996f YANDEXPAY-328. Don't log Mastercard's public keys
+   * 8f89ace YANDEXPAY-340. pan/checkout: message_id/message_expiration check
+   * 2d44a83 YANDEXPAY-340. pan/checkout
+   * bc78c47 YANDEXPAY-338. normalize expYear from Mastercard API.
+   * cfec5c5 YANDEXPAY-338. server's TestEnv
+   * a83dbf6 YANDEXPAY-338. generic Mastercard mock.
+   * 660c8dd server: GetExternal/InternalAPIEndpoint funcs
+   * 3fc8608 YANDEXPAY-338. paymenttoken: public NewSenderVerifyingKeySet
+   * 74be70d server: public TransactionInfo
+   * d9fc215 YANDEXPAY-338. mastercard: public RawCheckoutResponse
+   * 4aee6d2 YANDEXPAY-338. api: add StatusFail/StatusSuccess consts
+   * 17f328c server: fix comment for loadECDSAPrivateKey
+   * a18c47c deb: run go test
+   * 917c874 syslog: skip test if unix syslog not available
+   * 176d7c7 YANDEXPAY-265: fix signer constructor
+   * 9c19461 YANDEXPAY-265: fix review
+   * 964498d YANDEXPAY-265: implement VISA sign algorithm
+   * 27ae362 YANDEXPAY-318. Reset buildid for reproducable builds.
+   * 02e9fb6 Add make run-server and local config generator
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Mon, 18 Jan 2021 15:57:50 +0300
+
+yandex-duckgo (0.9.7) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * 137190d YANDEXPAY-290. Change log facility to syslog.LOG_USER
+   * 708c3eb YANDEXPAY-289. Add example config to deb
+   * 16e9eec YANDEXPAY-289. switch to v6 in sample config
+   * b57eed3 YANDEXPAY-283. Add /v1/ping handler to ext api.
+   * 030e45c fix TestMiddlewareTVMAuth
+   * f579433 omit empty MaskedBillingAddress
+   * 18b173b YANDEXPAY-208. Log correlation id
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Tue, 15 Dec 2020 19:08:26 +0300
+
+yandex-duckgo (0.9.6) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * 681a9fb tvm: add logging
+   * 3216613 paymenttoken: remove fake message validation
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Fri, 11 Dec 2020 22:33:44 +0300
+
+yandex-duckgo (0.9.5) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * bb7a3ce deb: create dirs for config
+   * 76404a7 deb: don't stop on adduser error
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Fri, 11 Dec 2020 13:58:03 +0300
+
+yandex-duckgo (0.9.4) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * a0a5547 YANDEXPAY-248. mastercard schemas: mark optional fields
+   * dbb0c51 mastercard: configurable public keys init download timeout
+   * d1cb66b mastercard: more validations in downloader
+   * 9164570 vendor github.com/coreos/go-systemd
+   * 44ee03a YANDEXPAY-258. notify systemd after start.
+   * dfb1f60 deb: disable binary strip
+   * f10b5a0 fix typo in debian/control
+   * 4e82334 YANDEXPAY-253. Proxy mastercard response status
+   * 68ba400 mastercard: test for redirect
+   * adfd589 Fix test for example config.
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Fri, 11 Dec 2020 13:16:42 +0300
+
+yandex-duckgo (0.9.3) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * 9855636 paymenttoken: add "type": "Yandex"
+   * 8a3cc7a example config fixes
+   * 6d36ecb external api: forward error from Mastercard.
+   * 2ad5c05 go mod tidy
+   * 1adbec9 YANDEXPAY-195. add TVM auth
+   * 9c09946 YANDEXPAY-195. vendor TVM from arcadia
+   * a4fe8e0 YANDEXPAY-245. Move api shared keys to config.
+   * 2c79c10 YANDEXPAY-209. Fix mastercard tests
+   * 7daf559 PAYSYSADMIN-7967. Fix config path in yandex-duckgo.service
+   * 8820586 YANDEXPAY-238. config: load mastercard ids from files
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Wed, 9 Dec 2020 12:09:51 +0300
+
+yandex-duckgo (0.9.2) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * 460effa YANDEXPAY-237. Add disable TLS option.
+   * 3e5d352 .gitignore
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Mon, 7 Dec 2020 14:47:31 +0300
+
+yandex-duckgo (0.9.1) unstable; urgency=low
+
+   See git@github.yandex-team.ru:Billing/duckgo.git for full log
+   * 05cefa1 paymenttoken: json format fixes
+   * 0e35af4 YANDEXPAY-209. mastercard log request status
+   * d77492a YANDEXPAY-209. Log http access-log
+   * e53c4c6 YANDEXPAY-209. switch to zap logger
+   * 138ec89 fix typo
+   * 3c0a645 YANDEXPAY-132. vendor zapsyslog deps
+   * 282702b YANDEXPAY-132. implement zapsyslog
+   * 34e90c6 YANDEXPAY-210. intermediate-signer: recv keys from stdin. (#15)
+   * 52458d7 YANDEXPAY-176. implement Mastercard checkout (#14)
+   * 395ba8b YANDEXPAY-206. paymenttoken code cleanup
+   * f0e1ca7 mastercard: client tests fixes
+   * 976f9e5 drop internal package
+   * cac7490 YANDEXPAY-169. review fixes
+   * a4677e5 YANDEXPAY-169. Add mastercard sign request.
+   * 9d0c233 YANDEXPAY-131. mastercard enroll tests
+   * ad67c6d YANDEXPAY-169. Default keys update period. (#10)
+   * 00eb076 YANDEXPAY-167 review issues
+   * 4169d8f YANDEXPAY-167 intermediate.json signing tool
+   * bc0a494 YANDEXPAY-133 review issues
+   * 5220703 YANDEXPAY-167. simplify manager options
+   * e1dba9f YANDEXPAY-167 review issues
+   * 49ccd00 YANDEXPAY-167 review issues: use context for task canceling
+   * 5f90f2d YANDEXPAY-133 gomod update
+   * 8ad999f YANDEXPAY-133 mastercard key rotation
+   * 1439306 YANDEXPAY-135. deb package
+   * c7488d5 YANDEXPAY-67 payment method token support
+   * 1e2b518 YANDEXPAY-165. implement SecretKeySHA256 method
+   * 64a2425 mastercard enroll: forward raw MaskedBillingAddress and MaskedConsumer
+   * cb2d50c vendor deps
+   * e73aff4 Add oauth1
+   * a0c6ec6 mastercard: enroll card proxy
+   * 86a70ec add gitignore
+ -- Ivan Khvatov <ivaxer@yandex-team.ru>  Sun, 6 Dec 2020 16:07:36 +0300
+

@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+#{$legoVariablesRoot} {
+    --tumbler-size-m-width: 42px;
+    --tumbler-size-m-height: 24px;
+    --tumbler-size-m-borderRadius: 12px;
+    --tumbler-size-m-button-width: 18px;
+    --tumbler-size-m-button-height: 18px;
+    --tumbler-size-m-button-borderRadius: 9px;
+    --tumbler-button-space: 3px;
+}

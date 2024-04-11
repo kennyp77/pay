@@ -1,0 +1,323 @@
+---
+# Документация New CI (https://docs.yandex-team.ru/ci/)
+service: yandexpay
+title: Yandex.Pay
+arcanum:
+  auto_merge:
+    requirements:
+      - system: arcanum
+        type: approved
+        data:
+          min_approvers_count: 1
+          ignore_self_ship: false
+      - system: arcanum
+        type: comment_issues_closed
+      - system: arcanum
+        type: st_issue_linked
+      - system: ci
+        type: build
+      - system: ci
+        type: tests
+
+shared:
+  deps:
+    build-nodejs-deps: &build-nodejs-deps
+      sub-paths: ["a.yaml"]
+  configs:
+    custom_script: &custom_script |
+      # Skip any interactive post-install configuration steps
+      export DEBIAN_FRONTEND=noninteractive;
+      export NODEJS_MAJOR="${by.major}";
+      export NODEJS_VERSION="${by.version}";
+
+      # Install Base package with internal keyrings
+      apt-get update \
+        --ignore-missing --allow-unauthenticated --allow-insecure-repositories;
+      apt-get install \
+        --no-install-recommends --no-install-suggests --assume-yes \
+        yandex-ubuntu-archive-apt \
+        yandex-archive-keyring \
+        yandex-search-common-apt;
+
+      # Install base dependencies required for downloading and installing public keys
+      # Install HTTPS transport for apt
+      # Common CA certificates
+      # Tool for transferring data with URL syntax (required to obtain keys)
+      # Tool for secure communication and data storage (required to install authentication keys)
+      apt-get update --fix-missing;
+      apt-get install \
+        --no-install-recommends --no-install-suggests --assume-yes \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        gnupg;
+
+      # Install certificates
+      # YandexInternalRootCA certificate
+      # Install Intermediate SSL-certificate
+      mkdir -p /usr/local/share/ca-certificates/;
+      curl https://crls.yandex.net/YandexInternalRootCA.crt > /usr/local/share/ca-certificates/YandexInternalRootCA.crt;
+      curl https://crls.yandex.net/allCAs.pem > /etc/ssl/certs/allCAs.pem;
+      curl https://crls.yandex.net/allCAs.pem >> /etc/ssl/certs/ca-certificates.crt;
+
+      update-ca-certificates;
+
+      # Install time zones and locales
+      # National language (locale) data
+      # Time zone and daylight-saving time data
+      apt-get update --fix-missing;
+      apt-get install \
+        --no-install-recommends --no-install-suggests --assume-yes \
+        locales \
+        tzdata;
+
+      # Install needed to python packages
+      # Essential for building Debian packages (g++, gcc, make and others)
+      # Asynchronous event notification library (required for pgcli)
+      # Header files for libpq5 (PostgreSQL C client library, required for pgcli)
+      # Header files and a static library for Python (required for pgcli)
+      # Minimal subset of the Python language
+      # Python package installer
+      apt-get install \
+        --no-install-recommends --no-install-suggests --assume-yes \
+        build-essential \
+        coreutils \
+        libevent-dev \
+        libpq-dev \
+        python-dev \
+        python-minimal;
+
+      # Install dependencies for debugging and scripts
+      # Git
+      # DNS lookup utility
+      # An interactive process viewer
+      # Collection of utilities for networking and traffic control,
+      # including ip required for L3 balancers
+      # Ping command
+      # Command-line JSON processor
+      # Default pager program
+      # Manual pages
+      # Stream editor
+      # System call tracer
+      # Utility to dump the traffic on a network
+      # Vim
+      # Arc VCS
+      # Yandex Environment Development
+      apt-get install \
+        --no-install-recommends --no-install-suggests --assume-yes \
+        git \
+        host \
+        htop \
+        iproute2 \
+        iputils-ping \
+        jq \
+        less \
+        man \
+        sed \
+        strace \
+        tcpdump \
+        vim \
+        yandex-arc-launcher \
+        yandex-environment-development \
+        fuse;
+
+      # Clean up packages required only for build to reduce image size
+      apt-get remove \
+        --assume-yes \
+        python-dev;
+
+      apt-get autoremove --assume-yes;
+
+      # Clean up the apt cache to reduce image size
+      apt-get clean;
+      rm -rf /var/lib/apt/lists/*;
+
+      # Setup Europe/Moscow as the default timezone
+      echo 'Europe/Moscow' > /etc/timezone;
+      [ -s /usr/share/zoneinfo/Europe/Moscow ] && ln -fs /usr/share/zoneinfo/Europe/Moscow /etc/localtime;
+      if [ -L /usr/share/zoneinfo/UTC ] && [ -f /usr/share/zoneinfo/Etc/UTC ]; then ln -fs /usr/share/zoneinfo/Etc/UTC /usr/share/zoneinfo/UTC; fi;
+      dpkg-reconfigure --frontend noninteractive tzdata;
+
+      # Generate the en_US.UTF-8 locale
+      locale-gen en_US.UTF-8;
+
+      # Setup en_US.UTF-8 as the default locale
+      export LANG=en_US.UTF-8;
+      cat >> /etc/bash.bashrc << 'EOF'
+      export LANG=en_US.UTF-8
+      EOF
+
+      # Setup command prompt
+      cp /root/.bashrc /.bashrc;
+
+      # Download Node.js package specified version
+      curl -o /tmp/nodejs_$NODEJS_VERSION.deb https://deb.nodesource.com/node_$NODEJS_MAJOR.x/pool/main/n/nodejs/nodejs_$NODEJS_VERSION-1nodesource1_amd64.deb;
+
+      apt-get update --fix-missing;
+
+      # Install build essential which is used to install npm dependencies with node-gyp
+      apt-get install \
+        --no-install-recommends --no-install-suggests --assume-yes \
+        build-essential;
+
+      # Install Node.js and npm
+      dpkg -i /tmp/nodejs_$NODEJS_VERSION.deb;
+
+      # Update npm to the latest minor version
+      npm install \
+        --global --registry=http://registry.npmjs.org/ \
+        npm@$(npm --version | cut --delimiter='.' --fields=1);
+
+      # Use Yandex internal npm registry by default
+      npm --global config set registry=https://npm.yandex-team.ru/;
+
+      # Necessary for building native modules
+      npm --global config set user root;
+
+      export npm_config_cache=$(mktemp -d);
+
+      # Install pnpm
+      npm install --global pnpm@6.28.0;
+
+      # Install ICU data
+      FULL_ICU_PREFER_NPM=true npm install --global full-icu;
+
+      # Install si.ci.sandbox-shovel
+      npm install --global @yandex-int/si.ci.sandbox-shovel;
+
+      rm -rf $npm_config_cache;
+
+      # Clean up packages required only for build to reduce image size
+      apt-get autoremove --assume-yes;
+
+      # Clean up the apt cache and remove downloaded packages to reduce image size
+      apt-get clean;
+      rm -rf /var/lib/apt/lists/*;
+      rm -rf /tmp/nodejs_$NODEJS_VERSION.deb;
+
+      # Give full access to the /tmp, which is necessary for npm
+      chmod 1777 /tmp;
+
+      cat >> /etc/bash.bashrc << 'EOF'
+      export NODE_EXTRA_CA_CERTS=/usr/local/share/ca-certificates/YandexInternalRootCA.crt
+      export NODE_ICU_DATA=/usr/lib/node_modules/full-icu
+      export NODE_PATH=/usr/lib/node_modules/
+      EOF
+
+
+ci:
+  secret: sec-01ftjv8y5d2dh3n58a28vyssrp
+  runtime:
+    sandbox:
+      owner: YANDEX-PAY
+  actions:
+    build-on-pr-action:
+      flow: build-on-pr
+      flow-vars:
+        nodejs-versions:
+          - title: Node.js 12.22.9
+            major: "12"
+            version: "12.22.9"
+          - title: Node.js 14.18.3
+            major: "14"
+            version: "14.18.3"
+          - title: Node.js 16.13.2
+            major: "16"
+            version: "16.13.2"
+      triggers:
+        - on: pr
+          filters:
+            - discovery: dir
+              <<: *build-nodejs-deps
+
+  flows: # Описания сборок
+    build-on-pr: # Объявление flow build-on-pr
+      title: Build Node.js
+      jobs: # Задачи конкретного flow
+        build-nodejs:
+          multiply:
+            by: ${flow-vars.nodejs-versions}
+            title: Build ${by.title}
+          title: Build Node.js
+          task: common/misc/run_command
+          requirements:
+            cores: 1 # Число процессорных ядер
+            ram: 1 GB
+            disk: 5 GB
+            sandbox:
+              # Теги Sandbox, позволяющие выбрать конкретные агенты
+              client_tags: GENERIC & LINUX
+
+              # porto-container
+              # https://sandbox.yandex-team.ru/task/1187110709/view
+              # container_resource: 2709034743
+              dns: dns64 # Использовать NAT64
+              priority:
+                class: SERVICE
+                subclass: LOW
+          input:
+            config:
+              cmd_line: |
+                wget https://nodejs.org/dist/v${by.version}/node-v${by.version}-linux-x64.tar.gz -O nodejs.tar.gz;
+                tar -xf nodejs.tar.gz;
+                mv node-v${by.version}-linux-x64 $RESULT_RESOURCES_PATH/nodejs;
+
+              # Возможность сохранить ресурсы из тасклета
+              # При её использовании в переменных окружения появляется следующее значение:
+              #    RESULT_RESOURCES_PATH – путь до папки, в которой будут искаться ресурсы
+              # Сохраненные ресурсы попадут в output тасклета и их можно будет использовать дальше по графу
+              result_resources:
+                # Пример сохранения папки в виде tar.gz архива
+                # Название папки будет включено в собранный архив
+                - path: nodejs # путь до нужной папки из директории RESULT_RESOURCES_PATH
+                  description: "${by.title}" # Описание ресурса в sandbox
+                  type: NODEJS_PACKAGE # Тип ресурса в терминах sandbox
+                  compression_type: tgz # (optional) Флаг, определяющий сжатие данных ресурса. По умолчанию tgz. Другие возможные значения none и tar
+                  attributes: # Список дополнительных атрибутов для установки в ресурс, любые комбинации ключ+значение
+                    nodejs: "${by.version}"
+                    released: stable
+                    ttl: inf
+
+              # Опция 'true' сформирует все ссылки на выходные ресурсы в виде прямых ссылок на Sandbox прокси: https://proxy.sandbox.yandex-team.ru/{}
+              # По умолчанию (false) ссылки будут сформированы на ресурс Sandbox откуда его можно скачать разными способами: https://sandbox.yandex-team.ru/resource/{}/view
+              direct_output_links: true
+
+              logs_config:
+                # Перенаправит stderr в stdout так что получится один файл 'run_command.out.log'
+                redirect_stderr_to_stdout: true
+                # Если указан то ссылка на 'run_command.out.log' будет добавлена badge-ем в кубик CI
+                stdout_ci_badge: true
+
+        build-lxc:
+          multiply:
+            by: ${flow-vars.nodejs-versions}
+            title: Build LXC with ${by.title}
+          title: Build LXC
+          task: common/sandbox/build_lxc_image
+          requirements:
+            sandbox:
+              # Теги Sandbox, позволяющие выбрать конкретные агенты
+              client_tags: GENERIC & LINUX
+              dns: dns64 # Использовать NAT64
+              priority:
+                class: SERVICE
+                subclass: LOW
+
+          input:
+            custom_script: *custom_script
+            unwanted_packages: juggler-client ^config-juggler
+            install_common: false
+            resource_description: |
+              Базовый LXC-контейнер на основе Ubuntu Bionic для сборки фронтенда Yandex Pay.
+
+              Включает в себя:
+              — nodejs@${by.version}
+              — pnpm@6.28.0
+              — si.ci.sandbox-shovel
+              — всё необходимое для отладки и сборки бинарных зависимостей
+              — корневые сертификаты
+              — локали
+            ubuntu_release: bionic
+            custom_attrs:
+              ttl: "inf"
+              nodejs: "${by.version}"

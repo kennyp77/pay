@@ -1,0 +1,31 @@
+@import 'styles/breakpoints.scss';
+@import 'styles/mixins.scss';
+
+.RegistrationFormThirdStep-Buttons.Back {
+  width: var(--back-button-width);
+  margin-right: var(--offset-12);
+}
+
+.RegistrationFormThirdStep-Buttons.Next {
+  flex-grow: 1;
+}
+
+.RegistrationFormThirdStep-ToAccountButtonIcon {
+  margin-left: var(--offset-14);
+  vertical-align: middle;
+}
+
+@include media($tablet, below) {
+  .RegistrationFormThirdStep-Buttons {
+    flex-direction: column;
+  }
+
+  .RegistrationFormThirdStep-Buttons.Back {
+    width: 100%;
+    margin-bottom: var(--offset-12);
+  }
+
+  .RegistrationFormThirdStep-Buttons.Next {
+    width: 100%;
+  }
+}

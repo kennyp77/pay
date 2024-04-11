@@ -1,0 +1,13 @@
+@import '../../../styles/variables.scss';
+
+.LoaderScreen {
+    &-Block {
+        min-height: 300px;
+        max-height: 90vh;
+    }
+
+    .Modal-Content {
+        width: calc(100% - var(--space-m) * 2);
+        max-width: 400px;
+    }
+}

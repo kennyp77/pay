@@ -1,0 +1,19 @@
+@import '../../../styles/variables.scss';
+
+.PanelHeader {
+    .PanelHeader {
+        &-Back,
+        &-Close,
+        &-Delete {
+            z-index: 999;
+
+            color: $color-typo-grey;
+
+            transition: color 0.3s ease;
+
+            &.hovered {
+                color: $color-typo-black;
+            }
+        }
+    }
+}

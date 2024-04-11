@@ -1,0 +1,32 @@
+@import 'styles/breakpoints.scss';
+@import 'styles/mixins.scss';
+
+.RegistrationFormSecondStep-Buttons.Back {
+  width: var(--back-button-width);
+  margin-right: var(--offset-12);
+}
+
+.RegistrationFormSecondStep-Buttons.Next {
+  flex-grow: 1;
+}
+
+.RegistrationFormSecondStep-toggleProvidersBtn {
+  color: var(--color-link-default);
+  font-size: var(--fz-14);
+  line-height: var(--lh-20);
+}
+
+@include media($tablet, below) {
+  .RegistrationFormSecondStep-Buttons {
+    flex-direction: column;
+  }
+
+  .RegistrationFormSecondStep-Buttons.Back {
+    width: 100%;
+    margin-bottom: var(--offset-12);
+  }
+
+  .RegistrationFormSecondStep-Buttons.Next {
+    width: 100%;
+  }
+}

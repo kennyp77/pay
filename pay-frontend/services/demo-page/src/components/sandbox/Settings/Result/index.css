@@ -1,0 +1,14 @@
+.logs {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    max-height: 400px;
+}
+
+.logs__content {
+    width: 100%;
+
+    font-family: monospace;
+    white-space: break-spaces;
+    word-break: break-all;
+}

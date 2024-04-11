@@ -1,0 +1,13 @@
+.AboutEnableAccount {
+  max-width: var(--about-block-width);
+  margin: 0 auto;
+  padding: var(--offset-32) 0;
+
+  a {
+    color: var(--link-default);
+  }
+
+  &-disable-icon {
+    margin-right: var(--offset-16);
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../../styles/mixins.scss';
+
+.Button2_variant_cleared {
+  @extend %clear-button;
+
+  margin-left: calc(-1 * var(--offset-16));
+  padding: var(--offset-10) var(--offset-16);
+  color: var(--color-text-secondary);
+
+  &:empty {
+    display: none;
+  }
+}

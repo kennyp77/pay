@@ -1,0 +1,10 @@
+@import '../../../styles/mixins.scss';
+
+.Button2_variant_message-box-white {
+  padding: var(--offset-8) var(--offset-16);
+  box-sizing: border-box;
+  font-size: var(--fz-14);
+  line-height: var(--lh-20);
+  border-radius: var(--radius-12);
+  background-color: var(--bg-white);
+}

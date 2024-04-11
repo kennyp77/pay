@@ -1,0 +1,130 @@
+{
+  "external_api": {
+    "listen_addr": ":1867",
+
+    # TLS is enabled by-default
+    # "disable_tls": false,
+
+    # cert if TLS enabled
+    "cert_file": "example-configs/cert.cer",
+
+    # cert key if TLS enabled
+    "key_file": "example-configs/cert.key",
+
+    # "auth": "shared_key", # shared_key or tvm
+
+    # if "shared_key" auth is enabled
+    "shared_key": {
+        # file with shared secret. If empty, fallback to DUCKGO_EXTERNAL_API_SHARED_KEY
+        # env var.
+        "shared_key_path": "",
+    },
+    "tvm": {
+      # self tvm_id or alias
+      # "self": "duckgo",
+
+      # URL to API of local tvmtool daemon. Fallback to TVMTOOL_URL env var, if empty.
+      "tvmtool_url": "http://localhost:1998",
+      "allowed": [
+          123,
+      ],
+      # AuthToken of tvmtool daemon. Fallback to auth_token_path, then
+      # TVMTOOL_LOCAL_AUTHTOKEN env var, if empty.
+      "auth_token": "123",
+      "auth_token_path": "",
+    },
+  },
+  "internal_api": {
+    "listen_addr": "[::1]:2020",
+
+    "auth": "shared_key", # only shared_key is supported
+
+    "shared_key": {
+      # file with shared secret. If empty, fallback to DUCKGO_INTERNAL_API_SHARED_KEY
+      # env var.
+      "shared_key_path": "",
+    },
+  },
+  "mastercard": {
+    "api_host_url": "https://sandbox.api.mastercard.com",
+    "public_keys_url": "https://sandbox.src.mastercard.com/keys",
+    # "keys_update_period" : "168h",
+    # "keys_init_download_timeout": "5s",
+
+    # ConsumerKey provided by Mastercard. If empty, fallback to "consumer_key_path", then
+    # to MASTERCARD_CONSUMER_KEY env var.
+    "consumer_key": "",
+    "consumer_key_path": "",
+
+    # srcClientId provided by Mastercard. If empty, fallback to "client_id_path", then
+    # to MASTERCARD_CLIENT_ID env var.
+    "client_id": "",
+    "client_id_path": "",
+
+    # serviceID provided by Mastercard. If empty, fallback to "service_id_path", then
+    # to MASTERCARD_SERVICE_ID env var.
+    "service_id": "",
+    "service_id_path": "",
+
+    "signing_key_path": "example-configs/mastercard-sign-key.pem",
+    "encryption_key_path": "example-configs/mastercard-encryption-key.pem",
+
+    # keys_cache_path is path to file for local cache of public keys. Directory must be
+    # writable, file may be missing.
+    #
+    # "keys_cache_path": "/var/cache/mastercard-keys.json",
+  },
+  "visa": {
+    "is_enabled": true,
+    "client_app_id": "YandexPay",
+    "api_host_url": "https://cert.api.visa.com",
+    # signing key and it's id. Provided by visa. Can be set via env variables $VISA_SIGNING_KEY_ID and $VISA_SIGNING_KEY_SECRET
+    "signing_key": {
+      "key_id": "",
+      "secret": "",
+
+      "key_id_path": "",
+      "secret_path": "",
+    },
+    # verifying key and it's id. Provided by visa. Can be set via env variables $VISA_VERIFYING_KEY_ID and $VISA_VERIFYING_KEY_SECRET
+    "verifying_keys":
+      [
+        {
+          "key_id": "",
+          "secret": "",
+
+          "key_id_path": "",
+          "secret_path": "",
+        }
+      ],
+    # encryption key and it's id. Provided by visa. Can be set via env variables $VISA_ENCRYPTION_KEY_ID and $VISA_ENCRYPTION_KEY_SECRET
+    "encryption_key": {
+      "key_id": "",
+      "secret": "",
+
+      "key_id_path": "",
+      "secret_path": "",
+    },
+    "enroll_timeout": "16s",
+  },
+  "payment_token": {
+    "signing_key_path": "example-configs/paymenttoken-intermediate-key.pem",
+    "intermediate_cert_path": "example-configs/paymenttoken-intermediate.json",
+    "recipient_verification_public_keys": [
+      "example-configs/recipient-verification-key-pub-1.pem",
+    ],
+  },
+  "wallet": {
+    "thales": {
+        "card_encryption_cert_path": "example-configs/thales-card-encryption-cert.pem"
+    }
+  },
+  "logger": {
+    "level": "debug",
+    "sink": "stdout", # or syslog, development
+    "syslog": {
+      "network": "", # udp or tcp
+      "raddr": "", # host:port
+    },
+  },
+}

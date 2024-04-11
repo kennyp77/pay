@@ -1,0 +1,6 @@
+.UserPic {
+  &_size_s {
+    width: var(--user-pic-width);
+    height: var(--user-pic-height);
+  }
+}
